@@ -4,7 +4,7 @@
 		module="play-java-starter-example_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20171112235938"
+		publication="20171113011744"
 	>
 		<description>
 		play-java-starter-example
@@ -41,8 +41,9 @@
 	<dependencies>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.2" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.2" conf="scala-tool->default,optional(default);compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="twirl-api_2.12" rev="1.3.12" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-enhancer" rev="1.2.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="twirl-api_2.12" rev="1.3.12" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-ebean_2.12" rev="4.0.6" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-server_2.12" rev="2.6.7" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-test_2.12" rev="2.6.7" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-omnidoc_2.12" rev="2.6.7" conf="docs->default(compile)"/>
@@ -54,5 +55,6 @@
 		<dependency org="com.h2database" name="h2" rev="1.4.194" conf="compile->default(compile)"/>
 		<dependency org="org.assertj" name="assertj-core" rev="3.6.2" conf="test->default(compile)"/>
 		<dependency org="org.awaitility" name="awaitility" rev="2.0.0" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-jdbc-evolutions_2.12" rev="2.6.7" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

@@ -4,7 +4,7 @@
 		module="root-_practica-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171112235841"
+		publication="20171113011358"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
@@ -42,5 +42,6 @@
 		</dependency>
 		<dependency org="com.typesafe.play" name="sbt-plugin" rev="2.6.7" conf="compile->default(compile)" e:sbtVersion="1.0" e:scalaVersion="2.12"/>
 		<dependency org="com.typesafe.sbt" name="sbt-play-enhancer" rev="1.2.2" conf="compile->default(compile)" e:sbtVersion="1.0" e:scalaVersion="2.12"/>
+		<dependency org="com.typesafe.sbt" name="sbt-play-ebean" rev="4.0.6" conf="compile->default(compile)" e:sbtVersion="1.0" e:scalaVersion="2.12"/>
 	</dependencies>
 </ivy-module>
