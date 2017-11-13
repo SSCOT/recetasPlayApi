@@ -1,0 +1,24 @@
+2017-11-13 02:19:12,167 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2017-11-13 02:19:12,200 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:h2:~/dbRecetas.db
+2017-11-13 02:19:12,726 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2017-11-13T01:19:12.726Z
+2017-11-13 02:19:13,015 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2017-11-13 02:19:13,154 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
+2017-11-13 02:20:35,935 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Stopping application at 2017-11-13T01:20:35.935Z after 83s.
+2017-11-13 02:20:35,938 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Shutting down connection pool.
+2017-11-13 02:20:36,073 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2017-11-13 02:20:36,078 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:h2:~/dbRecetas.db
+2017-11-13 02:20:36,122 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Starting application at 2017-11-13T01:20:36.122Z
+2017-11-13 02:20:36,247 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+    filters.ExampleFilter
+
+2017-11-13 02:20:36,258 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev)

@@ -5,6 +5,7 @@ import io.ebean.Model;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Receta extends Model {
 
     @Id

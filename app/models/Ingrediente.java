@@ -3,10 +3,12 @@ package models;
 import io.ebean.Model;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.util.List;
 
+@Entity
 public class Ingrediente extends Model {
     @Id
     public Long id;

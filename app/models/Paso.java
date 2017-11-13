@@ -2,9 +2,11 @@ package models;
 
 import io.ebean.Model;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Paso extends Model {
     @Id
     public Long id;

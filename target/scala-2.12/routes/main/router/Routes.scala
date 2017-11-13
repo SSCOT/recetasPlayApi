@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/play/_practica/conf/routes
-// @DATE:Mon Nov 13 01:17:44 CET 2017
+// @DATE:Mon Nov 13 02:18:59 CET 2017
 
 package router
 
@@ -16,31 +16,43 @@ import _root_.play.libs.F
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
-  HomeController_0: controllers.HomeController,
+  HomeController_2: controllers.HomeController,
   // @LINE:8
-  CountController_3: controllers.CountController,
+  CountController_1: controllers.CountController,
   // @LINE:10
-  AsyncController_2: controllers.AsyncController,
+  AsyncController_4: controllers.AsyncController,
   // @LINE:13
-  Assets_1: controllers.Assets,
+  Assets_6: controllers.Assets,
+  // @LINE:18
+  CocineroController_5: controllers.CocineroController,
+  // @LINE:25
+  RecetaController_0: controllers.RecetaController,
+  // @LINE:32
+  PasoController_3: controllers.PasoController,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
-    HomeController_0: controllers.HomeController,
+    HomeController_2: controllers.HomeController,
     // @LINE:8
-    CountController_3: controllers.CountController,
+    CountController_1: controllers.CountController,
     // @LINE:10
-    AsyncController_2: controllers.AsyncController,
+    AsyncController_4: controllers.AsyncController,
     // @LINE:13
-    Assets_1: controllers.Assets
-  ) = this(errorHandler, HomeController_0, CountController_3, AsyncController_2, Assets_1, "/")
+    Assets_6: controllers.Assets,
+    // @LINE:18
+    CocineroController_5: controllers.CocineroController,
+    // @LINE:25
+    RecetaController_0: controllers.RecetaController,
+    // @LINE:32
+    PasoController_3: controllers.PasoController
+  ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_4, Assets_6, CocineroController_5, RecetaController_0, PasoController_3, "/")
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_0, CountController_3, AsyncController_2, Assets_1, prefix)
+    new Routes(errorHandler, HomeController_2, CountController_1, AsyncController_4, Assets_6, CocineroController_5, RecetaController_0, PasoController_3, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -52,6 +64,21 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """count""", """controllers.CountController.count"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.crearCocinero()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.obtenerCocinero()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocineros/""", """controllers.CocineroController.obtenerCocineros()"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.editarCocinero()"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.borrarCocinero()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.crearReceta()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.obtenerReceta()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/""", """controllers.RecetaController.obtenerRecetas()"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.editarReceta()"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.borrarReceta()"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""", """controllers.PasoController.crearPaso()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""", """controllers.PasoController.obtenerPaso()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """pasos/""", """controllers.PasoController.obtenerPasos()"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""", """controllers.PasoController.editarPaso()"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""", """controllers.PasoController.borrarPaso()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -64,7 +91,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix)))
   )
   private[this] lazy val controllers_HomeController_index0_invoker = createInvoker(
-    HomeController_0.index,
+    HomeController_2.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
@@ -82,7 +109,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("count")))
   )
   private[this] lazy val controllers_CountController_count1_invoker = createInvoker(
-    CountController_3.count,
+    CountController_1.count,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.CountController",
@@ -100,7 +127,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("message")))
   )
   private[this] lazy val controllers_AsyncController_message2_invoker = createInvoker(
-    AsyncController_2.message,
+    AsyncController_4.message,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.AsyncController",
@@ -118,7 +145,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
   private[this] lazy val controllers_Assets_versioned3_invoker = createInvoker(
-    Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
+    Assets_6.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -131,31 +158,391 @@ class Routes(
     )
   )
 
+  // @LINE:18
+  private[this] lazy val controllers_CocineroController_crearCocinero4_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+  )
+  private[this] lazy val controllers_CocineroController_crearCocinero4_invoker = createInvoker(
+    CocineroController_5.crearCocinero(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.CocineroController",
+      "crearCocinero",
+      Nil,
+      "POST",
+      this.prefix + """cocinero/""",
+      """ Cocineros""",
+      Seq()
+    )
+  )
+
+  // @LINE:19
+  private[this] lazy val controllers_CocineroController_obtenerCocinero5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+  )
+  private[this] lazy val controllers_CocineroController_obtenerCocinero5_invoker = createInvoker(
+    CocineroController_5.obtenerCocinero(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.CocineroController",
+      "obtenerCocinero",
+      Nil,
+      "GET",
+      this.prefix + """cocinero/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:20
+  private[this] lazy val controllers_CocineroController_obtenerCocineros6_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocineros/")))
+  )
+  private[this] lazy val controllers_CocineroController_obtenerCocineros6_invoker = createInvoker(
+    CocineroController_5.obtenerCocineros(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.CocineroController",
+      "obtenerCocineros",
+      Nil,
+      "GET",
+      this.prefix + """cocineros/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:21
+  private[this] lazy val controllers_CocineroController_editarCocinero7_route = Route("PUT",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+  )
+  private[this] lazy val controllers_CocineroController_editarCocinero7_invoker = createInvoker(
+    CocineroController_5.editarCocinero(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.CocineroController",
+      "editarCocinero",
+      Nil,
+      "PUT",
+      this.prefix + """cocinero/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:22
+  private[this] lazy val controllers_CocineroController_borrarCocinero8_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+  )
+  private[this] lazy val controllers_CocineroController_borrarCocinero8_invoker = createInvoker(
+    CocineroController_5.borrarCocinero(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.CocineroController",
+      "borrarCocinero",
+      Nil,
+      "DELETE",
+      this.prefix + """cocinero/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:25
+  private[this] lazy val controllers_RecetaController_crearReceta9_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/")))
+  )
+  private[this] lazy val controllers_RecetaController_crearReceta9_invoker = createInvoker(
+    RecetaController_0.crearReceta(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetaController",
+      "crearReceta",
+      Nil,
+      "POST",
+      this.prefix + """receta/""",
+      """ Recetas""",
+      Seq()
+    )
+  )
+
+  // @LINE:26
+  private[this] lazy val controllers_RecetaController_obtenerReceta10_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/")))
+  )
+  private[this] lazy val controllers_RecetaController_obtenerReceta10_invoker = createInvoker(
+    RecetaController_0.obtenerReceta(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetaController",
+      "obtenerReceta",
+      Nil,
+      "GET",
+      this.prefix + """receta/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:27
+  private[this] lazy val controllers_RecetaController_obtenerRecetas11_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas/")))
+  )
+  private[this] lazy val controllers_RecetaController_obtenerRecetas11_invoker = createInvoker(
+    RecetaController_0.obtenerRecetas(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetaController",
+      "obtenerRecetas",
+      Nil,
+      "GET",
+      this.prefix + """recetas/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:28
+  private[this] lazy val controllers_RecetaController_editarReceta12_route = Route("PUT",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/")))
+  )
+  private[this] lazy val controllers_RecetaController_editarReceta12_invoker = createInvoker(
+    RecetaController_0.editarReceta(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetaController",
+      "editarReceta",
+      Nil,
+      "PUT",
+      this.prefix + """receta/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:29
+  private[this] lazy val controllers_RecetaController_borrarReceta13_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/")))
+  )
+  private[this] lazy val controllers_RecetaController_borrarReceta13_invoker = createInvoker(
+    RecetaController_0.borrarReceta(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RecetaController",
+      "borrarReceta",
+      Nil,
+      "DELETE",
+      this.prefix + """receta/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:32
+  private[this] lazy val controllers_PasoController_crearPaso14_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/")))
+  )
+  private[this] lazy val controllers_PasoController_crearPaso14_invoker = createInvoker(
+    PasoController_3.crearPaso(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PasoController",
+      "crearPaso",
+      Nil,
+      "POST",
+      this.prefix + """paso/""",
+      """ Pasos""",
+      Seq()
+    )
+  )
+
+  // @LINE:33
+  private[this] lazy val controllers_PasoController_obtenerPaso15_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/")))
+  )
+  private[this] lazy val controllers_PasoController_obtenerPaso15_invoker = createInvoker(
+    PasoController_3.obtenerPaso(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PasoController",
+      "obtenerPaso",
+      Nil,
+      "GET",
+      this.prefix + """paso/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:34
+  private[this] lazy val controllers_PasoController_obtenerPasos16_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("pasos/")))
+  )
+  private[this] lazy val controllers_PasoController_obtenerPasos16_invoker = createInvoker(
+    PasoController_3.obtenerPasos(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PasoController",
+      "obtenerPasos",
+      Nil,
+      "GET",
+      this.prefix + """pasos/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:35
+  private[this] lazy val controllers_PasoController_editarPaso17_route = Route("PUT",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/")))
+  )
+  private[this] lazy val controllers_PasoController_editarPaso17_invoker = createInvoker(
+    PasoController_3.editarPaso(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PasoController",
+      "editarPaso",
+      Nil,
+      "PUT",
+      this.prefix + """paso/""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:36
+  private[this] lazy val controllers_PasoController_borrarPaso18_route = Route("DELETE",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/")))
+  )
+  private[this] lazy val controllers_PasoController_borrarPaso18_invoker = createInvoker(
+    PasoController_3.borrarPaso(),
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.PasoController",
+      "borrarPaso",
+      Nil,
+      "DELETE",
+      this.prefix + """paso/""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
     // @LINE:6
     case controllers_HomeController_index0_route(params@_) =>
       call { 
-        controllers_HomeController_index0_invoker.call(HomeController_0.index)
+        controllers_HomeController_index0_invoker.call(HomeController_2.index)
       }
   
     // @LINE:8
     case controllers_CountController_count1_route(params@_) =>
       call { 
-        controllers_CountController_count1_invoker.call(CountController_3.count)
+        controllers_CountController_count1_invoker.call(CountController_1.count)
       }
   
     // @LINE:10
     case controllers_AsyncController_message2_route(params@_) =>
       call { 
-        controllers_AsyncController_message2_invoker.call(AsyncController_2.message)
+        controllers_AsyncController_message2_invoker.call(AsyncController_4.message)
       }
   
     // @LINE:13
     case controllers_Assets_versioned3_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned3_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned3_invoker.call(Assets_6.versioned(path, file))
+      }
+  
+    // @LINE:18
+    case controllers_CocineroController_crearCocinero4_route(params@_) =>
+      call { 
+        controllers_CocineroController_crearCocinero4_invoker.call(CocineroController_5.crearCocinero())
+      }
+  
+    // @LINE:19
+    case controllers_CocineroController_obtenerCocinero5_route(params@_) =>
+      call { 
+        controllers_CocineroController_obtenerCocinero5_invoker.call(CocineroController_5.obtenerCocinero())
+      }
+  
+    // @LINE:20
+    case controllers_CocineroController_obtenerCocineros6_route(params@_) =>
+      call { 
+        controllers_CocineroController_obtenerCocineros6_invoker.call(CocineroController_5.obtenerCocineros())
+      }
+  
+    // @LINE:21
+    case controllers_CocineroController_editarCocinero7_route(params@_) =>
+      call { 
+        controllers_CocineroController_editarCocinero7_invoker.call(CocineroController_5.editarCocinero())
+      }
+  
+    // @LINE:22
+    case controllers_CocineroController_borrarCocinero8_route(params@_) =>
+      call { 
+        controllers_CocineroController_borrarCocinero8_invoker.call(CocineroController_5.borrarCocinero())
+      }
+  
+    // @LINE:25
+    case controllers_RecetaController_crearReceta9_route(params@_) =>
+      call { 
+        controllers_RecetaController_crearReceta9_invoker.call(RecetaController_0.crearReceta())
+      }
+  
+    // @LINE:26
+    case controllers_RecetaController_obtenerReceta10_route(params@_) =>
+      call { 
+        controllers_RecetaController_obtenerReceta10_invoker.call(RecetaController_0.obtenerReceta())
+      }
+  
+    // @LINE:27
+    case controllers_RecetaController_obtenerRecetas11_route(params@_) =>
+      call { 
+        controllers_RecetaController_obtenerRecetas11_invoker.call(RecetaController_0.obtenerRecetas())
+      }
+  
+    // @LINE:28
+    case controllers_RecetaController_editarReceta12_route(params@_) =>
+      call { 
+        controllers_RecetaController_editarReceta12_invoker.call(RecetaController_0.editarReceta())
+      }
+  
+    // @LINE:29
+    case controllers_RecetaController_borrarReceta13_route(params@_) =>
+      call { 
+        controllers_RecetaController_borrarReceta13_invoker.call(RecetaController_0.borrarReceta())
+      }
+  
+    // @LINE:32
+    case controllers_PasoController_crearPaso14_route(params@_) =>
+      call { 
+        controllers_PasoController_crearPaso14_invoker.call(PasoController_3.crearPaso())
+      }
+  
+    // @LINE:33
+    case controllers_PasoController_obtenerPaso15_route(params@_) =>
+      call { 
+        controllers_PasoController_obtenerPaso15_invoker.call(PasoController_3.obtenerPaso())
+      }
+  
+    // @LINE:34
+    case controllers_PasoController_obtenerPasos16_route(params@_) =>
+      call { 
+        controllers_PasoController_obtenerPasos16_invoker.call(PasoController_3.obtenerPasos())
+      }
+  
+    // @LINE:35
+    case controllers_PasoController_editarPaso17_route(params@_) =>
+      call { 
+        controllers_PasoController_editarPaso17_invoker.call(PasoController_3.editarPaso())
+      }
+  
+    // @LINE:36
+    case controllers_PasoController_borrarPaso18_route(params@_) =>
+      call { 
+        controllers_PasoController_borrarPaso18_invoker.call(PasoController_3.borrarPaso())
       }
   }
 }
