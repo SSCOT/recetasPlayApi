@@ -16,10 +16,10 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # Cocineros
 POST    /cocinero/                  controllers.CocineroController.crearCocinero()
-GET     /cocinero/                  controllers.CocineroController.obtenerCocinero()
+GET     /cocinero/:id               controllers.CocineroController.obtenerCocinero(id: Long)
 GET     /cocineros/                 controllers.CocineroController.obtenerCocineros()
-PUT     /cocinero/                  controllers.CocineroController.editarCocinero()
-DELETE  /cocinero/                  controllers.CocineroController.borrarCocinero()
+PUT     /cocinero/:id               controllers.CocineroController.editarCocinero(id: Long)
+DELETE  /cocinero/:id               controllers.CocineroController.borrarCocinero(id: Long)
 
 # Recetas
 POST    /receta/                    controllers.RecetaController.crearReceta()

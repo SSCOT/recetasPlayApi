@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/play/_practica/conf/routes
-// @DATE:Mon Nov 13 02:18:59 CET 2017
+// @DATE:Tue Nov 14 02:31:52 CET 2017
 
 import play.api.mvc.Call
 
@@ -35,27 +35,27 @@ package controllers {
 
   
     // @LINE:19
-    def obtenerCocinero(): Call = {
+    def obtenerCocinero(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "cocinero/")
+      Call("GET", _prefix + { _defaultPrefix } + "cocinero/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
     // @LINE:21
-    def editarCocinero(): Call = {
+    def editarCocinero(id:Long): Call = {
       
-      Call("PUT", _prefix + { _defaultPrefix } + "cocinero/")
+      Call("PUT", _prefix + { _defaultPrefix } + "cocinero/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+    }
+  
+    // @LINE:22
+    def borrarCocinero(id:Long): Call = {
+      
+      Call("DELETE", _prefix + { _defaultPrefix } + "cocinero/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
     // @LINE:20
     def obtenerCocineros(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "cocineros/")
-    }
-  
-    // @LINE:22
-    def borrarCocinero(): Call = {
-      
-      Call("DELETE", _prefix + { _defaultPrefix } + "cocinero/")
     }
   
     // @LINE:18

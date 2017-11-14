@@ -1,0 +1,5 @@
+@(cocinero: Cocinero)
+<cocinero>
+    <nombre>@cocinero.getNombre()</nombre>
+    <apellido>@cocinero.getApellido()</apellido>
+</cocinero>

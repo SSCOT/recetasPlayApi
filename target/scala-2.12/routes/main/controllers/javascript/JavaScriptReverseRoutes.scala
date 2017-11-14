@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/play/_practica/conf/routes
-// @DATE:Mon Nov 13 02:18:59 CET 2017
+// @DATE:Tue Nov 14 02:31:52 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -44,8 +44,8 @@ package controllers.javascript {
     def obtenerCocinero: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CocineroController.obtenerCocinero",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cocinero/"})
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cocinero/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
@@ -54,8 +54,18 @@ package controllers.javascript {
     def editarCocinero: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.CocineroController.editarCocinero",
       """
-        function() {
-          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "cocinero/"})
+        function(id0) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "cocinero/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:22
+    def borrarCocinero: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.CocineroController.borrarCocinero",
+      """
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "cocinero/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
@@ -66,16 +76,6 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cocineros/"})
-        }
-      """
-    )
-  
-    // @LINE:22
-    def borrarCocinero: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.CocineroController.borrarCocinero",
-      """
-        function() {
-          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "cocinero/"})
         }
       """
     )

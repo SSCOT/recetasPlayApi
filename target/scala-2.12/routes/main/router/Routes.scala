@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/play/_practica/conf/routes
-// @DATE:Mon Nov 13 02:18:59 CET 2017
+// @DATE:Tue Nov 14 02:31:52 CET 2017
 
 package router
 
@@ -65,10 +65,10 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """message""", """controllers.AsyncController.message"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.crearCocinero()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.obtenerCocinero()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""" + "$" + """id<[^/]+>""", """controllers.CocineroController.obtenerCocinero(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocineros/""", """controllers.CocineroController.obtenerCocineros()"""),
-    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.editarCocinero()"""),
-    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""", """controllers.CocineroController.borrarCocinero()"""),
+    ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""" + "$" + """id<[^/]+>""", """controllers.CocineroController.editarCocinero(id:Long)"""),
+    ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""" + "$" + """id<[^/]+>""", """controllers.CocineroController.borrarCocinero(id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.crearReceta()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.obtenerReceta()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/""", """controllers.RecetaController.obtenerRecetas()"""),
@@ -178,17 +178,17 @@ class Routes(
 
   // @LINE:19
   private[this] lazy val controllers_CocineroController_obtenerCocinero5_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_CocineroController_obtenerCocinero5_invoker = createInvoker(
-    CocineroController_5.obtenerCocinero(),
+    CocineroController_5.obtenerCocinero(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.CocineroController",
       "obtenerCocinero",
-      Nil,
+      Seq(classOf[Long]),
       "GET",
-      this.prefix + """cocinero/""",
+      this.prefix + """cocinero/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )
@@ -214,17 +214,17 @@ class Routes(
 
   // @LINE:21
   private[this] lazy val controllers_CocineroController_editarCocinero7_route = Route("PUT",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_CocineroController_editarCocinero7_invoker = createInvoker(
-    CocineroController_5.editarCocinero(),
+    CocineroController_5.editarCocinero(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.CocineroController",
       "editarCocinero",
-      Nil,
+      Seq(classOf[Long]),
       "PUT",
-      this.prefix + """cocinero/""",
+      this.prefix + """cocinero/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )
@@ -232,17 +232,17 @@ class Routes(
 
   // @LINE:22
   private[this] lazy val controllers_CocineroController_borrarCocinero8_route = Route("DELETE",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("cocinero/"), DynamicPart("id", """[^/]+""",true)))
   )
   private[this] lazy val controllers_CocineroController_borrarCocinero8_invoker = createInvoker(
-    CocineroController_5.borrarCocinero(),
+    CocineroController_5.borrarCocinero(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.CocineroController",
       "borrarCocinero",
-      Nil,
+      Seq(classOf[Long]),
       "DELETE",
-      this.prefix + """cocinero/""",
+      this.prefix + """cocinero/""" + "$" + """id<[^/]+>""",
       """""",
       Seq()
     )
@@ -463,8 +463,8 @@ class Routes(
   
     // @LINE:19
     case controllers_CocineroController_obtenerCocinero5_route(params@_) =>
-      call { 
-        controllers_CocineroController_obtenerCocinero5_invoker.call(CocineroController_5.obtenerCocinero())
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_CocineroController_obtenerCocinero5_invoker.call(CocineroController_5.obtenerCocinero(id))
       }
   
     // @LINE:20
@@ -475,14 +475,14 @@ class Routes(
   
     // @LINE:21
     case controllers_CocineroController_editarCocinero7_route(params@_) =>
-      call { 
-        controllers_CocineroController_editarCocinero7_invoker.call(CocineroController_5.editarCocinero())
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_CocineroController_editarCocinero7_invoker.call(CocineroController_5.editarCocinero(id))
       }
   
     // @LINE:22
     case controllers_CocineroController_borrarCocinero8_route(params@_) =>
-      call { 
-        controllers_CocineroController_borrarCocinero8_invoker.call(CocineroController_5.borrarCocinero())
+      call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_CocineroController_borrarCocinero8_invoker.call(CocineroController_5.borrarCocinero(id))
       }
   
     // @LINE:25

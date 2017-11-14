@@ -58,7 +58,7 @@ Seq[Any](format.raw/*5.19*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Mon Nov 13 01:17:44 CET 2017
+                  DATE: Mon Nov 13 16:43:43 CET 2017
                   SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/play/_practica/app/views/index.scala.html
                   HASH: 9040cdc6391df1f5c9d9a05a763073d6fd21d0f1
                   MATRIX: 1037->95|1149->112|1178->308|1206->310|1238->333|1278->335|1311->464|1343->470|1396->502|1429->505
