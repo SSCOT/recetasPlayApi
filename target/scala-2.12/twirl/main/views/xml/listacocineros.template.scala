@@ -22,22 +22,28 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object listacocineros extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.XmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.XmlFormat.Appendable]](play.twirl.api.XmlFormat) with _root_.play.twirl.api.Template0[play.twirl.api.XmlFormat.Appendable] {
+object listacocineros extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.XmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.XmlFormat.Appendable]](play.twirl.api.XmlFormat) with _root_.play.twirl.api.Template1[List[Cocinero],play.twirl.api.XmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.XmlFormat.Appendable = {
+  def apply/*1.2*/(cocineros: List[Cocinero]):play.twirl.api.XmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any]()
+Seq[Any](format.raw/*1.29*/("""
+        """),format.raw/*2.9*/("""<?xml version="1.0" encoding="UTF-8"?>
+<cocineros>
+    """),_display_(/*4.6*/for(c <- cocineros) yield /*4.25*/ {_display_(Seq[Any](format.raw/*4.27*/("""
+    """),_display_(/*5.6*/cocinero(c)),format.raw/*5.17*/("""
+    """)))}),format.raw/*6.6*/("""
+"""),format.raw/*7.1*/("""</cocineros>"""))
       }
     }
   }
 
-  def render(): play.twirl.api.XmlFormat.Appendable = apply()
+  def render(cocineros:List[Cocinero]): play.twirl.api.XmlFormat.Appendable = apply(cocineros)
 
-  def f:(() => play.twirl.api.XmlFormat.Appendable) = () => apply()
+  def f:((List[Cocinero]) => play.twirl.api.XmlFormat.Appendable) = (cocineros) => apply(cocineros)
 
   def ref: this.type = this
 
@@ -46,11 +52,11 @@ Seq[Any]()
 
               /*
                   -- GENERATED --
-                  DATE: Tue Nov 14 02:32:43 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/play/_practica/app/views/listacocineros.scala.xml
-                  HASH: 043fe834a90ea852be499a7f53b161e390c3687c
-                  MATRIX: 
-                  LINES: 
+                  DATE: Mon Dec 18 21:24:01 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/listacocineros.scala.xml
+                  HASH: 958365ce0fad2ed6174170fdde06a5c7c2506b43
+                  MATRIX: 959->1|1080->28|1115->37|1196->93|1230->112|1269->114|1300->120|1331->131|1366->137|1393->138
+                  LINES: 28->1|33->1|34->2|36->4|36->4|36->4|37->5|37->5|38->6|39->7
                   -- GENERATED --
               */
           

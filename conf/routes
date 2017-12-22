@@ -23,14 +23,14 @@ DELETE  /cocinero/:id               controllers.CocineroController.borrarCociner
 
 # Recetas
 POST    /receta/                    controllers.RecetaController.crearReceta()
-GET     /receta/                    controllers.RecetaController.obtenerReceta()
-GET     /recetas/                   controllers.RecetaController.obtenerRecetas()
-PUT     /receta/                    controllers.RecetaController.editarReceta()
-DELETE  /receta/                    controllers.RecetaController.borrarReceta()
+GET     /receta/:id                 controllers.RecetaController.obtenerReceta(id: Long)
+GET     /recetas/:idCocinero        controllers.RecetaController.obtenerRecetas(idCocinero: Long)
+PUT     /receta/:id                 controllers.RecetaController.editarReceta(id: Long)
+DELETE  /receta/:id                 controllers.RecetaController.borrarReceta(id: Long)
 
 # Pasos
 POST    /paso/                      controllers.PasoController.crearPaso()
-GET     /paso/                      controllers.PasoController.obtenerPaso()
-GET     /pasos/                     controllers.PasoController.obtenerPasos()
-PUT     /paso/                      controllers.PasoController.editarPaso()
-DELETE  /paso/                      controllers.PasoController.borrarPaso()
+# GET   /paso/                   controllers.PasoController.obtenerPaso()
+# GET     /pasos/:idReceta            controllers.PasoController.obtenerPasos(idReceta: Long)
+# PUT     /paso/:id                   controllers.PasoController.editarPaso(id: Long)
+# DELETE  /paso/:id                   controllers.PasoController.borrarPaso(id: Long)

@@ -10,9 +10,17 @@
             </ProjectSettingsEntry>
           </value>
         </entry>
+        <entry key="play-java-starter-example">
+          <value>
+            <ProjectSettingsEntry>
+              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.12/jars/play_2.12-2.6.7.jar" />
+            </ProjectSettingsEntry>
+          </value>
+        </entry>
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
+              <option name="sourceDir" value="$PROJECT_DIR$/app" />
               <option name="confDir" value="$PROJECT_DIR$/app" />
               <option name="templateImports">
                 <list>
@@ -44,7 +52,7 @@
                   <option value="play.libs.F" />
                 </list>
               </option>
-              <option name="uri" value="$USER_HOME$/_MASTER%20MIMO/_proyectos/play/_practica" />
+              <option name="uri" value="$USER_HOME$/_MASTER%20MIMO/_proyectos/2%20CLOUD/play/_practica" />
             </ProjectSettingsEntry>
           </value>
         </entry>

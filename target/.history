@@ -36,3 +36,9 @@ compile
 h2-browser
 run
 exit
+compile
+run
+h2-browser
+run
+h2-browser
+run

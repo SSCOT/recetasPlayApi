@@ -1,0 +1,7 @@
+@(cocineros: List[Cocinero])
+        <?xml version="1.0" encoding="UTF-8"?>
+<cocineros>
+    @for(c <- cocineros) {
+    @cocinero(c)
+    }
+</cocineros>

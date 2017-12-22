@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/play/_practica/conf/routes
-// @DATE:Tue Nov 14 02:31:52 CET 2017
+// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes
+// @DATE:Tue Dec 19 11:48:55 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -160,32 +160,32 @@ package controllers.javascript {
     }
 
   
-    // @LINE:28
-    def editarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetaController.editarReceta",
-      """
-        function() {
-          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/"})
-        }
-      """
-    )
-  
     // @LINE:27
     def obtenerRecetas: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.obtenerRecetas",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/"})
+        function(idCocinero0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idCocinero", idCocinero0))})
         }
       """
     )
   
-    // @LINE:29
-    def borrarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetaController.borrarReceta",
+    // @LINE:28
+    def editarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetaController.editarReceta",
       """
-        function() {
-          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/"})
+        function(id0) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:26
+    def obtenerReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetaController.obtenerReceta",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
@@ -200,12 +200,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:26
-    def obtenerReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.RecetaController.obtenerReceta",
+    // @LINE:29
+    def borrarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetaController.borrarReceta",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/"})
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
         }
       """
     )
@@ -219,46 +219,6 @@ package controllers.javascript {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
-  
-    // @LINE:34
-    def obtenerPasos: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PasoController.obtenerPasos",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "pasos/"})
-        }
-      """
-    )
-  
-    // @LINE:33
-    def obtenerPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PasoController.obtenerPaso",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "paso/"})
-        }
-      """
-    )
-  
-    // @LINE:35
-    def editarPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PasoController.editarPaso",
-      """
-        function() {
-          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "paso/"})
-        }
-      """
-    )
-  
-    // @LINE:36
-    def borrarPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PasoController.borrarPaso",
-      """
-        function() {
-          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "paso/"})
-        }
-      """
-    )
   
     // @LINE:32
     def crearPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(

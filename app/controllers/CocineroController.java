@@ -3,14 +3,19 @@ package controllers;
 import models.Cocinero;
 import play.data.Form;
 import play.data.FormFactory;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class CocineroController extends Controller {
+
+    List<Cocinero> listaCoc = new ArrayList<Cocinero>();
 
     @Inject
     FormFactory frmFactory;
@@ -31,17 +36,23 @@ public class CocineroController extends Controller {
         // Ya tenemos el nuevo cocinero
         Cocinero nuevoCocinero = frm.get();
 
+        // Comprobamos que el cocinero no existe con el nombre y los apellidos
+        if (Cocinero.findByNombre(nuevoCocinero.getNombre(), nuevoCocinero.getApellido()) != null) {
+            return Results.badRequest();
+        }
+
         // Checkeamos y guardamos
         if (nuevoCocinero.checkAndSave()) {
             return Results.created();
         } else {
             return Results.badRequest();
         }
+
     }
 
     public Result editarCocinero(Long id) {
         // Comprobamos que el usuario existe
-        if(Cocinero.findById(id) == null){
+        if (Cocinero.findById(id) == null) {
             return Results.notFound();
         }
 
@@ -59,7 +70,25 @@ public class CocineroController extends Controller {
     }
 
     public Result obtenerCocineros() {
-        return Results.ok("Obtenemos los cocineros");
+        List<Cocinero> listaCocineros = Cocinero.findAll();
+
+
+        if (listaCocineros == null) {
+            return Results.badRequest();
+        }
+
+        if (request().accepts("application/xml")) {
+            return Results
+                    .ok(views.xml.listacocineros.render(listaCocineros));
+            // return Results.ok();
+        } else if (request().accepts("application/json")) {
+            return Results
+                    .ok(Json.toJson(listaCocineros));
+            //.ok(Json.toJson(listaCocineros)).as("application/json");
+        } else {
+            return Results
+                    .status(415);
+        }
     }
 
     public Result obtenerCocinero(Long id) {
@@ -85,11 +114,12 @@ public class CocineroController extends Controller {
 
     public Result borrarCocinero(Long id) {
         Cocinero cocineroBorrar = Cocinero.findById(id);
-        if (cocineroBorrar != null){
-            if(!cocineroBorrar.delete()){
+        if (cocineroBorrar != null) {
+            if (!cocineroBorrar.delete()) {
                 Results.internalServerError();
             }
         }
+        // Siempre devuelve OK para la idempotencia
         return Results.ok();
     }
 

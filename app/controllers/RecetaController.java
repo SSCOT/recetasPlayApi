@@ -17,19 +17,19 @@ public class RecetaController extends Controller {
         return Results.ok("Creamos un receta");
     }
 
-    public Result obtenerRecetas(){
+    public Result obtenerRecetas(Long idCocinero){
         return Results.ok("Obtenemos las Recetas");
     }
 
-    public Result obtenerReceta(){
+    public Result obtenerReceta(Long id){
         return Results.ok("Obtenemos una Receta concreto");
     }
 
-    public Result editarReceta(){
+    public Result editarReceta(Long id){
         return Results.ok("editamos un Recetas");
     }
 
-    public Result borrarReceta(){
+    public Result borrarReceta(Long id){
         return Results.ok("Borramos un Recetas");
     }
 

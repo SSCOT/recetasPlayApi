@@ -57,22 +57,6 @@ public class Cocinero extends Model {
         this.id = id;
     }
 
-    public String getRestaurante() {
-        return restaurante;
-    }
-
-    public void setRestaurante(String restaurante) {
-        this.restaurante = restaurante;
-    }
-
-    public List<Receta> getRecetas() {
-        return recetas;
-    }
-
-    public void setRecetas(List<Receta> recetas) {
-        this.recetas = recetas;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -98,6 +82,22 @@ public class Cocinero extends Model {
         this.tipo = tipo;
     }
 
+    public String getRestaurante() {
+        return restaurante;
+    }
+
+    public void setRestaurante(String restaurante) {
+        this.restaurante = restaurante;
+    }
+
+    public List<Receta> getRecetas() {
+        return recetas;
+    }
+
+    public void setRecetas(List<Receta> recetas) {
+        this.recetas = recetas;
+    }
+
 
     //========================================
     //    MÉTODOS DE BASE DE DATOS
@@ -105,6 +105,15 @@ public class Cocinero extends Model {
 
     public static Cocinero findById(Long id) {
         return find.byId(id);
+    }
+
+    public static Cocinero findByNombre(String nombre, String apellido) {
+        return find
+                .query()
+                .where()
+                .eq("nombre", nombre)
+                .eq("apellido", apellido)
+                .findOne();
     }
 
     public static List<Cocinero> findAll() {

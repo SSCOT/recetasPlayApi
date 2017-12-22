@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/play/_practica/conf/routes
-// @DATE:Tue Nov 14 02:31:52 CET 2017
+// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes
+// @DATE:Tue Dec 19 11:48:55 CET 2017
 
 import play.api.mvc.Call
 
@@ -118,22 +118,22 @@ package controllers {
     }
 
   
-    // @LINE:28
-    def editarReceta(): Call = {
-      
-      Call("PUT", _prefix + { _defaultPrefix } + "receta/")
-    }
-  
     // @LINE:27
-    def obtenerRecetas(): Call = {
+    def obtenerRecetas(idCocinero:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "recetas/")
+      Call("GET", _prefix + { _defaultPrefix } + "recetas/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idCocinero", idCocinero)))
     }
   
-    // @LINE:29
-    def borrarReceta(): Call = {
+    // @LINE:28
+    def editarReceta(id:Long): Call = {
       
-      Call("DELETE", _prefix + { _defaultPrefix } + "receta/")
+      Call("PUT", _prefix + { _defaultPrefix } + "receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+    }
+  
+    // @LINE:26
+    def obtenerReceta(id:Long): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
     // @LINE:25
@@ -142,10 +142,10 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "receta/")
     }
   
-    // @LINE:26
-    def obtenerReceta(): Call = {
+    // @LINE:29
+    def borrarReceta(id:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "receta/")
+      Call("DELETE", _prefix + { _defaultPrefix } + "receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
   }
@@ -156,30 +156,6 @@ package controllers {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
-  
-    // @LINE:34
-    def obtenerPasos(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "pasos/")
-    }
-  
-    // @LINE:33
-    def obtenerPaso(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "paso/")
-    }
-  
-    // @LINE:35
-    def editarPaso(): Call = {
-      
-      Call("PUT", _prefix + { _defaultPrefix } + "paso/")
-    }
-  
-    // @LINE:36
-    def borrarPaso(): Call = {
-      
-      Call("DELETE", _prefix + { _defaultPrefix } + "paso/")
-    }
   
     // @LINE:32
     def crearPaso(): Call = {
