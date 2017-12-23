@@ -145,14 +145,6 @@ public class Cocinero extends Model {
         return true;
     }
 
-    public void checkAndDelete() {
-        // Si el usuario existe lo eliminamos. Por la idempotencia devolvemos siempre ok.
-        if (findById(this.getId()) != null) {
-            this.delete();
-        }
-    }
-
-
     //========================================
     //    MÉTODOS DE MUESTREO
     //========================================

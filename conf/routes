@@ -25,12 +25,22 @@ DELETE  /cocinero/:id               controllers.CocineroController.borrarCociner
 POST    /receta/                    controllers.RecetaController.crearReceta()
 GET     /receta/:id                 controllers.RecetaController.obtenerReceta(id: Long)
 GET     /recetas/:idCocinero        controllers.RecetaController.obtenerRecetas(idCocinero: Long)
+GET     /receta/:id/ingredientes    controllers.RecetaController.obtenerIngredientes(id: Long)
+
 PUT     /receta/:id                 controllers.RecetaController.editarReceta(id: Long)
 DELETE  /receta/:id                 controllers.RecetaController.borrarReceta(id: Long)
 
 # Pasos
 POST    /paso/                      controllers.PasoController.crearPaso()
-# GET   /paso/                   controllers.PasoController.obtenerPaso()
-# GET     /pasos/:idReceta            controllers.PasoController.obtenerPasos(idReceta: Long)
-# PUT     /paso/:id                   controllers.PasoController.editarPaso(id: Long)
-# DELETE  /paso/:id                   controllers.PasoController.borrarPaso(id: Long)
+# GET   /paso/                      controllers.PasoController.obtenerPaso()
+# GET     /pasos/:idReceta          controllers.PasoController.obtenerPasos(idReceta: Long)
+# PUT     /paso/:id                 controllers.PasoController.editarPaso(id: Long)
+# DELETE  /paso/:id                 controllers.PasoController.borrarPaso(id: Long)
+
+# Ingredientes
+GET     /ingredientes               controllers.IngredienteController.obtenerIngredientes()
+
+POST    /ingrediente/:nombre        controllers.IngredienteController.crearIngrediente(nombre: String)
+PUT     /ingrediente/:id/:nombre    controllers.IngredienteController.editarIngrediente(id: Long, nombre: String)
+DELETE  /ingrediente/:id            controllers.IngredienteController.borrarIngrediente(id: Long)
+# tags

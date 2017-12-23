@@ -25,6 +25,10 @@ public class RecetaController extends Controller {
         return Results.ok("Obtenemos una Receta concreto");
     }
 
+    public Result obtenerIngredientes(Long id){
+        return Results.ok();
+    }
+
     public Result editarReceta(Long id){
         return Results.ok("editamos un Recetas");
     }

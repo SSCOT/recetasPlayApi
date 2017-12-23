@@ -113,12 +113,12 @@ public class CocineroController extends Controller {
     }
 
     public Result borrarCocinero(Long id) {
-        Cocinero cocineroBorrar = Cocinero.findById(id);
-        if (cocineroBorrar != null) {
-            if (!cocineroBorrar.delete()) {
-                Results.internalServerError();
-            }
-        }
+        Cocinero cocinero = Cocinero.findById(id);
+
+        // Si encuentra al cocinero lo elimina
+        if(cocinero != null)
+            cocinero.delete();
+
         // Siempre devuelve OK para la idempotencia
         return Results.ok();
     }

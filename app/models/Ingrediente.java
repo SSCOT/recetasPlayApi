@@ -1,7 +1,9 @@
 package models;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Finder;
 import io.ebean.Model;
+import play.libs.Json;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -25,6 +27,10 @@ public class Ingrediente extends Model {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -41,18 +47,53 @@ public class Ingrediente extends Model {
         this.recetas = recetas;
     }
 
+
+    //========================================
+    //    MÉTODOS DE BASE DE DATOS
+    //========================================
+
+    public static Ingrediente findById(Long id) {
+        return find.byId(id);
+    }
+
+    public static Ingrediente findByNombre(String nombre) {
+        return find
+                .query()
+                .where()
+                .eq("nombre", nombre)
+                .findOne();
+    }
+
+    public static List<Ingrediente> searchIngrediente(String nombreParcial) {
+        return find
+                .query()
+                .where()
+                .like("nombre", "%" + nombreParcial + "%")
+                .findList();
+    }
+
+    public static List<Ingrediente> findAll() {
+        // Falta el paginado
+        return find.all();
+    }
+
     public boolean checkAndSave() {
 
-
-        // Comprobamos que tiene nombre apellidos y tipo
+        // Comprobamos que tiene nombre
         if (this.nombre.isEmpty()) {
             return false;
         }
 
-        // Comprobamos que no existe ningún otro ingrediente con el mismo nombre
-
-
         this.save();
         return true;
     }
+
+    //========================================
+    //    MÉTODOS DE MUESTREO
+    //========================================
+
+    public JsonNode toJson() {
+        return Json.toJson(this);
+    }
+
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes
-// @DATE:Tue Dec 19 11:48:55 CET 2017
+// @DATE:Sat Dec 23 04:59:30 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -112,6 +112,56 @@ package controllers.javascript {
   
   }
 
+  // @LINE:41
+  class ReverseIngredienteController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:41
+    def obtenerIngredientes: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.IngredienteController.obtenerIngredientes",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ingredientes"})
+        }
+      """
+    )
+  
+    // @LINE:45
+    def borrarIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.IngredienteController.borrarIngrediente",
+      """
+        function(id0) {
+          return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "ingrediente/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:44
+    def editarIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.IngredienteController.editarIngrediente",
+      """
+        function(id0,nombre1) {
+          return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "ingrediente/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0)) + "/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("nombre", nombre1))})
+        }
+      """
+    )
+  
+    // @LINE:43
+    def crearIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.IngredienteController.crearIngrediente",
+      """
+        function(nombre0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "ingrediente/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[String]].javascriptUnbind + """)("nombre", nombre0))})
+        }
+      """
+    )
+  
+  }
+
   // @LINE:6
   class ReverseHomeController(_prefix: => String) {
 
@@ -170,7 +220,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:30
     def editarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.editarReceta",
       """
@@ -200,7 +250,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:31
     def borrarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.borrarReceta",
       """
@@ -210,9 +260,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:28
+    def obtenerIngredientes: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RecetaController.obtenerIngredientes",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "receta/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0)) + "/ingredientes"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:32
+  // @LINE:34
   class ReversePasoController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -220,7 +280,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
+    // @LINE:34
     def crearPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.crearPaso",
       """
