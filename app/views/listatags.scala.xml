@@ -1,0 +1,7 @@
+@(tags: List[Tag])
+        <?xml version="1.0" encoding="UTF-8"?>
+<tags>
+    @for(i <- tags) {
+    @tag(i)
+    }
+</tags>

@@ -1,0 +1,5 @@
+@(paso: Paso)
+<paso>
+    <descripcion>@paso.getDescripcion()</descripcion>
+    <tiempo>@paso.getTiempo()</tiempo>
+</paso>

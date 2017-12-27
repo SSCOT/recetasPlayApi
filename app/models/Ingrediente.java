@@ -1,5 +1,6 @@
 package models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Finder;
 import io.ebean.Model;
@@ -12,24 +13,15 @@ import javax.persistence.ManyToMany;
 import java.util.List;
 
 @Entity
-public class Ingrediente extends Model {
-    @Id
-    public Long id;
+public class Ingrediente extends ModeloBase {
 
     private String nombre;
 
     @ManyToMany(cascade = CascadeType.ALL)
+    @JsonBackReference
     public List<Receta> recetas;
 
     public static final Finder<Long, Ingrediente> find = new Finder<>(Ingrediente.class);
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;
@@ -64,7 +56,7 @@ public class Ingrediente extends Model {
                 .findOne();
     }
 
-    public static List<Ingrediente> searchIngrediente(String nombreParcial) {
+    public static List<Ingrediente> busquedaIngrediente(String nombreParcial) {
         return find
                 .query()
                 .where()

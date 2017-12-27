@@ -52,7 +52,7 @@ Seq[Any](format.raw/*1.35*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Sat Dec 23 05:01:15 CET 2017
+                  DATE: Tue Dec 26 23:36:58 CET 2017
                   SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/listaingredientes.scala.xml
                   HASH: f89c69729b8b18e10de91e73a3b04c221697e9a6
                   MATRIX: 965->1|1092->34|1127->43|1211->102|1248->124|1287->126|1318->132|1352->146|1387->152|1414->153

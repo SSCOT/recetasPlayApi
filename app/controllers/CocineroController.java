@@ -15,8 +15,6 @@ import java.util.List;
 
 public class CocineroController extends Controller {
 
-    List<Cocinero> listaCoc = new ArrayList<Cocinero>();
-
     @Inject
     FormFactory frmFactory;
 
@@ -42,7 +40,7 @@ public class CocineroController extends Controller {
         }
 
         // Checkeamos y guardamos
-        if (nuevoCocinero.checkAndSave()) {
+        if (nuevoCocinero.checkAndCreate()) {
             return Results.created();
         } else {
             return Results.badRequest();
@@ -97,7 +95,6 @@ public class CocineroController extends Controller {
         if (cocinero == null) {
             return Results.notFound();
         }
-
 
         if (request().accepts("application/xml")) {
             return Results

@@ -1,6 +1,5 @@
 package controllers;
 
-import models.Cocinero;
 import models.Ingrediente;
 import play.data.Form;
 import play.data.FormFactory;
@@ -19,16 +18,16 @@ public class IngredienteController extends Controller {
     FormFactory frmFactory;
 
     public Result index() {
-        return ok("CocineroController");
+        return ok("IngredienteController");
     }
 
     public Result crearIngrediente(String nombre) {
 
-        if(nombre == "")
+        if (nombre == "")
             return Results.badRequest();
 
         // Comprobamos si existe ya el ingrediente
-        if(Ingrediente.findByNombre(nombre) != null){
+        if (Ingrediente.findByNombre(nombre) != null) {
             return Results.badRequest();
         }
 
@@ -45,7 +44,7 @@ public class IngredienteController extends Controller {
     }
 
     public Result editarIngrediente(Long id, String nuevoNombre) {
-        if(id == null || nuevoNombre == ""){
+        if (id == null || nuevoNombre == "") {
             return Results.badRequest();
         }
 
@@ -59,8 +58,8 @@ public class IngredienteController extends Controller {
 
     public Result borrarIngrediente(Long id) {
         Ingrediente ingredienteBorrar = Ingrediente.findById(id);
-        if (ingredienteBorrar != null){
-            if(!ingredienteBorrar.delete()){
+        if (ingredienteBorrar != null) {
+            if (!ingredienteBorrar.delete()) {
                 Results.internalServerError();
             }
         }
@@ -78,87 +77,49 @@ public class IngredienteController extends Controller {
         if (request().accepts("application/xml")) {
             return Results
                     .ok(views.xml.listaingredientes.render(listaIngredientes));
-            // return Results.ok();
         } else if (request().accepts("application/json")) {
             return Results
                     .ok(Json.toJson(listaIngredientes));
-            //.ok(Json.toJson(listaCocineros)).as("application/json");
         } else {
             return Results
                     .status(415);
         }
     }
 
-    /*public Result editarCocinero(Long id) {
-        // Comprobamos que el usuario existe
-        if(Cocinero.findById(id) == null){
+    public Result editarIngrediente(Long id) {
+        if (Ingrediente.findById(id) == null) {
             return Results.notFound();
         }
 
-        // Recogemos los datos por formulario
-        Form<Cocinero> frm = frmFactory.form(Cocinero.class).bindFromRequest();
+        Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
         if (frm.hasErrors()) {
             return status(409, frm.errorsAsJson());
         }
 
-        Cocinero cocineroUpdate = frm.get();
-        cocineroUpdate.setId(id);
-        cocineroUpdate.update();
+        Ingrediente ingredienteUpdate = frm.get();
+        ingredienteUpdate.setId(id);
+        ingredienteUpdate.update();
         return Results.ok();
 
     }
 
-    public Result obtenerCocineros() {
-        List<Cocinero> listaCocineros = Cocinero.findAll();
+    public Result obtenerIngrediente(Long id) {
+        Ingrediente ingrediente = Ingrediente.findById(id);
 
-
-        if(listaCocineros == null) {
-            return Results.badRequest();
-        }
-
-        if (request().accepts("application/xml")) {
-            return Results
-                    .ok(views.xml.listacocineros.render(listaCocineros));
-            // return Results.ok();
-        } else if (request().accepts("application/json")) {
-
-            return Results.ok();
-                    //.ok(Json.toJson(listaCocineros));
-        } else {
-            return Results
-                    .status(415);
-        }
-    }
-
-    public Result obtenerCocinero(Long id) {
-        Cocinero cocinero = Cocinero.findById(id);
-
-        if (cocinero == null) {
+        if (ingrediente == null) {
             return Results.notFound();
         }
 
 
         if (request().accepts("application/xml")) {
             return Results
-                    .ok(views.xml.cocinero.render(cocinero));
-            // return Results.ok();
+                    .ok(views.xml.ingrediente.render(ingrediente));
         } else if (request().accepts("application/json")) {
             return Results
-                    .ok(cocinero.toJson());
+                    .ok(ingrediente.toJson());
         } else {
             return Results
                     .status(415);
         }
     }
-
-    public Result borrarCocinero(Long id) {
-        Cocinero cocineroBorrar = Cocinero.findById(id);
-        if (cocineroBorrar != null){
-            if(!cocineroBorrar.delete()){
-                Results.internalServerError();
-            }
-        }
-        return Results.ok();
-    }*/
-
 }

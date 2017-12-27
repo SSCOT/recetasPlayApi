@@ -1,0 +1,4 @@
+@(tag: Tag)
+<tag>
+    <texto>@tag.getTexto()</texto>
+</tag>
