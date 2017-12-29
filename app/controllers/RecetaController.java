@@ -1,6 +1,7 @@
 package controllers;
 
 import io.ebean.Ebean;
+import io.ebean.PagedList;
 import models.Cocinero;
 import models.Ingrediente;
 import models.Receta;
@@ -87,8 +88,9 @@ public class RecetaController extends Controller {
         return Results.ok("Añadimos un paso determinado en el lugar que queremos");
     }
 
-    public Result obtenerRecetas() {
-        List<Receta> listaRecetas = Receta.findAll();
+    public Result obtenerRecetas(Integer page) {
+        PagedList<Receta> listaPaginadaRecetas = Receta.findAll(page);
+        List<Receta> listaRecetas = listaPaginadaRecetas.getList();
 
         if (listaRecetas == null) {
             return Results.badRequest();
@@ -96,7 +98,8 @@ public class RecetaController extends Controller {
 
         if (request().accepts("application/xml")) {
             return Results
-                    .ok(views.xml.listarecetas.render(listaRecetas));
+                    .ok();
+                    // .ok(views.xml.listarecetas.render(listaRecetas));
         } else if (request().accepts("application/json")) {
             return Results
                     .ok(Json.toJson(listaRecetas));

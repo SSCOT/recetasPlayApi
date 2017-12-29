@@ -8,6 +8,9 @@ import play.libs.Json;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.OrderBy;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Entity
@@ -15,7 +18,7 @@ public class Paso extends ModeloBase {
 
     private Long tiempo;
     private String descripcion;
-    private int indice;
+    private Long indice;
 
     @ManyToOne
     @JsonBackReference
@@ -39,11 +42,11 @@ public class Paso extends ModeloBase {
         this.descripcion = descripcion;
     }
 
-    public int getIndice() {
+    public Long getIndice() {
         return indice;
     }
 
-    public void setIndice(int indice) {
+    public void setIndice(Long indice) {
         this.indice = indice;
     }
 
@@ -64,7 +67,7 @@ public class Paso extends ModeloBase {
         return find.byId(id);
     }
 
-    public static List<Paso> findByReceta(Long idReceta){
+    public static List<Paso> findByReceta(Long idReceta) {
 
         return find
                 .query()
@@ -73,17 +76,99 @@ public class Paso extends ModeloBase {
                 .findList();
     }
 
+    public static Paso findByIndice(Long indice) {
+        return find
+                .query()
+                .where()
+                .eq("indice", indice)
+                .findOne();
+    }
+
     public boolean checkAndCreate() {
         // Comprobamos que exista una descripción, dado que es el único aspecto obligatorio
         if (this.descripcion.isEmpty()) {
             return false;
         }
 
+        // Comprobamos que hay una receta asociada y esta existe
+        if (this.p_receta.id == null) {
+            return false;
+        }
+
+        Receta recetaAsociada = Receta.findById(this.p_receta.id);
+        if (recetaAsociada == null) {
+            return false;
+        }
+
+        boolean recolocacion = false;
+        // Si se indica un indice
+        if (this.indice != null) {
+            // Existe un paso con el mismo indice. Hay que recolocar los pasos (reasignación de indices)
+            if (Paso.findByIndice(this.indice) != null) {
+                // Hay que recolocar, pero lo realizamos en el TRY por seguridad
+                recolocacion = true;
+            } else {
+                // El índice no está asignado a nadie, pero debemos vigilar que sea exactamente el indice siguiente
+                if (indice != find.all().size() + 1) {
+                    return false;
+                }
+            }
+        } else {
+            // Asignamos el indice siguiente en nuestra lista de pasos
+            this.indice = new Long(find.all().size() + 1);
+        }
+
         // Una vez hechas las comprobaciones creamos el paso
         Ebean.beginTransaction();
         try {
+
+            if (recolocacion) {
+                List<Paso> listaPasos = find.query().where().orderBy("indice").findList();
+                Long indiceTemp = this.indice;
+
+                Iterator<Paso> iterator = listaPasos.iterator();
+                while (iterator.hasNext()) {
+                    Paso pasoTemp = iterator.next();
+                    if (pasoTemp.indice == indiceTemp) {
+                        Paso pasoUpdate = Paso.findById(pasoTemp.id);
+                        indiceTemp++;
+                        pasoUpdate.setIndice(indiceTemp);
+                        pasoUpdate.save();
+                    }
+                }
+            }
+
+
             this.save();
             Ebean.commitTransaction();
+        } finally {
+            Ebean.endTransaction();
+        }
+
+        return true;
+    }
+
+    public boolean checkAndDelete() {
+
+        // Reordenamos los indices de los pasos
+        List<Paso> listaPasos = find.query().where().orderBy("indice").findList();
+
+        Long indiceTemp = this.id + 1;
+
+        Ebean.beginTransaction();
+        try {
+            Iterator<Paso> iterator = listaPasos.iterator();
+            while (iterator.hasNext()) {
+                Paso pasoTemp = iterator.next();
+                if (pasoTemp.indice == indiceTemp) {
+                    Paso pasoUpdate = Paso.findById(pasoTemp.id);
+                    pasoUpdate.setIndice(indiceTemp - 1);
+                    indiceTemp++;
+                    pasoUpdate.save();
+                }
+            }
+
+            this.delete();
         } finally {
             Ebean.endTransaction();
         }

@@ -1,7 +1,7 @@
 [0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/application.conf,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/target/scala-2.12/classes/application.conf)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/evolutions,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/target/scala-2.12/classes/evolutions)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/logback.xml,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/target/scala-2.12/classes/logback.xml)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/target/scala-2.12/classes/routes)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/evolutions/default,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/target/scala-2.12/classes/evolutions/default)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/evolutions/default/1.sql,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/target/scala-2.12/classes/evolutions/default/1.sql)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/application.conf,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/evolutions,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/evolutions)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/logback.xml,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/evolutions/default,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/evolutions/default)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/evolutions/default/1.sql,/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/evolutions/default/1.sql)[0m

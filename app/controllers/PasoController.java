@@ -54,9 +54,14 @@ public class PasoController extends Controller {
             return status(409, frm.errorsAsJson());
         }
 
-        Paso pasoUpdate = frm.get();
+        // El indice de ordenación no se puede editar. Lo controlamos
+        Paso pasoInicial = frm.get();
+        Paso pasoUpdate = new Paso();
         pasoUpdate.setId(id);
+        pasoUpdate.setDescripcion(pasoInicial.getDescripcion());
+        pasoUpdate.setTiempo(pasoInicial.getTiempo());
         pasoUpdate.update();
+
         return Results.ok();
 
     }
@@ -106,7 +111,7 @@ public class PasoController extends Controller {
         Paso paso = Paso.findById(id);
 
         if(paso != null)
-            paso.delete();
+            paso.checkAndDelete();
 
         return Results.ok();
     }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes
-// @DATE:Tue Dec 26 23:36:57 CET 2017
+// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
+// @DATE:Fri Dec 29 03:56:23 CET 2017
 
 import play.api.mvc.Call
 
@@ -158,9 +158,9 @@ package controllers {
     }
   
     // @LINE:27
-    def obtenerRecetas(): Call = {
+    def obtenerRecetas(page:Integer): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "recetas/")
+      Call("GET", _prefix + { _defaultPrefix } + "recetas/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)))
     }
   
     // @LINE:30
@@ -196,7 +196,7 @@ package controllers {
     // @LINE:28
     def obtenerRecetasCocinero(idCocinero:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "recetas/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idCocinero", idCocinero)))
+      Call("GET", _prefix + { _defaultPrefix } + "recetas/cocinero/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idCocinero", idCocinero)))
     }
   
     // @LINE:29

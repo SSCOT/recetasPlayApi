@@ -34,7 +34,7 @@ create table paso (
   id                            bigint auto_increment not null,
   tiempo                        bigint,
   descripcion                   varchar(255),
-  indice                        integer not null,
+  indice                        bigint,
   p_receta_id                   bigint,
   version                       bigint not null,
   fecha_creacion                timestamp not null,

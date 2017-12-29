@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes
-// @DATE:Tue Dec 26 23:36:57 CET 2017
+// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
+// @DATE:Fri Dec 29 03:56:23 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -224,8 +224,8 @@ package controllers.javascript {
     def obtenerRecetas: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.obtenerRecetas",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/"})
+        function(page0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("page", page0))})
         }
       """
     )
@@ -285,7 +285,7 @@ package controllers.javascript {
       "controllers.RecetaController.obtenerRecetasCocinero",
       """
         function(idCocinero0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idCocinero", idCocinero0))})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/cocinero/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idCocinero", idCocinero0))})
         }
       """
     )

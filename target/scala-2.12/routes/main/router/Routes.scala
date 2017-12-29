@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/conf/routes
-// @DATE:Tue Dec 26 23:36:57 CET 2017
+// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
+// @DATE:Fri Dec 29 03:56:23 CET 2017
 
 package router
 
@@ -75,8 +75,8 @@ class Routes(
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """cocinero/""" + "$" + """id<[^/]+>""", """controllers.CocineroController.borrarCocinero(id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""", """controllers.RecetaController.crearReceta()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>""", """controllers.RecetaController.obtenerReceta(id:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/""", """controllers.RecetaController.obtenerRecetas()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/""" + "$" + """idCocinero<[^/]+>""", """controllers.RecetaController.obtenerRecetasCocinero(idCocinero:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/""" + "$" + """page<[^/]+>""", """controllers.RecetaController.obtenerRecetas(page:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/cocinero/""" + "$" + """idCocinero<[^/]+>""", """controllers.RecetaController.obtenerRecetasCocinero(idCocinero:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>/ingredientes""", """controllers.RecetaController.obtenerIngredientes(id:Long)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>""", """controllers.RecetaController.editarReceta(id:Long)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>""", """controllers.RecetaController.borrarReceta(id:Long)"""),
@@ -298,17 +298,17 @@ class Routes(
 
   // @LINE:27
   private[this] lazy val controllers_RecetaController_obtenerRecetas11_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas/"), DynamicPart("page", """[^/]+""",true)))
   )
   private[this] lazy val controllers_RecetaController_obtenerRecetas11_invoker = createInvoker(
-    RecetaController_0.obtenerRecetas(),
+    RecetaController_0.obtenerRecetas(fakeValue[Integer]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.RecetaController",
       "obtenerRecetas",
-      Nil,
+      Seq(classOf[Integer]),
       "GET",
-      this.prefix + """recetas/""",
+      this.prefix + """recetas/""" + "$" + """page<[^/]+>""",
       """""",
       Seq()
     )
@@ -316,7 +316,7 @@ class Routes(
 
   // @LINE:28
   private[this] lazy val controllers_RecetaController_obtenerRecetasCocinero12_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas/"), DynamicPart("idCocinero", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas/cocinero/"), DynamicPart("idCocinero", """[^/]+""",true)))
   )
   private[this] lazy val controllers_RecetaController_obtenerRecetasCocinero12_invoker = createInvoker(
     RecetaController_0.obtenerRecetasCocinero(fakeValue[Long]),
@@ -326,7 +326,7 @@ class Routes(
       "obtenerRecetasCocinero",
       Seq(classOf[Long]),
       "GET",
-      this.prefix + """recetas/""" + "$" + """idCocinero<[^/]+>""",
+      this.prefix + """recetas/cocinero/""" + "$" + """idCocinero<[^/]+>""",
       """""",
       Seq()
     )
@@ -655,8 +655,8 @@ class Routes(
   
     // @LINE:27
     case controllers_RecetaController_obtenerRecetas11_route(params@_) =>
-      call { 
-        controllers_RecetaController_obtenerRecetas11_invoker.call(RecetaController_0.obtenerRecetas())
+      call(params.fromPath[Integer]("page", None)) { (page) =>
+        controllers_RecetaController_obtenerRecetas11_invoker.call(RecetaController_0.obtenerRecetas(page))
       }
   
     // @LINE:28

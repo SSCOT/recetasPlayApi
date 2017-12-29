@@ -24,8 +24,8 @@ DELETE  /cocinero/:id                   controllers.CocineroController.borrarCoc
 # Recetas
 POST    /receta/                        controllers.RecetaController.crearReceta()
 GET     /receta/:id                     controllers.RecetaController.obtenerReceta(id: Long)
-GET     /recetas/                       controllers.RecetaController.obtenerRecetas()
-GET     /recetas/:idCocinero            controllers.RecetaController.obtenerRecetasCocinero(idCocinero: Long)
+GET     /recetas/:page                  controllers.RecetaController.obtenerRecetas(page: Integer)
+GET     /recetas/cocinero/:idCocinero   controllers.RecetaController.obtenerRecetasCocinero(idCocinero: Long)
 GET     /receta/:id/ingredientes        controllers.RecetaController.obtenerIngredientes(id: Long)
 PUT     /receta/:id                     controllers.RecetaController.editarReceta(id: Long)
 DELETE  /receta/:id                     controllers.RecetaController.borrarReceta(id: Long)

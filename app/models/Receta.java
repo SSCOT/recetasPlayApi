@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Ebean;
 import io.ebean.Finder;
 import io.ebean.Model;
+import io.ebean.PagedList;
 import play.libs.Json;
 
 import javax.persistence.*;
@@ -25,6 +26,7 @@ public class Receta extends ModeloBase {
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "p_receta")
     @JsonManagedReference
+    @OrderBy("indice")
     public List<Paso> pasos = new ArrayList<>();
 
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "recetas")
@@ -99,9 +101,17 @@ public class Receta extends ModeloBase {
         return find.query().where().eq("titulo", titulo).findOne();
     }
 
-    public static List<Receta> findAll() {
+    public static Receta findByTituloAndAutor(String titulo, Cocinero cocinero){
+        return find.query().where().eq("titulo", titulo).eq("r_cocinero", cocinero).findOne();
+    }
+
+    public static PagedList<Receta> findAll(Integer page) {
+        return find.query()
+                .setMaxRows(2)
+                .setFirstRow(2*page)
+                .findPagedList();
         // Falta el paginado
-        return find.all();
+        //return find.all();
     }
 
     public boolean checkAndCreate() {
@@ -110,20 +120,20 @@ public class Receta extends ModeloBase {
             return false;
         }
 
-        // Comprobamos que el cocinero no existe con el nombre y los apellidos
-        Cocinero autor = Cocinero.findById(this.r_cocinero.id);
-
-
-        // Si existe esa receta hecha por el mismo cocinero
-        Receta nuevaReceta = Receta.findByTitulo(this.titulo);
-        if (nuevaReceta != null) {
-            if (Cocinero.findById(nuevaReceta.r_cocinero.getId()) != null) {
-                return false;
-            }
+        // El id de cocinero es obligatorio para que se pueda crear la receta y además debe existir
+        if (this.r_cocinero.getId() == null) {
+            return false;
         }
 
-        // El cocinero es obligatorio para que se pueda crear la receta y además debe existir
-        if (this.r_cocinero.getId() == null) {
+        // Comprobamos que el cocinero existe
+        Cocinero autor = Cocinero.findById(this.r_cocinero.id);
+        if (autor == null){
+            return false;
+        }
+
+        // Comprobamos si existe una receta con ese cocinero
+        Receta recetaExistente = Receta.findByTituloAndAutor(this.titulo, autor);
+        if (recetaExistente != null){
             return false;
         }
 
@@ -134,14 +144,20 @@ public class Receta extends ModeloBase {
 
         Ebean.beginTransaction();
         try {
-            this.save();
+            // No guardamos en bruto lo que nos llega para controlar un poco lo que se mete en la base de datos
+            // Los ingredientes, tags y pasos se asignas con llamadas a la api independientes
+
+            Receta recetaFinal = new Receta();
+            recetaFinal.titulo = this.titulo;
+            recetaFinal.tipo = this.tipo;
+            recetaFinal.r_cocinero = this.r_cocinero;
+
+            recetaFinal.save();
+            // this.save();
             Ebean.commitTransaction();
         } finally {
             Ebean.endTransaction();
         }
-
-        // long idCocinero = this.r_cocinero.getId();
-
 
         return true;
     }
