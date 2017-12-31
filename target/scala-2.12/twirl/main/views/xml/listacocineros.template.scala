@@ -52,8 +52,8 @@ Seq[Any](format.raw/*1.29*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 26 23:36:58 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/listacocineros.scala.xml
+                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/listacocineros.scala.xml
                   HASH: 958365ce0fad2ed6174170fdde06a5c7c2506b43
                   MATRIX: 959->1|1080->28|1115->37|1196->93|1230->112|1269->114|1300->120|1331->131|1366->137|1393->138
                   LINES: 28->1|33->1|34->2|36->4|36->4|36->4|37->5|37->5|38->6|39->7

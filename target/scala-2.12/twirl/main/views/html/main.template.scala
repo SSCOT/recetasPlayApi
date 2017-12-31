@@ -67,8 +67,8 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 26 23:36:58 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/main.scala.html
+                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/main.scala.html
                   HASH: 6ea0cc6fffc14ad60386de863a153b880fcdcbb3
                   MATRIX: 1206->260|1331->290|1359->292|1439->397|1475->406|1510->414|1536->419|1625->481|1640->487|1703->528|1791->589|1806->595|1867->634|1919->659|1934->665|1996->706|2090->862|2127->872|2155->879|2187->884
                   LINES: 33->7|38->7|40->9|43->12|44->13|44->13|44->13|45->14|45->14|45->14|46->15|46->15|46->15|47->16|47->16|47->16|50->20|51->21|51->21|52->22

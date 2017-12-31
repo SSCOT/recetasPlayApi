@@ -1,5 +1,6 @@
 package controllers;
 
+import io.ebean.PagedList;
 import models.Ingrediente;
 import play.data.Form;
 import play.data.FormFactory;
@@ -66,9 +67,9 @@ public class IngredienteController extends Controller {
         return Results.ok();
     }
 
-    public Result obtenerIngredientes() {
-        List<Ingrediente> listaIngredientes = Ingrediente.findAll();
-
+    public Result obtenerIngredientes(Integer page) {
+        PagedList<Ingrediente> listaPaginadaIngredientes = Ingrediente.findAll(page);
+        List<Ingrediente> listaIngredientes = listaPaginadaIngredientes.getList();
 
         if (listaIngredientes == null) {
             return Results.badRequest();

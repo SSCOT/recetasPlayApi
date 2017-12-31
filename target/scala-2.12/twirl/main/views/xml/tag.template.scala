@@ -49,8 +49,8 @@ Seq[Any](format.raw/*1.12*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 27 01:30:28 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/tag.scala.xml
+                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/tag.scala.xml
                   HASH: 6823014616d9b7808daee3d1b3e9fd5419b619dc
                   MATRIX: 937->1|1041->11|1068->12|1112->30|1123->33|1154->44
                   LINES: 28->1|33->1|34->2|35->3|35->3|35->3

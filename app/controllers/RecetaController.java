@@ -1,10 +1,10 @@
 package controllers;
 
-import io.ebean.Ebean;
+
 import io.ebean.PagedList;
-import models.Cocinero;
 import models.Ingrediente;
 import models.Receta;
+
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.Json;
@@ -13,7 +13,8 @@ import play.mvc.Result;
 import play.mvc.Results;
 
 import javax.inject.Inject;
-import java.util.List;
+
+import java.util.*;
 
 
 public class RecetaController extends Controller {
@@ -40,6 +41,76 @@ public class RecetaController extends Controller {
         } else {
             return Results.badRequest();
         }
+    }
+
+    public Result obtenerReceta(Long id) {
+        Receta receta = Receta.findById(id);
+
+        if (receta == null) {
+            return Results.notFound();
+        }
+
+        if (request().accepts("application/xml")) {
+            return Results
+                    .ok(views.xml.receta.render(receta));
+        } else if (request().accepts("application/json")) {
+            return Results
+                    .ok(receta.toJson());
+        } else {
+            return Results
+                    .status(415);
+        }
+    }
+
+    public Result editarReceta(Long id) {
+        Form<Receta> frm = frmFactory.form(Receta.class).bindFromRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
+        }
+
+        if (Receta.findById(id) == null) {
+            return Results.notFound();
+        }
+
+        Receta recetaUpdate = frm.get();
+        recetaUpdate.setId(id);
+        recetaUpdate.update();
+        return Results.ok();
+    }
+
+    public Result obtenerRecetas(Integer page) {
+        PagedList<Receta> listaPaginadaRecetas = Receta.findAll(page);
+        List<Receta> listaRecetas = listaPaginadaRecetas.getList();
+
+        if (listaRecetas == null) {
+            return Results.badRequest();
+        }
+
+        if (request().accepts("application/xml")) {
+            return Results
+                    .ok(views.xml.listarecetas.render(listaRecetas));
+        } else if (request().accepts("application/json")) {
+            return Results
+                    .ok(Json.toJson(listaRecetas));
+        } else {
+            return Results
+                    .status(415);
+        }
+    }
+
+    public Result obtenerRecetasCocinero(Long idCocinero) {
+
+        return Results.ok("Obtenemos las Recetas");
+    }
+
+    public Result borrarReceta(Long id) {
+        Receta receta = Receta.findById(id);
+
+        if (receta != null)
+            receta.delete();
+
+        // Idempotencia
+        return Results.ok();
     }
 
     public Result anadirIngrediente(Long idReceta, Long idIngrediente) {
@@ -84,13 +155,29 @@ public class RecetaController extends Controller {
         return Results.ok();
     }
 
+    public Result obtenerIngredientes(Long id) {
+        return Results.ok();
+    }
+
     public Result anadirPaso(Long idReceta, Long idIngrediente, Long indice) {
         return Results.ok("Añadimos un paso determinado en el lugar que queremos");
     }
 
-    public Result obtenerRecetas(Integer page) {
-        PagedList<Receta> listaPaginadaRecetas = Receta.findAll(page);
-        List<Receta> listaRecetas = listaPaginadaRecetas.getList();
+    public Result busqueda() {
+
+        String[] listaTags = new String[0];
+        List<Receta> listaRecetas;
+
+        // Docu: https://stackoverflow.com/questions/15907996/how-to-get-query-string-parameters-in-java-play-framework
+        final Set<Map.Entry<String, String[]>> entries = request().queryString().entrySet();
+        for (Map.Entry<String, String[]> entry : entries) {
+            if (Objects.equals(entry.getKey(), "tag")) {
+                // Guardamos los tags en un array de cadenas
+                listaTags = entry.getValue();
+            }
+        }
+
+        listaRecetas = Receta.findByTags(listaTags);
 
         if (listaRecetas == null) {
             return Results.badRequest();
@@ -98,8 +185,7 @@ public class RecetaController extends Controller {
 
         if (request().accepts("application/xml")) {
             return Results
-                    .ok();
-                    // .ok(views.xml.listarecetas.render(listaRecetas));
+                    .ok(views.xml.listarecetas.render(listaRecetas));
         } else if (request().accepts("application/json")) {
             return Results
                     .ok(Json.toJson(listaRecetas));
@@ -108,59 +194,4 @@ public class RecetaController extends Controller {
                     .status(415);
         }
     }
-
-    public Result obtenerRecetasCocinero(Long idCocinero) {
-
-        return Results.ok("Obtenemos las Recetas");
-    }
-
-    public Result obtenerReceta(Long id) {
-        Receta receta = Receta.findById(id);
-
-        if (receta == null) {
-            return Results.notFound();
-        }
-
-        if (request().accepts("application/xml")) {
-            return Results
-                    .ok(views.xml.receta.render(receta));
-        } else if (request().accepts("application/json")) {
-            return Results
-                    .ok(receta.toJson());
-        } else {
-            return Results
-                    .status(415);
-        }
-    }
-
-    public Result obtenerIngredientes(Long id) {
-        return Results.ok();
-    }
-
-    public Result editarReceta(Long id) {
-        Form<Receta> frm = frmFactory.form(Receta.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        if (Receta.findById(id) == null) {
-            return Results.notFound();
-        }
-
-        Receta recetaUpdate = frm.get();
-        recetaUpdate.setId(id);
-        recetaUpdate.update();
-        return Results.ok();
-    }
-
-    public Result borrarReceta(Long id) {
-        Receta receta = Receta.findById(id);
-
-        if (receta != null)
-            receta.delete();
-
-        // Idempotencia
-        return Results.ok();
-    }
-
 }

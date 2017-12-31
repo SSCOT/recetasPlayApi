@@ -50,8 +50,8 @@ Seq[Any](format.raw/*1.14*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 26 23:36:58 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/paso.scala.xml
+                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/paso.scala.xml
                   HASH: 375c603443df856811ca2868d6ef6dd367445ffb
                   MATRIX: 939->1|1045->13|1072->14|1123->39|1135->43|1172->60|1226->88|1238->92|1270->104
                   LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4

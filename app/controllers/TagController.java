@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Paso;
+import models.Receta;
 import models.Tag;
 import play.data.Form;
 import play.data.FormFactory;
@@ -22,40 +23,40 @@ public class TagController extends Controller {
         return ok("TagController Works!");
     }
 
-    public Result crearTag(){
+    public Result crearTag(String texto, Long idReceta){
 
-        // Recogemos los datos por formulario
-        Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
-
-        // Comprobación de errores
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        Tag nuevoTag = frm.get();
-
-        // Checkeamos y guardamos
-        if (nuevoTag.checkAndCreate()) {
-            return Results.created();
-        } else {
+        if (texto.isEmpty() || idReceta == null){
             return Results.badRequest();
         }
 
+        // Comprobar existencia de la receta
+        Receta receta = Receta.findById(idReceta);
+        if (receta == null){
+            return Results.notFound();
+        }
+
+        Tag nuevoTag = new Tag();
+        nuevoTag.setTexto(texto);
+        nuevoTag.t_receta = receta;
+
+        nuevoTag.save();
+        return Results.created();
     }
 
-    public Result editarTag(Long id) {
+    public Result editarTag(Long id, String texto) {
+
+        if(id == null || texto.isEmpty()){
+            return Results.badRequest();
+        }
+
         // Comprobamos que el usuario existe
         if (Tag.findById(id) == null) {
             return Results.notFound();
         }
 
-        Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        Tag tagUpdate = frm.get();
+        Tag tagUpdate = new Tag();
         tagUpdate.setId(id);
+        tagUpdate.setTexto(texto);
         tagUpdate.update();
         return Results.ok();
 

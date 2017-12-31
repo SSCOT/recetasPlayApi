@@ -1,5 +1,6 @@
 package controllers;
 
+import io.ebean.PagedList;
 import models.Cocinero;
 import play.data.Form;
 import play.data.FormFactory;
@@ -67,9 +68,10 @@ public class CocineroController extends Controller {
 
     }
 
-    public Result obtenerCocineros() {
-        List<Cocinero> listaCocineros = Cocinero.findAll();
+    public Result obtenerCocineros(Integer page) {
 
+        PagedList<Cocinero> listaPaginadaCocineros = Cocinero.findAll(page);
+        List<Cocinero> listaCocineros  = listaPaginadaCocineros.getList();
 
         if (listaCocineros == null) {
             return Results.badRequest();

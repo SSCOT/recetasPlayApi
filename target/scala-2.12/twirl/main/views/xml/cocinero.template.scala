@@ -50,8 +50,8 @@ Seq[Any](format.raw/*1.22*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 26 23:36:58 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/cocinero.scala.xml
+                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/cocinero.scala.xml
                   HASH: 9dbd1c567a9566f16005ad739c2a89c4d81033f5
                   MATRIX: 947->1|1061->21|1088->22|1138->46|1154->54|1186->66|1237->91|1253->99|1287->113
                   LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Fri Dec 29 03:56:23 CET 2017
+// @DATE:Sun Dec 31 03:20:16 CET 2017
 
 package controllers;
 
@@ -10,6 +10,7 @@ import router.RoutesPrefix;
 public class routes {
   
   public static final controllers.ReverseAssets Assets = new controllers.ReverseAssets(RoutesPrefix.byNamePrefix());
+  public static final controllers.ReverseTagController TagController = new controllers.ReverseTagController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseCocineroController CocineroController = new controllers.ReverseCocineroController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseCountController CountController = new controllers.ReverseCountController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseIngredienteController IngredienteController = new controllers.ReverseIngredienteController(RoutesPrefix.byNamePrefix());
@@ -21,6 +22,7 @@ public class routes {
   public static class javascript {
     
     public static final controllers.javascript.ReverseAssets Assets = new controllers.javascript.ReverseAssets(RoutesPrefix.byNamePrefix());
+    public static final controllers.javascript.ReverseTagController TagController = new controllers.javascript.ReverseTagController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseCocineroController CocineroController = new controllers.javascript.ReverseCocineroController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseCountController CountController = new controllers.javascript.ReverseCountController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseIngredienteController IngredienteController = new controllers.javascript.ReverseIngredienteController(RoutesPrefix.byNamePrefix());

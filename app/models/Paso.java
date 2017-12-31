@@ -76,11 +76,12 @@ public class Paso extends ModeloBase {
                 .findList();
     }
 
-    public static Paso findByIndice(Long indice) {
+    public static Paso findByIndice(Long indice, Receta receta) {
         return find
                 .query()
                 .where()
                 .eq("indice", indice)
+                .eq("p_receta", receta)
                 .findOne();
     }
 
@@ -100,22 +101,25 @@ public class Paso extends ModeloBase {
             return false;
         }
 
+        // Sacamos la lista de pasos de la receta determinada
+        List<Paso> listaPasos = find.query().where().eq("p_receta.id", this.p_receta.id).orderBy("indice").findList();
+
         boolean recolocacion = false;
         // Si se indica un indice
         if (this.indice != null) {
             // Existe un paso con el mismo indice. Hay que recolocar los pasos (reasignación de indices)
-            if (Paso.findByIndice(this.indice) != null) {
+            if (Paso.findByIndice(this.indice, this.p_receta) != null) {
                 // Hay que recolocar, pero lo realizamos en el TRY por seguridad
                 recolocacion = true;
             } else {
                 // El índice no está asignado a nadie, pero debemos vigilar que sea exactamente el indice siguiente
-                if (indice != find.all().size() + 1) {
+                if (indice != listaPasos.size() + 1) {
                     return false;
                 }
             }
         } else {
             // Asignamos el indice siguiente en nuestra lista de pasos
-            this.indice = new Long(find.all().size() + 1);
+            this.indice = new Long(listaPasos.size() + 1);
         }
 
         // Una vez hechas las comprobaciones creamos el paso
@@ -123,7 +127,7 @@ public class Paso extends ModeloBase {
         try {
 
             if (recolocacion) {
-                List<Paso> listaPasos = find.query().where().orderBy("indice").findList();
+
                 Long indiceTemp = this.indice;
 
                 Iterator<Paso> iterator = listaPasos.iterator();
@@ -138,7 +142,6 @@ public class Paso extends ModeloBase {
                 }
             }
 
-
             this.save();
             Ebean.commitTransaction();
         } finally {
@@ -148,12 +151,12 @@ public class Paso extends ModeloBase {
         return true;
     }
 
-    public boolean checkAndDelete() {
+    public void checkAndDelete() {
 
         // Reordenamos los indices de los pasos
-        List<Paso> listaPasos = find.query().where().orderBy("indice").findList();
+        List<Paso> listaPasos = find.query().where().eq("p_receta.id", this.p_receta.id).orderBy("indice").findList();
 
-        Long indiceTemp = this.id + 1;
+        Long indiceTemp = this.indice + 1;
 
         Ebean.beginTransaction();
         try {
@@ -167,13 +170,12 @@ public class Paso extends ModeloBase {
                     pasoUpdate.save();
                 }
             }
-
             this.delete();
+            Ebean.commitTransaction();
         } finally {
             Ebean.endTransaction();
         }
 
-        return true;
     }
 
     //========================================

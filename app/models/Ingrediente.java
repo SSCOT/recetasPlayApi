@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Finder;
 import io.ebean.Model;
+import io.ebean.PagedList;
 import play.libs.Json;
 
 import javax.persistence.CascadeType;
@@ -64,9 +65,11 @@ public class Ingrediente extends ModeloBase {
                 .findList();
     }
 
-    public static List<Ingrediente> findAll() {
-        // Falta el paginado
-        return find.all();
+    public static PagedList<Ingrediente> findAll(Integer page) {
+        return find.query()
+                .setMaxRows(2)
+                .setFirstRow(2*page)
+                .findPagedList();
     }
 
     public boolean checkAndSave() {

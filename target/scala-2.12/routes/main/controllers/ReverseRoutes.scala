@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Fri Dec 29 03:56:23 CET 2017
+// @DATE:Sun Dec 31 03:20:16 CET 2017
 
 import play.api.mvc.Call
 
@@ -23,6 +23,45 @@ package controllers {
     def versioned(file:Asset): Call = {
       implicit lazy val _rrc = new play.core.routing.ReverseRouteContext(Map(("path", "/public"))); _rrc
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[play.api.mvc.PathBindable[Asset]].unbind("file", file))
+    }
+  
+  }
+
+  // @LINE:50
+  class ReverseTagController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:54
+    def borrarTag(id:Long): Call = {
+      
+      Call("DELETE", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+    }
+  
+    // @LINE:52
+    def obtenerTags(idReceta:Long): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "tags/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
+    }
+  
+    // @LINE:51
+    def obtenerTag(id:Long): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
+    }
+  
+    // @LINE:50
+    def crearTag(texto:String, idReceta:Long): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("texto", texto)) + "/receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
+    }
+  
+    // @LINE:53
+    def editarTag(id:Long, texto:String): Call = {
+      
+      Call("PUT", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)) + "/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("texto", texto)))
     }
   
   }
@@ -53,9 +92,9 @@ package controllers {
     }
   
     // @LINE:20
-    def obtenerCocineros(): Call = {
+    def obtenerCocineros(page:Integer): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "cocineros/")
+      Call("GET", _prefix + { _defaultPrefix } + "cocineros/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)))
     }
   
     // @LINE:18
@@ -81,7 +120,7 @@ package controllers {
   
   }
 
-  // @LINE:44
+  // @LINE:41
   class ReverseIngredienteController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -89,24 +128,24 @@ package controllers {
 
   
     // @LINE:44
-    def obtenerIngredientes(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "ingredientes/")
-    }
-  
-    // @LINE:47
     def borrarIngrediente(id:Long): Call = {
       
       Call("DELETE", _prefix + { _defaultPrefix } + "ingrediente/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:46
+    // @LINE:41
+    def obtenerIngredientes(page:Integer): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "ingredientes/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)))
+    }
+  
+    // @LINE:43
     def editarIngrediente(id:Long, nombre:String): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "ingrediente/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)) + "/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("nombre", nombre)))
     }
   
-    // @LINE:45
+    // @LINE:42
     def crearIngrediente(nombre:String): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "ingrediente/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[String]].unbind("nombre", nombre)))
@@ -151,7 +190,7 @@ package controllers {
     }
 
   
-    // @LINE:49
+    // @LINE:46
     def anadirIngrediente(idR:Long, idI:Long): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idR", idR)) + "/ingrediente/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idI", idI)))
@@ -161,6 +200,12 @@ package controllers {
     def obtenerRecetas(page:Integer): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "recetas/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)))
+    }
+  
+    // @LINE:57
+    def busqueda(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "busqueda/")
     }
   
     // @LINE:30
@@ -181,7 +226,7 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "receta/")
     }
   
-    // @LINE:50
+    // @LINE:47
     def quitarIngrediente(idR:Long, idI:Long): Call = {
       
       Call("DELETE", _prefix + { _defaultPrefix } + "receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idR", idR)) + "/ingrediente/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idI", idI)))
@@ -207,38 +252,38 @@ package controllers {
   
   }
 
-  // @LINE:37
+  // @LINE:34
   class ReversePasoController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:38
+    // @LINE:35
     def obtenerPaso(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "paso/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:40
+    // @LINE:37
     def editarPaso(id:Long): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "paso/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:37
+    // @LINE:34
     def crearPaso(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "paso/")
     }
   
-    // @LINE:39
+    // @LINE:36
     def obtenerPasos(idReceta:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "pasos/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
     }
   
-    // @LINE:41
+    // @LINE:38
     def borrarPaso(id:Long): Call = {
       
       Call("DELETE", _prefix + { _defaultPrefix } + "paso/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))

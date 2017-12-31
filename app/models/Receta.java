@@ -4,14 +4,13 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.databind.JsonNode;
-import io.ebean.Ebean;
-import io.ebean.Finder;
-import io.ebean.Model;
-import io.ebean.PagedList;
+import io.ebean.*;
 import play.libs.Json;
 
 import javax.persistence.*;
+import javax.persistence.OrderBy;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Entity
@@ -39,6 +38,7 @@ public class Receta extends ModeloBase {
 
     public static final Finder<Long, Receta> find = new Finder<>(Receta.class);
     public static final Finder<Long, Cocinero> findCocinero = new Finder<>(Cocinero.class);
+    public static final Finder<Long, Tag> findTag = new Finder<>(Tag.class);
 
     public String getTitulo() {
         return titulo;
@@ -87,8 +87,7 @@ public class Receta extends ModeloBase {
     public void setIngredientes(List<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
     }
-
-
+    
     //========================================
     //    MÉTODOS DE BASE DE DATOS
     //========================================
@@ -101,17 +100,36 @@ public class Receta extends ModeloBase {
         return find.query().where().eq("titulo", titulo).findOne();
     }
 
-    public static Receta findByTituloAndAutor(String titulo, Cocinero cocinero){
+    public static Receta findByTituloAndAutor(String titulo, Cocinero cocinero) {
         return find.query().where().eq("titulo", titulo).eq("r_cocinero", cocinero).findOne();
     }
 
     public static PagedList<Receta> findAll(Integer page) {
         return find.query()
-                .setMaxRows(2)
-                .setFirstRow(2*page)
+                .setMaxRows(25)
+                .setFirstRow(25 * page)
                 .findPagedList();
-        // Falta el paginado
-        //return find.all();
+    }
+
+    public static List<Receta> findByTags(String[] tags) {
+        List<Receta> listaRecetas = new ArrayList<Receta>();
+
+        for (int i = 0; i < tags.length; i++){
+            // Sacamos la lista de tags que tienen ese mismo nombre
+            List<Tag> listaTags = findTag.query().where().eq("texto", tags[i]).findList();
+
+            // Iteramos cada uno de los tags para sacar la receta a la que pertenece
+            Iterator<Tag> iterator = listaTags.iterator();
+            while (iterator.hasNext()) {
+                Tag tagTemp = iterator.next();
+
+                if(!listaRecetas.contains(tagTemp.t_receta)) {
+                    listaRecetas.add(tagTemp.t_receta);
+                }
+            }
+        }
+
+        return listaRecetas;
     }
 
     public boolean checkAndCreate() {
@@ -127,13 +145,13 @@ public class Receta extends ModeloBase {
 
         // Comprobamos que el cocinero existe
         Cocinero autor = Cocinero.findById(this.r_cocinero.id);
-        if (autor == null){
+        if (autor == null) {
             return false;
         }
 
         // Comprobamos si existe una receta con ese cocinero
         Receta recetaExistente = Receta.findByTituloAndAutor(this.titulo, autor);
-        if (recetaExistente != null){
+        if (recetaExistente != null) {
             return false;
         }
 

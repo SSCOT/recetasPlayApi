@@ -52,8 +52,8 @@ Seq[Any](format.raw/*1.21*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 26 23:36:58 CET 2017
-                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_practica/app/views/listapasos.scala.xml
+                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/listapasos.scala.xml
                   HASH: a311ca6a319243d476b9b31b4c717ee6811ead5d
                   MATRIX: 951->1|1064->20|1099->29|1176->81|1206->96|1245->98|1276->104|1303->111|1338->117|1365->118
                   LINES: 28->1|33->1|34->2|36->4|36->4|36->4|37->5|37->5|38->6|39->7

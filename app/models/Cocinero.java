@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Ebean;
 import io.ebean.Finder;
 import io.ebean.Model;
+import io.ebean.PagedList;
 import play.libs.Json;
 import scala.util.parsing.json.JSONObject;
 import scala.util.parsing.json.JSONObject$;
@@ -108,9 +109,11 @@ public class Cocinero extends ModeloBase {
                 .findOne();
     }
 
-    public static List<Cocinero> findAll() {
-        // Falta el paginado
-        return find.all();
+    public static PagedList<Cocinero> findAll(Integer page) {
+        return find.query()
+                .setMaxRows(25)
+                .setFirstRow(25*page)
+                .findPagedList();
     }
 
     public List<Receta> findRecetas() {
