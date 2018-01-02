@@ -67,19 +67,38 @@ public class Ingrediente extends ModeloBase {
 
     public static PagedList<Ingrediente> findAll(Integer page) {
         return find.query()
-                .setMaxRows(2)
-                .setFirstRow(2*page)
+                .setMaxRows(25)
+                .setFirstRow(25*page)
                 .findPagedList();
     }
 
-    public boolean checkAndSave() {
-
+    public boolean checkAndCreate() {
         // Comprobamos que tiene nombre
         if (this.nombre.isEmpty()) {
             return false;
         }
 
+        // Comprobamos si existe ya el ingrediente
+        if (Ingrediente.findByNombre(this.nombre) != null) {
+            return false;
+        }
+
         this.save();
+        return true;
+    }
+
+    public boolean checkAndUpdate() {
+
+        if (this.nombre.isEmpty()) {
+            return false;
+        }
+
+        // Su nuevo nombre no existe
+        if(Ingrediente.findByNombre(this.nombre) != null){
+            return false;
+        }
+
+        this.update();
         return true;
     }
 

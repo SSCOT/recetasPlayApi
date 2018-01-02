@@ -4,7 +4,7 @@
 		module="play-java-starter-example_2.12"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20171229181450"
+		publication="20180102025335"
 	>
 		<description>
 		play-java-starter-example
@@ -57,5 +57,6 @@
 		<dependency org="org.awaitility" name="awaitility" rev="2.0.0" conf="test->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-jdbc-evolutions_2.12" rev="2.6.7" conf="compile->default(compile)"/>
 		<dependency org="mysql" name="mysql-connector-java" rev="5.1.18" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-ehcache_2.12" rev="2.6.7" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

@@ -1,7 +1,9 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.PagedList;
 import models.Cocinero;
+import play.cache.SyncCacheApi;
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.Json;
@@ -18,6 +20,9 @@ public class CocineroController extends Controller {
 
     @Inject
     FormFactory frmFactory;
+
+    @Inject
+    private SyncCacheApi cache;
 
     public Result index() {
         return ok("CocineroController");
@@ -70,8 +75,15 @@ public class CocineroController extends Controller {
 
     public Result obtenerCocineros(Integer page) {
 
-        PagedList<Cocinero> listaPaginadaCocineros = Cocinero.findAll(page);
-        List<Cocinero> listaCocineros  = listaPaginadaCocineros.getList();
+        String key = "cocineros" + page;
+        String keyResJson = "cocineros" + page + "resJson";
+
+        List<Cocinero> listaCocineros = cache.get(key);
+        if (listaCocineros == null) {
+            PagedList<Cocinero> listaPaginadaCocineros = Cocinero.findAll(page);
+            listaCocineros = listaPaginadaCocineros.getList();
+            cache.set(key, listaCocineros);
+        }
 
         if (listaCocineros == null) {
             return Results.badRequest();
@@ -82,8 +94,15 @@ public class CocineroController extends Controller {
                     .ok(views.xml.listacocineros.render(listaCocineros));
             // return Results.ok();
         } else if (request().accepts("application/json")) {
+
+            JsonNode resultado = cache.get(keyResJson);
+            if (resultado == null) {
+                resultado = Json.toJson(listaCocineros);
+                cache.set(keyResJson, resultado);
+            }
+
             return Results
-                    .ok(Json.toJson(listaCocineros));
+                    .ok(resultado);
             //.ok(Json.toJson(listaCocineros)).as("application/json");
         } else {
             return Results
@@ -92,7 +111,15 @@ public class CocineroController extends Controller {
     }
 
     public Result obtenerCocinero(Long id) {
-        Cocinero cocinero = Cocinero.findById(id);
+
+        String key = "cocinero" + id;
+        String keyResJson = "cocinero" + id + "resJson";
+
+        Cocinero cocinero = cache.get(key);
+        if (cocinero == null) {
+            cocinero = Cocinero.findById(id);
+            cache.set(key, cocinero);
+        }
 
         if (cocinero == null) {
             return Results.notFound();
@@ -103,8 +130,15 @@ public class CocineroController extends Controller {
                     .ok(views.xml.cocinero.render(cocinero));
             // return Results.ok();
         } else if (request().accepts("application/json")) {
+
+            JsonNode resultado = cache.get(keyResJson);
+            if (resultado == null) {
+                resultado = cocinero.toJson();
+                cache.set(keyResJson, resultado);
+            }
+
             return Results
-                    .ok(cocinero.toJson());
+                    .ok(resultado);
         } else {
             return Results
                     .status(415);
@@ -115,7 +149,7 @@ public class CocineroController extends Controller {
         Cocinero cocinero = Cocinero.findById(id);
 
         // Si encuentra al cocinero lo elimina
-        if(cocinero != null)
+        if (cocinero != null)
             cocinero.delete();
 
         // Siempre devuelve OK para la idempotencia

@@ -112,7 +112,7 @@ public class Cocinero extends ModeloBase {
     public static PagedList<Cocinero> findAll(Integer page) {
         return find.query()
                 .setMaxRows(25)
-                .setFirstRow(25*page)
+                .setFirstRow(25 * page)
                 .findPagedList();
     }
 

@@ -54,16 +54,34 @@ public class Tag extends ModeloBase {
                 .findList();
     }
 
-    public static List<Tag> busquedaTags(String textoParcial){
+    public static Tag findByTexto(String texto) {
+        return find
+                .query()
+                .where()
+                .eq("texto", texto)
+                .findOne();
+    }
+
+    /*public static List<Tag> busquedaTags(String textoParcial){
         return find
                 .query()
                 .where()
                 .like("nombre", "%" + textoParcial + "%")
                 .findList();
-    }
+    }*/
 
     public boolean checkAndCreate() {
         if (this.texto.isEmpty()) {
+            return false;
+        }
+
+        if (this.t_receta == null){
+            return false;
+        } else if (Receta.findById(this.t_receta.id) == null){
+            return false;
+        }
+
+        if(Tag.findByTexto(this.texto) != null){
             return false;
         }
 
@@ -75,6 +93,31 @@ public class Tag extends ModeloBase {
             Ebean.endTransaction();
         }
 
+        return true;
+    }
+
+    public boolean checkAndUpdate() {
+
+        if (this.texto.isEmpty()) {
+            return false;
+        }
+
+        // Su nuevo nombre no existe
+        if(Tag.findByTexto(this.texto) != null){
+            return false;
+        }
+
+        Ebean.beginTransaction();
+        try {
+            // No permitimos que se modifique la receta asociada
+            Tag tagUpdate = new Tag();
+            tagUpdate.setId(this.id);
+            tagUpdate.setTexto(this.texto);
+            tagUpdate.update();
+            Ebean.commitTransaction();
+        } finally {
+            Ebean.endTransaction();
+        }
         return true;
     }
 

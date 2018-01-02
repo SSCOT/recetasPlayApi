@@ -87,7 +87,7 @@ public class Receta extends ModeloBase {
     public void setIngredientes(List<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
     }
-    
+
     //========================================
     //    MÉTODOS DE BASE DE DATOS
     //========================================
@@ -111,10 +111,23 @@ public class Receta extends ModeloBase {
                 .findPagedList();
     }
 
+    public static PagedList<Receta> findByAutor(Integer page, Long idAutor) {
+
+        if (idAutor == null)
+            return null;
+
+        return find.query()
+                .setMaxRows(25)
+                .setFirstRow(25 * page)
+                .where()
+                .eq("r_cocinero.id", idAutor)
+                .findPagedList();
+    }
+
     public static List<Receta> findByTags(String[] tags) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
 
-        for (int i = 0; i < tags.length; i++){
+        for (int i = 0; i < tags.length; i++) {
             // Sacamos la lista de tags que tienen ese mismo nombre
             List<Tag> listaTags = findTag.query().where().eq("texto", tags[i]).findList();
 
@@ -123,7 +136,7 @@ public class Receta extends ModeloBase {
             while (iterator.hasNext()) {
                 Tag tagTemp = iterator.next();
 
-                if(!listaRecetas.contains(tagTemp.t_receta)) {
+                if (!listaRecetas.contains(tagTemp.t_receta)) {
                     listaRecetas.add(tagTemp.t_receta);
                 }
             }

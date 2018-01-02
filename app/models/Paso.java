@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Ebean;
 import io.ebean.Finder;
+import io.ebean.PagedList;
 import play.libs.Json;
 
 import javax.persistence.Entity;
@@ -67,13 +68,15 @@ public class Paso extends ModeloBase {
         return find.byId(id);
     }
 
-    public static List<Paso> findByReceta(Long idReceta) {
+    public static PagedList<Paso> findByReceta(Long idReceta, Integer page) {
 
         return find
                 .query()
                 .where()
                 .eq("p_receta.id", idReceta)
-                .findList();
+                .setMaxRows(25)
+                .setFirstRow(25 * page)
+                .findPagedList();
     }
 
     public static Paso findByIndice(Long indice, Receta receta) {

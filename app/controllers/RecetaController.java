@@ -1,10 +1,12 @@
 package controllers;
 
 
+import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.PagedList;
 import models.Ingrediente;
 import models.Receta;
 
+import play.cache.SyncCacheApi;
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.Json;
@@ -21,6 +23,9 @@ public class RecetaController extends Controller {
 
     @Inject
     FormFactory frmFactory;
+
+    @Inject
+    private SyncCacheApi cache;
 
     public Result index() {
         return ok("RecetaController works!");
@@ -44,7 +49,15 @@ public class RecetaController extends Controller {
     }
 
     public Result obtenerReceta(Long id) {
-        Receta receta = Receta.findById(id);
+
+        String key = "receta" + id;
+        String keyResJson = "receta"+id+"resJson";
+        Receta receta = cache.get(key);
+
+        if (receta == null) {
+            receta = Receta.findById(id);
+            cache.set(key, receta);
+        }
 
         if (receta == null) {
             return Results.notFound();
@@ -54,8 +67,81 @@ public class RecetaController extends Controller {
             return Results
                     .ok(views.xml.receta.render(receta));
         } else if (request().accepts("application/json")) {
+            JsonNode resultado = cache.get(keyResJson);
+            if(resultado == null){
+                resultado = receta.toJson();
+                cache.set(keyResJson,resultado);
+            }
             return Results
-                    .ok(receta.toJson());
+                    .ok(resultado);
+        } else {
+            return Results
+                    .status(415);
+        }
+    }
+
+    public Result obtenerRecetas(Integer page) {
+        //Long start = System.currentTimeMillis();
+        String key = "recetas" + page;
+        String keyResJson = "recetas" + page + "resJson";
+        List<Receta> listaRecetas = cache.get(key);
+        if (listaRecetas == null) {
+            PagedList<Receta> listaPaginadaRecetas = Receta.findAll(page);
+            listaRecetas = listaPaginadaRecetas.getList();
+            cache.set(key, listaRecetas);
+        }
+        //Long end = System.currentTimeMillis();
+        //System.out.println("-----------> TIME = " + (end - start));
+
+        if (listaRecetas == null) {
+            return Results.badRequest();
+        }
+
+        if (request().accepts("application/xml")) {
+            return Results
+                    .ok(views.xml.listarecetas.render(listaRecetas));
+        } else if (request().accepts("application/json")) {
+            JsonNode resultado = cache.get(keyResJson);
+            if (resultado == null) {
+                resultado = Json.toJson(listaRecetas);
+                cache.set(keyResJson, resultado);
+            }
+            return Results
+                    .ok(resultado);
+        } else {
+            return Results
+                    .status(415);
+        }
+    }
+
+    public Result obtenerRecetasCocinero(Long idCocinero, Integer page) {
+        //Long start = System.currentTimeMillis();
+        String key = "recetasAutor" + page + "cocinero" + idCocinero;
+        String keyResJson = "recetasAutor" + page + "cocinero" + idCocinero + "resJson";
+        List<Receta> listaRecetas = cache.get(key);
+        if (listaRecetas == null) {
+            PagedList<Receta> listaPaginadaRecetas = Receta.findByAutor(page, idCocinero);
+            listaRecetas = listaPaginadaRecetas.getList();
+            cache.set(key, listaRecetas);
+        }
+        //Long end = System.currentTimeMillis();
+        //System.out.println("-----------> TIME = " + (end - start));
+
+        if (listaRecetas == null) {
+            return Results.badRequest();
+        }
+
+        if (request().accepts("application/xml")) {
+            return Results
+                    .ok(views.xml.listarecetas.render(listaRecetas));
+        } else if (request().accepts("application/json")) {
+            JsonNode resultado = cache.get(keyResJson);
+            if (resultado == null) {
+                resultado = Json.toJson(listaRecetas);
+                cache.set(keyResJson, resultado);
+            }
+            return Results
+                    .ok(resultado);
         } else {
             return Results
                     .status(415);
@@ -76,31 +162,6 @@ public class RecetaController extends Controller {
         recetaUpdate.setId(id);
         recetaUpdate.update();
         return Results.ok();
-    }
-
-    public Result obtenerRecetas(Integer page) {
-        PagedList<Receta> listaPaginadaRecetas = Receta.findAll(page);
-        List<Receta> listaRecetas = listaPaginadaRecetas.getList();
-
-        if (listaRecetas == null) {
-            return Results.badRequest();
-        }
-
-        if (request().accepts("application/xml")) {
-            return Results
-                    .ok(views.xml.listarecetas.render(listaRecetas));
-        } else if (request().accepts("application/json")) {
-            return Results
-                    .ok(Json.toJson(listaRecetas));
-        } else {
-            return Results
-                    .status(415);
-        }
-    }
-
-    public Result obtenerRecetasCocinero(Long idCocinero) {
-
-        return Results.ok("Obtenemos las Recetas");
     }
 
     public Result borrarReceta(Long id) {
@@ -155,9 +216,9 @@ public class RecetaController extends Controller {
         return Results.ok();
     }
 
-    public Result obtenerIngredientes(Long id) {
+    /*public Result obtenerIngredientes(Long id) {
         return Results.ok();
-    }
+    }*/
 
     public Result anadirPaso(Long idReceta, Long idIngrediente, Long indice) {
         return Results.ok("Añadimos un paso determinado en el lugar que queremos");

@@ -1,6 +1,9 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import io.ebean.PagedList;
 import models.Paso;
+import play.cache.SyncCacheApi;
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.Json;
@@ -17,11 +20,14 @@ public class PasoController extends Controller {
     @Inject
     FormFactory frmFactory;
 
+    @Inject
+    private SyncCacheApi cache;
+
     public Result index() {
         return ok("PasoController Works!");
     }
 
-    public Result crearPaso(){
+    public Result crearPaso() {
 
         // Recogemos los datos por formulario
         Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
@@ -67,8 +73,16 @@ public class PasoController extends Controller {
     }
 
     // El listado de pasos solo tiene sentido cuando es de una determinada receta
-    public Result obtenerPasos(Long idReceta) {
-        List<Paso> listaPasos = Paso.findByReceta(idReceta);
+    public Result obtenerPasos(Long idReceta, Integer page) {
+        String key = "pasos" + page + "receta" + idReceta;
+        String keyResJson = "pasos" + page + "receta" + idReceta + "resJson";
+
+        List<Paso> listaPasos = cache.get(key);
+        if (listaPasos == null) {
+            PagedList<Paso> listaPaginadaPasos = Paso.findByReceta(idReceta, page);
+            listaPasos = listaPaginadaPasos.getList();
+            cache.set(key, listaPasos);
+        }
 
         if (listaPasos == null) {
             return Results.badRequest();
@@ -78,8 +92,15 @@ public class PasoController extends Controller {
             return Results
                     .ok(views.xml.listapasos.render(listaPasos));
         } else if (request().accepts("application/json")) {
+
+            JsonNode resJson = cache.get(keyResJson);
+            if (resJson == null) {
+                resJson = Json.toJson(listaPasos);
+                cache.set(keyResJson, resJson);
+            }
+
             return Results
-                    .ok(Json.toJson(listaPasos));
+                    .ok(resJson);
         } else {
             return Results
                     .status(415);
@@ -88,7 +109,13 @@ public class PasoController extends Controller {
     }
 
     public Result obtenerPaso(Long id) {
-        Paso paso = Paso.findById(id);
+        String key = "paso" + id;
+        String keyResJson = "paso" + id + "resJson";
+        Paso paso = cache.get(key);
+        if (paso == null) {
+            paso = Paso.findById(id);
+            cache.set(key, paso);
+        }
 
         if (paso == null) {
             return Results.notFound();
@@ -99,6 +126,13 @@ public class PasoController extends Controller {
                     .ok(views.xml.paso.render(paso));
             // return Results.ok();
         } else if (request().accepts("application/json")) {
+
+            JsonNode resultado = cache.get(keyResJson);
+            if (resultado == null) {
+                resultado = paso.toJson();
+                cache.set(keyResJson, resultado);
+            }
+
             return Results
                     .ok(paso.toJson());
         } else {
@@ -110,7 +144,7 @@ public class PasoController extends Controller {
     public Result borrarPaso(Long id) {
         Paso paso = Paso.findById(id);
 
-        if(paso != null)
+        if (paso != null)
             paso.checkAndDelete();
 
         return Results.ok();

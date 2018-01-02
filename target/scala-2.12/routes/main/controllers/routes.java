@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Sun Dec 31 03:20:16 CET 2017
+// @DATE:Tue Jan 02 04:46:07 CET 2018
 
 package controllers;
 

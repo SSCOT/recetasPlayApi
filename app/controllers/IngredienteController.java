@@ -1,7 +1,9 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.PagedList;
 import models.Ingrediente;
+import play.cache.SyncCacheApi;
 import play.data.Form;
 import play.data.FormFactory;
 import play.libs.Json;
@@ -18,43 +20,54 @@ public class IngredienteController extends Controller {
     @Inject
     FormFactory frmFactory;
 
+    @Inject
+    private SyncCacheApi cache;
+
     public Result index() {
         return ok("IngredienteController");
     }
 
-    public Result crearIngrediente(String nombre) {
+    public Result crearIngrediente() {
 
-        if (nombre == "")
-            return Results.badRequest();
+        Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
 
-        // Comprobamos si existe ya el ingrediente
-        if (Ingrediente.findByNombre(nombre) != null) {
-            return Results.badRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
         }
 
+        Ingrediente nuevoIngrediente = frm.get();
 
-        Ingrediente nuevoIngrediente = new Ingrediente();
-        nuevoIngrediente.setNombre(nombre);
 
         // Checkeamos y guardamos
-        if (nuevoIngrediente.checkAndSave()) {
+        if (nuevoIngrediente.checkAndCreate()) {
             return Results.created();
         } else {
             return Results.badRequest();
         }
     }
 
-    public Result editarIngrediente(Long id, String nuevoNombre) {
-        if (id == null || nuevoNombre == "") {
+    public Result editarIngrediente(Long id) {
+
+        if (id == null) {
+            return Results.badRequest();
+        } else if (Ingrediente.findById(id) == null) {
+            return Results.notFound();
+        }
+
+        Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
+        }
+
+        Ingrediente ingredienteUpdate = frm.get();
+        ingredienteUpdate.setId(id);
+
+        if (ingredienteUpdate.checkAndUpdate()) {
+            return Results.ok();
+        } else {
             return Results.badRequest();
         }
 
-        Ingrediente ingredienteUpdate = new Ingrediente();
-        ingredienteUpdate.setNombre(nuevoNombre);
-        ingredienteUpdate.setId(id);
-        ingredienteUpdate.update();
-
-        return Results.ok();
     }
 
     public Result borrarIngrediente(Long id) {
@@ -68,8 +81,14 @@ public class IngredienteController extends Controller {
     }
 
     public Result obtenerIngredientes(Integer page) {
-        PagedList<Ingrediente> listaPaginadaIngredientes = Ingrediente.findAll(page);
-        List<Ingrediente> listaIngredientes = listaPaginadaIngredientes.getList();
+        String key = "ingredientes" + page;
+        String keyResJson = "ingredientes" + page + "resJson";
+        List<Ingrediente> listaIngredientes = cache.get(key);
+        if (listaIngredientes == null) {
+            PagedList<Ingrediente> listaPaginadaIngredientes = Ingrediente.findAll(page);
+            listaIngredientes = listaPaginadaIngredientes.getList();
+            cache.set(key, listaIngredientes);
+        }
 
         if (listaIngredientes == null) {
             return Results.badRequest();
@@ -79,29 +98,17 @@ public class IngredienteController extends Controller {
             return Results
                     .ok(views.xml.listaingredientes.render(listaIngredientes));
         } else if (request().accepts("application/json")) {
+            JsonNode resultado = cache.get(keyResJson);
+            if (resultado == null) {
+                resultado = Json.toJson(listaIngredientes);
+                cache.set(keyResJson, resultado);
+            }
             return Results
-                    .ok(Json.toJson(listaIngredientes));
+                    .ok(resultado);
         } else {
             return Results
                     .status(415);
         }
-    }
-
-    public Result editarIngrediente(Long id) {
-        if (Ingrediente.findById(id) == null) {
-            return Results.notFound();
-        }
-
-        Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        Ingrediente ingredienteUpdate = frm.get();
-        ingredienteUpdate.setId(id);
-        ingredienteUpdate.update();
-        return Results.ok();
-
     }
 
     public Result obtenerIngrediente(Long id) {
