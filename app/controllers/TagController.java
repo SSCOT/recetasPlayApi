@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import io.ebean.Ebean;
 import models.Paso;
 import models.Receta;
 import models.Tag;
@@ -11,6 +12,7 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import utils.Cachefunctions;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -23,6 +25,8 @@ public class TagController extends Controller {
 
     @Inject
     private SyncCacheApi cache;
+
+    Cachefunctions cachefunctions;
 
     public Result index() {
         return ok("TagController Works!");
@@ -39,6 +43,7 @@ public class TagController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoTag.checkAndCreate()) {
+            cachefunctions.vaciarCacheListas("tags",Tag.numTags(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -61,6 +66,7 @@ public class TagController extends Controller {
         tagUpdate.setId(id);
 
         if (tagUpdate.checkAndUpdate()) {
+            cachefunctions.vaciarCacheCompleta("tag"+id, "tags", Tag.numTags(), cache);
             return Results.ok();
         } else {
             return Results.badRequest();
@@ -138,8 +144,16 @@ public class TagController extends Controller {
     public Result borrarTag(Long id) {
         Tag tag = Tag.findById(id);
 
-        if (tag != null)
-            tag.delete();
+        if (tag != null){
+            Ebean.beginTransaction();
+            try {
+                tag.delete();
+                cachefunctions.vaciarCacheCompleta("tag"+id,"tags",Tag.numTags(), cache);
+                Ebean.commitTransaction();
+            } finally {
+                Ebean.endTransaction();
+            }
+        }
 
         // idempotencia
         return Results.ok();

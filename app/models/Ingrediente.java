@@ -72,6 +72,10 @@ public class Ingrediente extends ModeloBase {
                 .findPagedList();
     }
 
+    public static Integer numIngredientes(){
+        return find.query().findCount();
+    }
+
     public boolean checkAndCreate() {
         // Comprobamos que tiene nombre
         if (this.nombre.isEmpty()) {

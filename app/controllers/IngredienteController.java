@@ -10,6 +10,7 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import utils.Cachefunctions;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -22,6 +23,8 @@ public class IngredienteController extends Controller {
 
     @Inject
     private SyncCacheApi cache;
+
+    private Cachefunctions cachefunctions;
 
     public Result index() {
         return ok("IngredienteController");
@@ -40,6 +43,7 @@ public class IngredienteController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoIngrediente.checkAndCreate()) {
+            cachefunctions.vaciarCacheListas("ingredientes", Ingrediente.numIngredientes(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -63,6 +67,7 @@ public class IngredienteController extends Controller {
         ingredienteUpdate.setId(id);
 
         if (ingredienteUpdate.checkAndUpdate()) {
+            cachefunctions.vaciarCacheCompleta("ingrediente"+id, "ingredientes", Ingrediente.numIngredientes(), cache);
             return Results.ok();
         } else {
             return Results.badRequest();
@@ -74,9 +79,10 @@ public class IngredienteController extends Controller {
         Ingrediente ingredienteBorrar = Ingrediente.findById(id);
         if (ingredienteBorrar != null) {
             if (!ingredienteBorrar.delete()) {
-                Results.internalServerError();
+                return Results.internalServerError();
             }
         }
+        cachefunctions.vaciarCacheCompleta("ingrediente"+id, "ingredientes", Ingrediente.numIngredientes(), cache);
         return Results.ok();
     }
 

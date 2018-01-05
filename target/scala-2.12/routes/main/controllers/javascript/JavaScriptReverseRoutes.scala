@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Tue Jan 02 04:46:07 CET 2018
+// @DATE:Thu Jan 04 16:28:51 CET 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -32,7 +32,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:51
+  // @LINE:50
   class ReverseTagController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -40,7 +40,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:56
+    // @LINE:54
     def borrarTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.borrarTag",
       """
@@ -50,7 +50,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:52
     def obtenerTags: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.obtenerTags",
       """
@@ -60,7 +60,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:50
     def crearTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.crearTag",
       """
@@ -70,7 +70,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:52
+    // @LINE:51
     def obtenerTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.obtenerTag",
       """
@@ -80,7 +80,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:55
+    // @LINE:53
     def editarTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.editarTag",
       """
@@ -290,7 +290,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:59
+    // @LINE:57
     def busqueda: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.busqueda",
       """

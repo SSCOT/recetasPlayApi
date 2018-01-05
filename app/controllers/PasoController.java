@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import io.ebean.Ebean;
 import io.ebean.PagedList;
 import models.Paso;
 import play.cache.SyncCacheApi;
@@ -10,6 +11,7 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import utils.Cachefunctions;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -23,12 +25,13 @@ public class PasoController extends Controller {
     @Inject
     private SyncCacheApi cache;
 
+    private Cachefunctions cachefunctions;
+
     public Result index() {
         return ok("PasoController Works!");
     }
 
     public Result crearPaso() {
-
         // Recogemos los datos por formulario
         Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
 
@@ -41,6 +44,7 @@ public class PasoController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoPaso.checkAndCreate()) {
+            cachefunctions.vaciarCacheListas("pasos", Paso.numPasos(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -67,6 +71,7 @@ public class PasoController extends Controller {
         pasoUpdate.setDescripcion(pasoInicial.getDescripcion());
         pasoUpdate.setTiempo(pasoInicial.getTiempo());
         pasoUpdate.update();
+        cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
 
         return Results.ok();
 
@@ -144,9 +149,16 @@ public class PasoController extends Controller {
     public Result borrarPaso(Long id) {
         Paso paso = Paso.findById(id);
 
-        if (paso != null)
-            paso.checkAndDelete();
-
+        if (paso != null){
+            Ebean.beginTransaction();
+            try{
+                paso.checkAndDelete();
+                cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+                Ebean.commitTransaction();
+            } finally {
+                Ebean.endTransaction();
+            }
+        }
         return Results.ok();
     }
 

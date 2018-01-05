@@ -32,7 +32,8 @@ object tag extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.XmlFor
 
 Seq[Any](format.raw/*1.12*/("""
 """),format.raw/*2.1*/("""<tag>
-    <texto>"""),_display_(/*3.13*/tag/*3.16*/.getTexto()),format.raw/*3.27*/("""</texto>
+    <receta>"""),_display_(/*3.14*/tag/*3.17*/.getT_receta().getTitulo()),format.raw/*3.43*/("""</receta>
+    <texto>"""),_display_(/*4.13*/tag/*4.16*/.getTexto()),format.raw/*4.27*/("""</texto>
 </tag>"""))
       }
     }
@@ -49,11 +50,11 @@ Seq[Any](format.raw/*1.12*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  DATE: Thu Jan 04 17:11:26 CET 2018
                   SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/tag.scala.xml
-                  HASH: 6823014616d9b7808daee3d1b3e9fd5419b619dc
-                  MATRIX: 937->1|1041->11|1068->12|1112->30|1123->33|1154->44
-                  LINES: 28->1|33->1|34->2|35->3|35->3|35->3
+                  HASH: abeca5ffa8ff8779a8a2a1633fa116615c69c85b
+                  MATRIX: 937->1|1041->11|1068->12|1113->31|1124->34|1170->60|1218->82|1229->85|1260->96
+                  LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4
                   -- GENERATED --
               */
           

@@ -2,4 +2,9 @@
 <cocinero>
     <nombre>@cocinero.getNombre()</nombre>
     <apellido>@cocinero.getApellido()</apellido>
+    <recetas>
+        @for(r <- cocinero.getRecetas()) {
+        @receta(r)
+        }
+    </recetas>
 </cocinero>

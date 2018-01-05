@@ -145,6 +145,10 @@ public class Receta extends ModeloBase {
         return listaRecetas;
     }
 
+    public static Integer numRecetas(){
+        return find.query().findCount();
+    }
+
     public boolean checkAndCreate() {
         // Comprobación de título y cocinero
         if (this.titulo.isEmpty() || this.r_cocinero == null) {

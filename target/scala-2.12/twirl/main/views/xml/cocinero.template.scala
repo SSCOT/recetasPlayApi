@@ -34,6 +34,11 @@ Seq[Any](format.raw/*1.22*/("""
 """),format.raw/*2.1*/("""<cocinero>
     <nombre>"""),_display_(/*3.14*/cocinero/*3.22*/.getNombre()),format.raw/*3.34*/("""</nombre>
     <apellido>"""),_display_(/*4.16*/cocinero/*4.24*/.getApellido()),format.raw/*4.38*/("""</apellido>
+    <recetas>
+        """),_display_(/*6.10*/for(r <- cocinero.getRecetas()) yield /*6.41*/ {_display_(Seq[Any](format.raw/*6.43*/("""
+        """),_display_(/*7.10*/receta(r)),format.raw/*7.19*/("""
+        """)))}),format.raw/*8.10*/("""
+    """),format.raw/*9.5*/("""</recetas>
 </cocinero>"""))
       }
     }
@@ -50,11 +55,11 @@ Seq[Any](format.raw/*1.22*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  DATE: Thu Jan 04 16:38:47 CET 2018
                   SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/cocinero.scala.xml
-                  HASH: 9dbd1c567a9566f16005ad739c2a89c4d81033f5
-                  MATRIX: 947->1|1061->21|1088->22|1138->46|1154->54|1186->66|1237->91|1253->99|1287->113
-                  LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4
+                  HASH: 8fc6adcef93d70601e38bf51992684169f30ee91
+                  MATRIX: 947->1|1061->21|1088->22|1138->46|1154->54|1186->66|1237->91|1253->99|1287->113|1348->148|1394->179|1433->181|1469->191|1498->200|1538->210|1569->215
+                  LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4|38->6|38->6|38->6|39->7|39->7|40->8|41->9
                   -- GENERATED --
               */
           

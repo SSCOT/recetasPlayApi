@@ -1,4 +1,5 @@
 @(tag: Tag)
 <tag>
+    <receta>@tag.getT_receta().getTitulo()</receta>
     <texto>@tag.getTexto()</texto>
 </tag>

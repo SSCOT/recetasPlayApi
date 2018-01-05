@@ -2,6 +2,7 @@ package controllers;
 
 
 import com.fasterxml.jackson.databind.JsonNode;
+import io.ebean.Ebean;
 import io.ebean.PagedList;
 import models.Ingrediente;
 import models.Receta;
@@ -13,6 +14,7 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import utils.Cachefunctions;
 
 import javax.inject.Inject;
 
@@ -26,6 +28,8 @@ public class RecetaController extends Controller {
 
     @Inject
     private SyncCacheApi cache;
+
+    private Cachefunctions cachefunctions;
 
     public Result index() {
         return ok("RecetaController works!");
@@ -42,6 +46,7 @@ public class RecetaController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevaReceta.checkAndCreate()) {
+            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -161,14 +166,24 @@ public class RecetaController extends Controller {
         Receta recetaUpdate = frm.get();
         recetaUpdate.setId(id);
         recetaUpdate.update();
+        cachefunctions.vaciarCacheCompleta("receta"+id, "recetas", Receta.numRecetas(), cache);
         return Results.ok();
     }
 
     public Result borrarReceta(Long id) {
         Receta receta = Receta.findById(id);
 
-        if (receta != null)
-            receta.delete();
+        if (receta != null){
+            Ebean.beginTransaction();
+            try{
+                receta.delete();
+                cachefunctions.vaciarCacheCompleta("receta"+id, "recetas", Receta.numRecetas(), cache);
+                Ebean.commitTransaction();
+            } finally {
+                Ebean.endTransaction();
+            }
+        }
+
 
         // Idempotencia
         return Results.ok();
@@ -190,6 +205,7 @@ public class RecetaController extends Controller {
         }
 
         if (Receta.asignarIngrediente(receta, ingrediente)) {
+            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         }
 
@@ -211,6 +227,7 @@ public class RecetaController extends Controller {
         }
 
         Receta.quitarIngrediente(receta, ingrediente);
+        cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
 
         // Idempotencia
         return Results.ok();
@@ -220,9 +237,9 @@ public class RecetaController extends Controller {
         return Results.ok();
     }*/
 
-    public Result anadirPaso(Long idReceta, Long idIngrediente, Long indice) {
+    /*public Result anadirPaso(Long idReceta, Long idIngrediente, Long indice) {
         return Results.ok("Añadimos un paso determinado en el lugar que queremos");
-    }
+    }*/
 
     public Result busqueda() {
 

@@ -9,8 +9,6 @@ import play.libs.Json;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OrderBy;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -86,6 +84,10 @@ public class Paso extends ModeloBase {
                 .eq("indice", indice)
                 .eq("p_receta", receta)
                 .findOne();
+    }
+
+    public static Integer numPasos(){
+        return find.query().findCount();
     }
 
     public boolean checkAndCreate() {

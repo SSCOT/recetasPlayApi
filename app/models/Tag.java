@@ -70,6 +70,10 @@ public class Tag extends ModeloBase {
                 .findList();
     }*/
 
+    public static Integer numTags(){
+        return find.query().findCount();
+    }
+
     public boolean checkAndCreate() {
         if (this.texto.isEmpty()) {
             return false;

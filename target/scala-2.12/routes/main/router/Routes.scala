@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Tue Jan 02 04:46:07 CET 2018
+// @DATE:Thu Jan 04 16:28:51 CET 2018
 
 package router
 
@@ -31,7 +31,7 @@ class Routes(
   PasoController_3: controllers.PasoController,
   // @LINE:41
   IngredienteController_7: controllers.IngredienteController,
-  // @LINE:51
+  // @LINE:50
   TagController_6: controllers.TagController,
   val prefix: String
 ) extends GeneratedRouter {
@@ -54,7 +54,7 @@ class Routes(
     PasoController_3: controllers.PasoController,
     // @LINE:41
     IngredienteController_7: controllers.IngredienteController,
-    // @LINE:51
+    // @LINE:50
     TagController_6: controllers.TagController
   ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_4, Assets_8, CocineroController_5, RecetaController_0, PasoController_3, IngredienteController_7, TagController_6, "/")
 
@@ -575,7 +575,7 @@ class Routes(
     )
   )
 
-  // @LINE:51
+  // @LINE:50
   private[this] lazy val controllers_TagController_crearTag26_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/")))
   )
@@ -588,13 +588,12 @@ class Routes(
       Nil,
       "POST",
       this.prefix + """tag/""",
-      """ tags
- POST    /tag/:texto/receta/:idReceta   controllers.TagController.crearTag(texto: String, idReceta: Long)""",
+      """ tags""",
       Seq()
     )
   )
 
-  // @LINE:52
+  // @LINE:51
   private[this] lazy val controllers_TagController_obtenerTag27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -612,7 +611,7 @@ class Routes(
     )
   )
 
-  // @LINE:53
+  // @LINE:52
   private[this] lazy val controllers_TagController_obtenerTags28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tags/"), DynamicPart("idReceta", """[^/]+""",true)))
   )
@@ -630,7 +629,7 @@ class Routes(
     )
   )
 
-  // @LINE:55
+  // @LINE:53
   private[this] lazy val controllers_TagController_editarTag29_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -643,12 +642,12 @@ class Routes(
       Seq(classOf[Long]),
       "PUT",
       this.prefix + """tag/""" + "$" + """id<[^/]+>""",
-      """PUT     /tag/:id/:texto                controllers.TagController.editarTag(id: Long, texto: String)""",
+      """""",
       Seq()
     )
   )
 
-  // @LINE:56
+  // @LINE:54
   private[this] lazy val controllers_TagController_borrarTag30_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -666,7 +665,7 @@ class Routes(
     )
   )
 
-  // @LINE:59
+  // @LINE:57
   private[this] lazy val controllers_RecetaController_busqueda31_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("busqueda/")))
   )
@@ -843,37 +842,37 @@ class Routes(
         controllers_RecetaController_quitarIngrediente25_invoker.call(RecetaController_0.quitarIngrediente(idR, idI))
       }
   
-    // @LINE:51
+    // @LINE:50
     case controllers_TagController_crearTag26_route(params@_) =>
       call { 
         controllers_TagController_crearTag26_invoker.call(TagController_6.crearTag())
       }
   
-    // @LINE:52
+    // @LINE:51
     case controllers_TagController_obtenerTag27_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_TagController_obtenerTag27_invoker.call(TagController_6.obtenerTag(id))
       }
   
-    // @LINE:53
+    // @LINE:52
     case controllers_TagController_obtenerTags28_route(params@_) =>
       call(params.fromPath[Long]("idReceta", None)) { (idReceta) =>
         controllers_TagController_obtenerTags28_invoker.call(TagController_6.obtenerTags(idReceta))
       }
   
-    // @LINE:55
+    // @LINE:53
     case controllers_TagController_editarTag29_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_TagController_editarTag29_invoker.call(TagController_6.editarTag(id))
       }
   
-    // @LINE:56
+    // @LINE:54
     case controllers_TagController_borrarTag30_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_TagController_borrarTag30_invoker.call(TagController_6.borrarTag(id))
       }
   
-    // @LINE:59
+    // @LINE:57
     case controllers_RecetaController_busqueda31_route(params@_) =>
       call { 
         controllers_RecetaController_busqueda31_invoker.call(RecetaController_0.busqueda())

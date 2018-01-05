@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import io.ebean.Ebean;
 import io.ebean.PagedList;
 import models.Cocinero;
 import play.cache.SyncCacheApi;
@@ -10,6 +11,7 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
+import utils.Cachefunctions;
 
 import javax.inject.Inject;
 import java.util.ArrayList;
@@ -23,6 +25,8 @@ public class CocineroController extends Controller {
 
     @Inject
     private SyncCacheApi cache;
+
+    Cachefunctions cachefunctions;
 
     public Result index() {
         return ok("CocineroController");
@@ -47,6 +51,7 @@ public class CocineroController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoCocinero.checkAndCreate()) {
+            cachefunctions.vaciarCacheListas("cocineros", Cocinero.numCocineros(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -68,13 +73,21 @@ public class CocineroController extends Controller {
 
         Cocinero cocineroUpdate = frm.get();
         cocineroUpdate.setId(id);
-        cocineroUpdate.update();
-        return Results.ok();
 
+        Ebean.beginTransaction();
+        try {
+            // vaciamos caché
+            cachefunctions.vaciarCacheCompleta("cocinero" + id, "cocineros", Cocinero.numCocineros(), cache);
+            cocineroUpdate.update();
+            Ebean.commitTransaction();
+        } finally {
+            Ebean.endTransaction();
+        }
+
+        return Results.ok();
     }
 
     public Result obtenerCocineros(Integer page) {
-
         String key = "cocineros" + page;
         String keyResJson = "cocineros" + page + "resJson";
 
@@ -100,10 +113,8 @@ public class CocineroController extends Controller {
                 resultado = Json.toJson(listaCocineros);
                 cache.set(keyResJson, resultado);
             }
-
             return Results
                     .ok(resultado);
-            //.ok(Json.toJson(listaCocineros)).as("application/json");
         } else {
             return Results
                     .status(415);
@@ -147,10 +158,17 @@ public class CocineroController extends Controller {
 
     public Result borrarCocinero(Long id) {
         Cocinero cocinero = Cocinero.findById(id);
-
         // Si encuentra al cocinero lo elimina
-        if (cocinero != null)
-            cocinero.delete();
+        if (cocinero != null) {
+            Ebean.beginTransaction();
+            try {
+                cachefunctions.vaciarCacheCompleta("cocinero" + id, "cocineros", Cocinero.numCocineros(), cache);
+                cocinero.delete();
+                Ebean.commitTransaction();
+            } finally {
+                Ebean.endTransaction();
+            }
+        }
 
         // Siempre devuelve OK para la idempotencia
         return Results.ok();

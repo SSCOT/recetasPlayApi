@@ -32,8 +32,9 @@ object paso extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.XmlFo
 
 Seq[Any](format.raw/*1.14*/("""
 """),format.raw/*2.1*/("""<paso>
-    <descripcion>"""),_display_(/*3.19*/paso/*3.23*/.getDescripcion()),format.raw/*3.40*/("""</descripcion>
-    <tiempo>"""),_display_(/*4.14*/paso/*4.18*/.getTiempo()),format.raw/*4.30*/("""</tiempo>
+    <receta>"""),_display_(/*3.14*/paso/*3.18*/.getP_receta().getTitulo()),format.raw/*3.44*/("""</receta>
+    <descripcion>"""),_display_(/*4.19*/paso/*4.23*/.getDescripcion()),format.raw/*4.40*/("""</descripcion>
+    <tiempo>"""),_display_(/*5.14*/paso/*5.18*/.getTiempo()),format.raw/*5.30*/("""</tiempo>
 </paso>"""))
       }
     }
@@ -50,11 +51,11 @@ Seq[Any](format.raw/*1.14*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 29 18:15:25 CET 2017
+                  DATE: Thu Jan 04 17:10:03 CET 2018
                   SOURCE: /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/app/views/paso.scala.xml
-                  HASH: 375c603443df856811ca2868d6ef6dd367445ffb
-                  MATRIX: 939->1|1045->13|1072->14|1123->39|1135->43|1172->60|1226->88|1238->92|1270->104
-                  LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4
+                  HASH: a35610554dc9c166d3a07681d77e46701af378e0
+                  MATRIX: 939->1|1045->13|1072->14|1118->34|1130->38|1176->64|1230->92|1242->96|1279->113|1333->141|1345->145|1377->157
+                  LINES: 28->1|33->1|34->2|35->3|35->3|35->3|36->4|36->4|36->4|37->5|37->5|37->5
                   -- GENERATED --
               */
           

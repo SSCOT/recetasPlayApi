@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Tue Jan 02 04:46:07 CET 2018
+// @DATE:Thu Jan 04 16:28:51 CET 2018
 
 import play.api.mvc.Call
 
@@ -27,38 +27,38 @@ package controllers {
   
   }
 
-  // @LINE:51
+  // @LINE:50
   class ReverseTagController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:56
+    // @LINE:54
     def borrarTag(id:Long): Call = {
       
       Call("DELETE", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:53
+    // @LINE:52
     def obtenerTags(idReceta:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tags/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
     }
   
-    // @LINE:51
+    // @LINE:50
     def crearTag(): Call = {
       
       Call("POST", _prefix + { _defaultPrefix } + "tag/")
     }
   
-    // @LINE:52
+    // @LINE:51
     def obtenerTag(id:Long): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
     }
   
-    // @LINE:55
+    // @LINE:53
     def editarTag(id:Long): Call = {
       
       Call("PUT", _prefix + { _defaultPrefix } + "tag/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("id", id)))
@@ -202,7 +202,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "recetas/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)))
     }
   
-    // @LINE:59
+    // @LINE:57
     def busqueda(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "busqueda/")

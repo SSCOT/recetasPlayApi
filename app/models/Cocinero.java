@@ -124,6 +124,10 @@ public class Cocinero extends ModeloBase {
                 .findList();
     }
 
+    public static Integer numCocineros(){
+        return find.query().findCount();
+    }
+
     public boolean checkAndCreate() {
 
 

@@ -1,4 +1,20 @@
 @(receta: Receta)
 <receta>
     <titulo>@receta.getTitulo()</titulo>
+    <autor>@receta.getR_cocinero().getNombre() @receta.getR_cocinero().getApellido()</autor>
+    <ingredientes>
+        @for(i <- receta.getIngredientes()) {
+        @ingrediente(i)
+        }
+    </ingredientes>
+    <pasos>
+        @for(p <- receta.getPasos()) {
+        @paso(p)
+        }
+    </pasos>
+    <tags>
+        @for(t <- receta.getTags()) {
+        @tag(t)
+        }
+    </tags>
 </receta>

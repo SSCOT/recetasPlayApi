@@ -47,11 +47,9 @@ POST    /receta/:idR/ingrediente/:idI   controllers.RecetaController.anadirIngre
 DELETE  /receta/:idR/ingrediente/:idI   controllers.RecetaController.quitarIngrediente(idR: Long, idI: Long)
 
 # tags
-# POST    /tag/:texto/receta/:idReceta   controllers.TagController.crearTag(texto: String, idReceta: Long)
 POST    /tag/                          controllers.TagController.crearTag()
 GET     /tag/:id                       controllers.TagController.obtenerTag(id: Long)
 GET     /tags/:idReceta                controllers.TagController.obtenerTags(idReceta: Long)
-#PUT     /tag/:id/:texto                controllers.TagController.editarTag(id: Long, texto: String)
 PUT     /tag/:id                       controllers.TagController.editarTag(id: Long)
 DELETE  /tag/:id                       controllers.TagController.borrarTag(id: Long)
 

@@ -1,5 +1,6 @@
 @(paso: Paso)
 <paso>
+    <receta>@paso.getP_receta().getTitulo()</receta>
     <descripcion>@paso.getDescripcion()</descripcion>
     <tiempo>@paso.getTiempo()</tiempo>
 </paso>
