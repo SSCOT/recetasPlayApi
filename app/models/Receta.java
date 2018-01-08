@@ -39,6 +39,7 @@ public class Receta extends ModeloBase {
     public static final Finder<Long, Receta> find = new Finder<>(Receta.class);
     public static final Finder<Long, Cocinero> findCocinero = new Finder<>(Cocinero.class);
     public static final Finder<Long, Tag> findTag = new Finder<>(Tag.class);
+    public static final Finder<Long, Ingrediente> findIngrediente = new Finder<>(Ingrediente.class);
 
     public String getTitulo() {
         return titulo;
@@ -100,6 +101,11 @@ public class Receta extends ModeloBase {
         return find.query().where().eq("titulo", titulo).findOne();
     }
 
+    public static List<Receta> findByTituloAprox(String titulo) {
+        System.out.println("SEC ** TITAPROX");
+        return find.query().where().like("titulo", "%" + titulo + "%").findList();
+    }
+
     public static Receta findByTituloAndAutor(String titulo, Cocinero cocinero) {
         return find.query().where().eq("titulo", titulo).eq("r_cocinero", cocinero).findOne();
     }
@@ -111,7 +117,7 @@ public class Receta extends ModeloBase {
                 .findPagedList();
     }
 
-    public static PagedList<Receta> findByAutorPaged(Integer page, Long idAutor) {
+    public static PagedList<Receta> findByCodineroPaged(Integer page, Long idAutor) {
 
         if (idAutor == null)
             return null;
@@ -124,27 +130,25 @@ public class Receta extends ModeloBase {
                 .findPagedList();
     }
 
-    /*public static List<Receta> findByAutors(Long[] idsCocineros) {
+    public static List<Receta> findByCocinero(Long idCocinero) {
+        if (idCocinero == null)
+            return null;
+
+        return find.query()
+                .where()
+                .eq("r_cocinero.id", idCocinero)
+                .findList();
+    }
+
+    // BUSQUEDA
+    public static List<Receta> findByCocineros(String[] idsCocineros) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
-
         for (int i = 0; i < idsCocineros.length; i++) {
-            // Sacamos la lista de tags que tienen ese mismo texto
-            List<Tag> listaTags = findTag.query().where().eq("texto", tags[i]).findList();
-
-            // Iteramos cada uno de los tags para sacar la receta a la que pertenece
-            Iterator<Tag> iterator = listaTags.iterator();
-            while (iterator.hasNext()) {
-                Tag tagTemp = iterator.next();
-                System.out.println("Iteración while con "+tagTemp);
-
-                if (!listaRecetas.contains(tagTemp.t_receta)) {
-                    listaRecetas.add(tagTemp.t_receta);
-                }
-            }
+            listaRecetas.addAll(Receta.findByCocinero(new Long(idsCocineros[i])));
         }
 
         return listaRecetas;
-    }*/
+    }
 
     public static List<Receta> findByTags(String[] tags) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
@@ -157,28 +161,42 @@ public class Receta extends ModeloBase {
             Iterator<Tag> iterator = listaTags.iterator();
             while (iterator.hasNext()) {
                 Tag tagTemp = iterator.next();
-                System.out.println("Iteración while con "+tagTemp);
-
-                if (!listaRecetas.contains(tagTemp.t_receta)) {
-                    listaRecetas.add(tagTemp.t_receta);
-                }
+                listaRecetas.add(tagTemp.t_receta);
             }
         }
 
         return listaRecetas;
     }
 
-    /*public static List<Receta> findByTitulos(String[] titulos){
+    public static List<Receta> findByIngredientes(String[] ingredientes) {
+        List<Receta> listaRecetas = new ArrayList<Receta>();
 
+        for (int i = 0; i < ingredientes.length; i++) {
+            // Sacamos la lista de tags que tienen ese mismo texto
+            List<Ingrediente> listaIngredientes = findIngrediente.query().where().eq("nombre", ingredientes[i]).findList();
+
+            // Iteramos cada uno de los tags para sacar la receta a la que pertenece
+            Iterator<Ingrediente> iterator = listaIngredientes.iterator();
+            while (iterator.hasNext()) {
+                Ingrediente ingredienteTemp = iterator.next();
+                listaRecetas.addAll(ingredienteTemp.recetas);
+            }
+        }
+
+        return listaRecetas;
     }
 
-    public static List<Receta> findByParameters(String[] titulos, String[] tags, Long[] cocineros){
-        // recetas por titulos
-        // recetas por tags
-        // recetas por cocineros
+    // Búsqueda aproximada por titulo
+    public static List<Receta> findByTitulos(String[] titulos) {
+        List<Receta> listaRecetas = new ArrayList<Receta>();
+        for (int i = 0; i < titulos.length; i++) {
+            System.out.println("entra en titulos aprox");
+            listaRecetas.addAll(Receta.findByTituloAprox(titulos[i]));
+        }
 
-        //llamadas a la función única con diferentes parámetros
-    }*/
+        return listaRecetas;
+    }
+
 
     public static Integer numRecetas() {
         return find.query().findCount();
@@ -276,7 +294,6 @@ public class Receta extends ModeloBase {
     public JsonNode toJson() {
         return Json.toJson(this);
     }
-
 
 
 }

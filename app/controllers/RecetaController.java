@@ -56,7 +56,7 @@ public class RecetaController extends Controller {
     public Result obtenerReceta(Long id) {
 
         String key = "receta" + id;
-        String keyResJson = "receta"+id+"resJson";
+        String keyResJson = "receta" + id + "resJson";
         Receta receta = cache.get(key);
 
         if (receta == null) {
@@ -73,9 +73,9 @@ public class RecetaController extends Controller {
                     .ok(views.xml.receta.render(receta));
         } else if (request().accepts("application/json")) {
             JsonNode resultado = cache.get(keyResJson);
-            if(resultado == null){
+            if (resultado == null) {
                 resultado = receta.toJson();
-                cache.set(keyResJson,resultado);
+                cache.set(keyResJson, resultado);
             }
             return Results
                     .ok(resultado);
@@ -125,7 +125,7 @@ public class RecetaController extends Controller {
         String keyResJson = "recetasAutor" + page + "cocinero" + idCocinero + "resJson";
         List<Receta> listaRecetas = cache.get(key);
         if (listaRecetas == null) {
-            PagedList<Receta> listaPaginadaRecetas = Receta.findByAutorPaged(page, idCocinero);
+            PagedList<Receta> listaPaginadaRecetas = Receta.findByCodineroPaged(page, idCocinero);
             listaRecetas = listaPaginadaRecetas.getList();
             cache.set(key, listaRecetas);
         }
@@ -166,18 +166,18 @@ public class RecetaController extends Controller {
         Receta recetaUpdate = frm.get();
         recetaUpdate.setId(id);
         recetaUpdate.update();
-        cachefunctions.vaciarCacheCompleta("receta"+id, "recetas", Receta.numRecetas(), cache);
+        cachefunctions.vaciarCacheCompleta("receta" + id, "recetas", Receta.numRecetas(), cache);
         return Results.ok();
     }
 
     public Result borrarReceta(Long id) {
         Receta receta = Receta.findById(id);
 
-        if (receta != null){
+        if (receta != null) {
             Ebean.beginTransaction();
-            try{
+            try {
                 receta.delete();
-                cachefunctions.vaciarCacheCompleta("receta"+id, "recetas", Receta.numRecetas(), cache);
+                cachefunctions.vaciarCacheCompleta("receta" + id, "recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {
                 Ebean.endTransaction();
@@ -244,7 +244,15 @@ public class RecetaController extends Controller {
     public Result busqueda() {
 
         String[] listaTags = new String[0];
-        List<Receta> listaRecetas;
+        String[] listaCocineros = new String[0];
+        String[] listaIngredientes = new String[0];
+        String[] listaTitulos = new String[0];
+
+        List<Receta> listaRecetas = new ArrayList<>();
+        List<Receta> listaRecetasTags = new ArrayList<>();
+        List<Receta> listaRecetasCocineros = new ArrayList<>();
+        List<Receta> listaRecetasIngredientes = new ArrayList<>();
+        List<Receta> listaRecetasTitulos = new ArrayList<>();
 
         // Docu: https://stackoverflow.com/questions/15907996/how-to-get-query-string-parameters-in-java-play-framework
         final Set<Map.Entry<String, String[]>> entries = request().queryString().entrySet();
@@ -252,10 +260,36 @@ public class RecetaController extends Controller {
             if (Objects.equals(entry.getKey(), "tag")) {
                 // Guardamos los tags en un array de cadenas
                 listaTags = entry.getValue();
+            } else if (Objects.equals(entry.getKey(), "cocinero")) {
+                listaCocineros = entry.getValue();
+            } else if (Objects.equals(entry.getKey(), "ingrediente")) {
+                listaIngredientes = entry.getValue();
+            } else if (Objects.equals(entry.getKey(), "titulo")) {
+                listaTitulos = entry.getValue();
             }
         }
 
-        listaRecetas = Receta.findByTags(listaTags);
+        listaRecetasTags = Receta.findByTags(listaTags);
+        listaRecetasCocineros = Receta.findByCocineros(listaCocineros);
+        listaRecetasIngredientes = Receta.findByIngredientes(listaIngredientes);
+        listaRecetasTitulos = Receta.findByTitulos(listaTitulos);
+
+        listaRecetas.addAll(listaRecetasTags);
+        listaRecetas.addAll(listaRecetasCocineros);
+        listaRecetas.addAll(listaRecetasIngredientes);
+        listaRecetas.addAll(listaRecetasTitulos);
+
+        // Eliminamos duplicados
+        List<Receta> listaRecetasFinal = new ArrayList<>();
+        Iterator<Receta> iterator = listaRecetas.iterator();
+        while (iterator.hasNext()) {
+            Receta recetaTemp = iterator.next();
+            System.out.println(recetaTemp.id);
+            if(!listaRecetasFinal.contains(recetaTemp)){
+                System.out.println(recetaTemp.id+" Se añade");
+                listaRecetasFinal.add(recetaTemp);
+            }
+        }
 
         if (listaRecetas == null) {
             return Results.badRequest();
@@ -263,10 +297,10 @@ public class RecetaController extends Controller {
 
         if (request().accepts("application/xml")) {
             return Results
-                    .ok(views.xml.listarecetas.render(listaRecetas));
+                    .ok(views.xml.listarecetas.render(listaRecetasFinal));
         } else if (request().accepts("application/json")) {
             return Results
-                    .ok(Json.toJson(listaRecetas));
+                    .ok(Json.toJson(listaRecetasFinal));
         } else {
             return Results
                     .status(415);
