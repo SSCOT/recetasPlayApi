@@ -43,7 +43,8 @@ public class TagController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoTag.checkAndCreate()) {
-            cachefunctions.vaciarCacheListas("tags",Tag.numTags(), cache);
+            cachefunctions.vaciarCacheListas("tags", Tag.numTags(), cache);
+            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -65,12 +66,15 @@ public class TagController extends Controller {
         Tag tagUpdate = frm.get();
         tagUpdate.setId(id);
 
-        if (tagUpdate.checkAndUpdate()) {
-            cachefunctions.vaciarCacheCompleta("tag"+id, "tags", Tag.numTags(), cache);
-            return Results.ok();
-        } else {
+        if (tagUpdate.getTexto().isEmpty()) {
             return Results.badRequest();
         }
+
+        tagUpdate.update();
+        cachefunctions.vaciarCacheCompleta("tag" + id, "tags", Tag.numTags(), cache);
+        cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+        return Results.ok();
+
     }
 
     // obtener los tags de una receta
@@ -144,11 +148,12 @@ public class TagController extends Controller {
     public Result borrarTag(Long id) {
         Tag tag = Tag.findById(id);
 
-        if (tag != null){
+        if (tag != null) {
             Ebean.beginTransaction();
             try {
                 tag.delete();
-                cachefunctions.vaciarCacheCompleta("tag"+id,"tags",Tag.numTags(), cache);
+                cachefunctions.vaciarCacheCompleta("tag" + id, "tags", Tag.numTags(), cache);
+                cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {
                 Ebean.endTransaction();

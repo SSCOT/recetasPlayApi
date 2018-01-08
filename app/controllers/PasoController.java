@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Ebean;
 import io.ebean.PagedList;
 import models.Paso;
+import models.Receta;
 import play.cache.SyncCacheApi;
 import play.data.Form;
 import play.data.FormFactory;
@@ -45,6 +46,7 @@ public class PasoController extends Controller {
         // Checkeamos y guardamos
         if (nuevoPaso.checkAndCreate()) {
             cachefunctions.vaciarCacheListas("pasos", Paso.numPasos(), cache);
+            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -72,6 +74,7 @@ public class PasoController extends Controller {
         pasoUpdate.setTiempo(pasoInicial.getTiempo());
         pasoUpdate.update();
         cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+        cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
 
         return Results.ok();
 
@@ -154,6 +157,7 @@ public class PasoController extends Controller {
             try{
                 paso.checkAndDelete();
                 cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+                cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {
                 Ebean.endTransaction();

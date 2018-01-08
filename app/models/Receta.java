@@ -111,7 +111,7 @@ public class Receta extends ModeloBase {
                 .findPagedList();
     }
 
-    public static PagedList<Receta> findByAutor(Integer page, Long idAutor) {
+    public static PagedList<Receta> findByAutorPaged(Integer page, Long idAutor) {
 
         if (idAutor == null)
             return null;
@@ -124,17 +124,40 @@ public class Receta extends ModeloBase {
                 .findPagedList();
     }
 
-    public static List<Receta> findByTags(String[] tags) {
+    /*public static List<Receta> findByAutors(Long[] idsCocineros) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
 
-        for (int i = 0; i < tags.length; i++) {
-            // Sacamos la lista de tags que tienen ese mismo nombre
+        for (int i = 0; i < idsCocineros.length; i++) {
+            // Sacamos la lista de tags que tienen ese mismo texto
             List<Tag> listaTags = findTag.query().where().eq("texto", tags[i]).findList();
 
             // Iteramos cada uno de los tags para sacar la receta a la que pertenece
             Iterator<Tag> iterator = listaTags.iterator();
             while (iterator.hasNext()) {
                 Tag tagTemp = iterator.next();
+                System.out.println("Iteración while con "+tagTemp);
+
+                if (!listaRecetas.contains(tagTemp.t_receta)) {
+                    listaRecetas.add(tagTemp.t_receta);
+                }
+            }
+        }
+
+        return listaRecetas;
+    }*/
+
+    public static List<Receta> findByTags(String[] tags) {
+        List<Receta> listaRecetas = new ArrayList<Receta>();
+
+        for (int i = 0; i < tags.length; i++) {
+            // Sacamos la lista de tags que tienen ese mismo texto
+            List<Tag> listaTags = findTag.query().where().eq("texto", tags[i]).findList();
+
+            // Iteramos cada uno de los tags para sacar la receta a la que pertenece
+            Iterator<Tag> iterator = listaTags.iterator();
+            while (iterator.hasNext()) {
+                Tag tagTemp = iterator.next();
+                System.out.println("Iteración while con "+tagTemp);
 
                 if (!listaRecetas.contains(tagTemp.t_receta)) {
                     listaRecetas.add(tagTemp.t_receta);
@@ -145,7 +168,19 @@ public class Receta extends ModeloBase {
         return listaRecetas;
     }
 
-    public static Integer numRecetas(){
+    /*public static List<Receta> findByTitulos(String[] titulos){
+
+    }
+
+    public static List<Receta> findByParameters(String[] titulos, String[] tags, Long[] cocineros){
+        // recetas por titulos
+        // recetas por tags
+        // recetas por cocineros
+
+        //llamadas a la función única con diferentes parámetros
+    }*/
+
+    public static Integer numRecetas() {
         return find.query().findCount();
     }
 
@@ -176,6 +211,8 @@ public class Receta extends ModeloBase {
         if ((this.tipo != "publica" && this.tipo != "privada") || this.tipo == null) {
             this.tipo = "publica";
         }
+
+        this.tipo = "publica";
 
         Ebean.beginTransaction();
         try {
@@ -239,5 +276,7 @@ public class Receta extends ModeloBase {
     public JsonNode toJson() {
         return Json.toJson(this);
     }
+
+
 
 }

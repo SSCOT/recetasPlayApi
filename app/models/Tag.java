@@ -54,11 +54,12 @@ public class Tag extends ModeloBase {
                 .findList();
     }
 
-    public static Tag findByTexto(String texto) {
+    public static Tag findByTexto(String texto, Long idReceta) {
         return find
                 .query()
                 .where()
                 .eq("texto", texto)
+                .eq("t_receta.id", idReceta)
                 .findOne();
     }
 
@@ -85,7 +86,8 @@ public class Tag extends ModeloBase {
             return false;
         }
 
-        if(Tag.findByTexto(this.texto) != null){
+        Tag tagEncontrado = Tag.findByTexto(this.texto, this.t_receta.id);
+        if(tagEncontrado != null){
             return false;
         }
 
@@ -100,16 +102,22 @@ public class Tag extends ModeloBase {
         return true;
     }
 
-    public boolean checkAndUpdate() {
+    /*public boolean checkAndUpdate() {
+        System.out.println("_____________LLEGA => "+this.texto+" "+this.t_receta.id);
 
         if (this.texto.isEmpty()) {
             return false;
         }
 
         // Su nuevo nombre no existe
-        if(Tag.findByTexto(this.texto) != null){
+        if(Tag.findByTexto(this.texto, this.t_receta.getId()) != null){
             return false;
         }
+        *//*if(Tag.findByTexto(this.texto, this.t_receta.id) != null){
+            return false;
+        }*//*
+
+        System.out.println("_____________LLEGA");
 
         Ebean.beginTransaction();
         try {
@@ -123,7 +131,7 @@ public class Tag extends ModeloBase {
             Ebean.endTransaction();
         }
         return true;
-    }
+    }*/
 
     //========================================
     //    MÉTODOS DE MUESTREO

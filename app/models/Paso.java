@@ -86,7 +86,7 @@ public class Paso extends ModeloBase {
                 .findOne();
     }
 
-    public static Integer numPasos(){
+    public static Integer numPasos() {
         return find.query().findCount();
     }
 
@@ -111,7 +111,7 @@ public class Paso extends ModeloBase {
 
         boolean recolocacion = false;
         // Si se indica un indice
-        if (this.indice != null) {
+        if (this.indice != null && listaPasos != null) {
             // Existe un paso con el mismo indice. Hay que recolocar los pasos (reasignación de indices)
             if (Paso.findByIndice(this.indice, this.p_receta) != null) {
                 // Hay que recolocar, pero lo realizamos en el TRY por seguridad
@@ -127,10 +127,12 @@ public class Paso extends ModeloBase {
             this.indice = new Long(listaPasos.size() + 1);
         }
 
+
         // Una vez hechas las comprobaciones creamos el paso
         Ebean.beginTransaction();
         try {
 
+            // Realizamos una recolocación de índices si se ha duplicado el índice
             if (recolocacion) {
 
                 Long indiceTemp = this.indice;
@@ -163,24 +165,20 @@ public class Paso extends ModeloBase {
 
         Long indiceTemp = this.indice + 1;
 
-        Ebean.beginTransaction();
-        try {
-            Iterator<Paso> iterator = listaPasos.iterator();
-            while (iterator.hasNext()) {
-                Paso pasoTemp = iterator.next();
-                if (pasoTemp.indice == indiceTemp) {
-                    Paso pasoUpdate = Paso.findById(pasoTemp.id);
-                    pasoUpdate.setIndice(indiceTemp - 1);
-                    indiceTemp++;
-                    pasoUpdate.save();
+        if (this.delete()) {
+            if (listaPasos.size() > 1){
+                Iterator<Paso> iterator = listaPasos.iterator();
+                while (iterator.hasNext()) {
+                    Paso pasoTemp = iterator.next();
+                    if (pasoTemp.indice == indiceTemp) {
+                        Paso pasoUpdate = Paso.findById(pasoTemp.id);
+                        pasoUpdate.setIndice(indiceTemp - 1);
+                        indiceTemp++;
+                        pasoUpdate.save();
+                    }
                 }
             }
-            this.delete();
-            Ebean.commitTransaction();
-        } finally {
-            Ebean.endTransaction();
         }
-
     }
 
     //========================================

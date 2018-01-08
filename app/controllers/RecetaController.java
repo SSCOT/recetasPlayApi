@@ -125,7 +125,7 @@ public class RecetaController extends Controller {
         String keyResJson = "recetasAutor" + page + "cocinero" + idCocinero + "resJson";
         List<Receta> listaRecetas = cache.get(key);
         if (listaRecetas == null) {
-            PagedList<Receta> listaPaginadaRecetas = Receta.findByAutor(page, idCocinero);
+            PagedList<Receta> listaPaginadaRecetas = Receta.findByAutorPaged(page, idCocinero);
             listaRecetas = listaPaginadaRecetas.getList();
             cache.set(key, listaRecetas);
         }
