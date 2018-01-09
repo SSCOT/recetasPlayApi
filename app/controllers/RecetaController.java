@@ -241,6 +241,7 @@ public class RecetaController extends Controller {
         return Results.ok("Añadimos un paso determinado en el lugar que queremos");
     }*/
 
+    // Búsqueda completa por diferentes parámetros
     public Result busqueda() {
 
         String[] listaTags = new String[0];
@@ -254,7 +255,6 @@ public class RecetaController extends Controller {
         List<Receta> listaRecetasIngredientes = new ArrayList<>();
         List<Receta> listaRecetasTitulos = new ArrayList<>();
 
-        // Docu: https://stackoverflow.com/questions/15907996/how-to-get-query-string-parameters-in-java-play-framework
         final Set<Map.Entry<String, String[]>> entries = request().queryString().entrySet();
         for (Map.Entry<String, String[]> entry : entries) {
             if (Objects.equals(entry.getKey(), "tag")) {
@@ -279,14 +279,13 @@ public class RecetaController extends Controller {
         listaRecetas.addAll(listaRecetasIngredientes);
         listaRecetas.addAll(listaRecetasTitulos);
 
+        // Docu: https://stackoverflow.com/questions/15907996/how-to-get-query-string-parameters-in-java-play-framework
         // Eliminamos duplicados
         List<Receta> listaRecetasFinal = new ArrayList<>();
         Iterator<Receta> iterator = listaRecetas.iterator();
         while (iterator.hasNext()) {
             Receta recetaTemp = iterator.next();
-            System.out.println(recetaTemp.id);
             if(!listaRecetasFinal.contains(recetaTemp)){
-                System.out.println(recetaTemp.id+" Se añade");
                 listaRecetasFinal.add(recetaTemp);
             }
         }

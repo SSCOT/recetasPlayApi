@@ -1,1 +1,49 @@
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe models.Cocinero has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(recetas,[Default]), UsedName(findRecetas,[Default]), UsedName(findReceta,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) models.Cocinero: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) models.Cocinero.[0m
+[0m[[0m[0mdebug[0m] [0m[0mName hashing optimization doesn't apply to non-Scala dependency: FunctionalTest[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe models.Ingrediente has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(recetas,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) models.Ingrediente: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) models.Ingrediente.[0m
+[0m[[0m[0mdebug[0m] [0m[0mName hashing optimization doesn't apply to non-Scala dependency: FunctionalTest[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe models.Receta has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(findByCodineroPaged,[Default]), UsedName(findCocinero,[Default]), UsedName(findTag,[Default]), UsedName(tags,[Default]), UsedName(findByTitulos,[Default]), UsedName(pasos,[Default]), UsedName(ingredientes,[Default]), UsedName(findByAutorPaged,[Default]), UsedName(findByTituloAprox,[Default]), UsedName(findByCocineros,[Default]), UsedName(findByCocinero,[Default]), UsedName(findByIngredientes,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) models.Receta: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) models.Receta.[0m
+[0m[[0m[0mdebug[0m] [0m[0mName hashing optimization doesn't apply to non-Scala dependency: FunctionalTest[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set(NamesChange(models.Cocinero,ModifiedNames(changes = UsedName(recetas,[Default]), UsedName(findRecetas,[Default]), UsedName(findReceta,[Default]))), NamesChange(models.Ingrediente,ModifiedNames(changes = UsedName(recetas,[Default]))), NamesChange(models.Receta,ModifiedNames(changes = UsedName(findByCodineroPaged,[Default]), UsedName(findCocinero,[Default]), UsedName(findTag,[Default]), UsedName(tags,[Default]), UsedName(findByTitulos,[Default]), UsedName(pasos,[Default]), UsedName(ingredientes,[Default]), UsedName(findByAutorPaged,[Default]), UsedName(findByTituloAprox,[Default]), UsedName(findByCocineros,[Default]), UsedName(findByCocinero,[Default]), UsedName(findByIngredientes,[Default]))))[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set(FunctionalTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(FunctionalTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set()[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@7b9e671f directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 0.298467566 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.045877968 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 0.347003352 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

@@ -1,1182 +1,178 @@
-2018-01-08 20:46:05,535 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
-2018-01-08 20:46:05,768 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 20:46:12,037 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2018-01-08T19:46:12.037Z
-2018-01-08 20:46:12,570 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-2 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 20:46:12,714 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-2 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-01-09 14:00:28,070 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - Creating Pool for datasource 'default'
+2018-01-09 14:00:28,337 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-3 - Database [default] connected at jdbc:h2:~/dbRecetas.db
+2018-01-09 14:00:34,169 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Starting application at 2018-01-09T13:00:34.166Z
+2018-01-09 14:00:34,723 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-3 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:00:34,868 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-3 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2018-01-08 20:46:12,718 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
-2018-01-08 20:48:02,716 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Stopping application at 2018-01-08T19:48:02.716Z after 110s.
-2018-01-08 20:48:02,762 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - Shutting down connection pool.
-2018-01-08 20:48:02,919 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - Creating Pool for datasource 'default'
-2018-01-08 20:48:02,934 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-6 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 20:48:03,075 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-6 - ApplicationTimer demo: Starting application at 2018-01-08T19:48:03.075Z
-2018-01-08 20:48:03,186 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-6 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 20:48:03,203 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-6 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-01-09 14:00:34,871 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-3 - Application started (Dev)
+2018-01-09 14:04:06,707 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-17 - ApplicationTimer demo: Stopping application at 2018-01-09T13:04:06.707Z after 212s.
+2018-01-09 14:04:06,750 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-17 - Shutting down connection pool.
+2018-01-09 14:04:06,955 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-17 - Creating Pool for datasource 'default'
+2018-01-09 14:04:06,972 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-17 - Database [default] connected at jdbc:h2:~/dbRecetas.db
+2018-01-09 14:04:07,027 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-17 - ApplicationTimer demo: Starting application at 2018-01-09T13:04:07.026Z
+2018-01-09 14:04:07,141 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-17 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:04:07,165 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-17 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2018-01-08 20:48:03,204 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-6 - Application started (Dev)
-2018-01-08 20:56:10,187 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - ApplicationTimer demo: Stopping application at 2018-01-08T19:56:10.187Z after 487s.
-2018-01-08 20:56:10,204 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - Shutting down connection pool.
-2018-01-08 20:56:10,347 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
-2018-01-08 20:56:10,363 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 20:56:10,507 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-12 - ApplicationTimer demo: Starting application at 2018-01-08T19:56:10.507Z
-2018-01-08 20:56:10,673 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-12 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 20:56:10,693 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-12 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2018-01-09 14:04:07,165 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-17 - Application started (Dev)
+2018-01-09 14:18:39,753 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-20 - ApplicationTimer demo: Stopping application at 2018-01-09T13:18:39.753Z after 872s.
+2018-01-09 14:18:39,754 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-20 - Shutting down connection pool.
+2018-01-09 14:18:39,924 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-20 - Creating Pool for datasource 'default'
+2018-01-09 14:18:39,937 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-20 - Database [default] connected at jdbc:h2:~/dbRecetas.db
+2018-01-09 14:18:40,043 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-20 - ApplicationTimer demo: Starting application at 2018-01-09T13:18:40.042Z
+2018-01-09 14:18:40,158 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-20 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:18:40,175 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-20 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
     filters.ExampleFilter
 
-2018-01-08 20:56:10,693 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-12 - Application started (Dev)
-2018-01-08 20:56:43,878 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-18 - 
-
-! @76hhgcoh8 - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.ArrayStoreException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.ArrayStoreException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: java.lang.ArrayStoreException: null
-	at java.lang.System.arraycopy(Native Method)
-	at controllers.RecetaController.busqueda(RecetaController.java:272)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 33 common frames omitted
-2018-01-08 20:57:24,351 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Stopping application at 2018-01-08T19:57:24.351Z after 74s.
-2018-01-08 20:57:24,359 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - Shutting down connection pool.
-2018-01-08 20:57:24,476 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - Creating Pool for datasource 'default'
-2018-01-08 20:57:24,492 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-15 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 20:57:24,598 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Starting application at 2018-01-08T19:57:24.598Z
-2018-01-08 20:57:24,739 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-15 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 20:57:24,795 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-15 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 20:57:24,797 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-15 - Application started (Dev)
-2018-01-08 20:57:24,826 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-15 - 
-
-! @76hhgf76b - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.ArrayStoreException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.ArrayStoreException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: java.lang.ArrayStoreException: null
-	at java.lang.System.arraycopy(Native Method)
-	at models.Receta.findByCocineros(Receta.java:142)
-	at controllers.RecetaController.busqueda(RecetaController.java:269)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 33 common frames omitted
-2018-01-08 20:58:32,871 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Stopping application at 2018-01-08T19:58:32.871Z after 68s.
-2018-01-08 20:58:32,884 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - Shutting down connection pool.
-2018-01-08 20:58:33,001 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - Creating Pool for datasource 'default'
-2018-01-08 20:58:33,012 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-15 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 20:58:33,123 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Starting application at 2018-01-08T19:58:33.123Z
-2018-01-08 20:58:33,240 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-15 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 20:58:33,257 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-15 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 20:58:33,257 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-15 - Application started (Dev)
-2018-01-08 20:58:33,282 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-15 - 
-
-! @76hhgj4d9 - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.ArrayStoreException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.ArrayStoreException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: java.lang.ArrayStoreException: null
-	at java.lang.System.arraycopy(Native Method)
-	at models.Receta.findByCocineros(Receta.java:143)
-	at controllers.RecetaController.busqueda(RecetaController.java:269)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 33 common frames omitted
-2018-01-08 21:00:07,023 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-16 - ApplicationTimer demo: Stopping application at 2018-01-08T20:00:07.023Z after 94s.
-2018-01-08 21:00:07,029 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-16 - Shutting down connection pool.
-2018-01-08 21:00:07,148 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-16 - Creating Pool for datasource 'default'
-2018-01-08 21:00:07,165 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-16 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:00:07,275 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-16 - ApplicationTimer demo: Starting application at 2018-01-08T20:00:07.275Z
-2018-01-08 21:00:07,387 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-16 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:00:07,404 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-16 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:00:07,404 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-16 - Application started (Dev)
-2018-01-08 21:00:07,428 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-16 - 
-
-! @76hhgodk9 - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.ArrayStoreException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.ArrayStoreException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: java.lang.ArrayStoreException: null
-	at java.lang.System.arraycopy(Native Method)
-	at models.Receta.findByCocineros(Receta.java:143)
-	at controllers.RecetaController.busqueda(RecetaController.java:269)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 33 common frames omitted
-2018-01-08 21:02:22,853 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Stopping application at 2018-01-08T20:02:22.853Z after 135s.
-2018-01-08 21:02:22,860 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - Shutting down connection pool.
-2018-01-08 21:02:22,997 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - Creating Pool for datasource 'default'
-2018-01-08 21:02:23,010 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-26 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:02:23,116 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-26 - ApplicationTimer demo: Starting application at 2018-01-08T20:02:23.116Z
-2018-01-08 21:02:23,234 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-26 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:02:23,251 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-26 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:02:23,252 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-26 - Application started (Dev)
-2018-01-08 21:02:23,272 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-26 - 
-
-! @76hhh66j3 - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.ArrayStoreException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.ArrayStoreException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: java.lang.ArrayStoreException: null
-	at java.lang.System.arraycopy(Native Method)
-	at models.Receta.findByCocineros(Receta.java:144)
-	at controllers.RecetaController.busqueda(RecetaController.java:269)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 33 common frames omitted
-2018-01-08 21:03:54,242 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - ApplicationTimer demo: Stopping application at 2018-01-08T20:03:54.242Z after 91s.
-2018-01-08 21:03:54,252 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - Shutting down connection pool.
-2018-01-08 21:03:54,387 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - Creating Pool for datasource 'default'
-2018-01-08 21:03:54,399 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-19 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:03:54,501 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - ApplicationTimer demo: Starting application at 2018-01-08T20:03:54.501Z
-2018-01-08 21:03:54,602 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-19 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:03:54,617 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-19 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:03:54,618 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-19 - Application started (Dev)
-2018-01-08 21:03:54,636 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-19 - 
-
-! @76hhhbbn3 - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.ArrayStoreException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.ArrayStoreException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: java.lang.ArrayStoreException: null
-	at java.lang.System.arraycopy(Native Method)
-	at controllers.RecetaController.busqueda(RecetaController.java:274)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 33 common frames omitted
-2018-01-08 21:04:43,585 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - ApplicationTimer demo: Stopping application at 2018-01-08T20:04:43.585Z after 49s.
-2018-01-08 21:04:43,593 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - Shutting down connection pool.
-2018-01-08 21:04:43,724 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - Creating Pool for datasource 'default'
-2018-01-08 21:04:43,735 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-19 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:04:43,830 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-19 - ApplicationTimer demo: Starting application at 2018-01-08T20:04:43.830Z
-2018-01-08 21:04:43,940 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-19 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:04:43,955 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-19 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:04:43,956 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-19 - Application started (Dev)
-2018-01-08 21:29:16,431 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-38 - ApplicationTimer demo: Stopping application at 2018-01-08T20:29:16.431Z after 1473s.
-2018-01-08 21:29:16,438 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-38 - Shutting down connection pool.
-2018-01-08 21:29:16,545 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-38 - Creating Pool for datasource 'default'
-2018-01-08 21:29:16,557 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-38 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:29:16,634 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-38 - ApplicationTimer demo: Starting application at 2018-01-08T20:29:16.634Z
-2018-01-08 21:29:16,728 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-38 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:29:16,743 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-38 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:29:16,743 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-38 - Application started (Dev)
-2018-01-08 21:29:27,707 [ERROR] from application in application-akka.actor.default-dispatcher-4 - 
-
-! @76hhkkhja - Internal server error, for (POST) [/ingrediente/] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: java.lang.NullPointerException]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.executeScheduled(Execution.scala:109)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:71)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:284)
-	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:284)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:284)
-	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:337)
-	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:322)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:39)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:43)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: java.lang.NullPointerException
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:474)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1977)
-	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:21)
-	at scala.concurrent.java8.FuturesConvertersImpl$CF.apply(FutureConvertersImpl.scala:18)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:63)
-	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:78)
-	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
-	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:81)
-	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:55)
-	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:864)
-	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:106)
-	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:103)
-	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:862)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:284)
-	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:284)
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:284)
-	at scala.concurrent.Promise.complete(Promise.scala:49)
-	at scala.concurrent.Promise.complete$(Promise.scala:48)
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:183)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	... 19 common frames omitted
-Caused by: java.lang.NullPointerException: null
-	at models.Ingrediente.checkAndCreate(Ingrediente.java:81)
-	at controllers.IngredienteController.crearIngrediente(IngredienteController.java:45)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$42(Routes.scala:812)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:302)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	... 12 common frames omitted
-2018-01-08 21:33:48,853 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Stopping application at 2018-01-08T20:33:48.853Z after 272s.
-2018-01-08 21:33:48,863 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - Shutting down connection pool.
-2018-01-08 21:33:48,988 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - Creating Pool for datasource 'default'
-2018-01-08 21:33:48,999 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-41 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:33:49,091 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Starting application at 2018-01-08T20:33:49.091Z
-2018-01-08 21:33:49,189 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-41 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:33:49,206 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-41 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:33:49,206 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-41 - Application started (Dev)
-2018-01-08 21:35:04,497 [ERROR] from application in play-dev-mode-akka.actor.default-dispatcher-41 - 
-
-! @76hhldlol - Internal server error, for (GET) [/busqueda/?tag=vegetariana&tag=rojo&cocinero=57&cocinero=58&ingrediente=harin] ->
- 
-play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[CompletionException: javax.persistence.PersistenceException: Query threw SQLException:Columna "INGREDIENTE" no encontrada
-Column "INGREDIENTE" not found; SQL statement:
-select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ?  [42122-194] Bind values:[null] Query was:select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ? ]]
-	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:255)
-	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:182)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:251)
-	at play.core.server.AkkaHttpServer$$anonfun$$nestedInanonfun$executeHandler$1$1.applyOrElse(AkkaHttpServer.scala:250)
-	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:412)
-	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:37)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:312)
-	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:303)
-	at scala.concurrent.impl.Promise.transformWith(Promise.scala:36)
-	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:34)
-	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:183)
-	at scala.concurrent.Future.recoverWith(Future.scala:411)
-	at scala.concurrent.Future.recoverWith$(Future.scala:410)
-	at scala.concurrent.impl.Promise$DefaultPromise.recoverWith(Promise.scala:183)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$recoverWith$3(Accumulator.scala:194)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:207)
-	at play.core.server.AkkaHttpServer.executeAction(AkkaHttpServer.scala:297)
-	at play.core.server.AkkaHttpServer.executeHandler(AkkaHttpServer.scala:254)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:200)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$3(AkkaHttpServer.scala:106)
-	at akka.stream.impl.fusing.MapAsync$$anon$23.onPush(Ops.scala:1172)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:499)
-	at akka.stream.impl.fusing.GraphInterpreter.processEvent(GraphInterpreter.scala:462)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:368)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:571)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:457)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:546)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:728)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:743)
-	at akka.actor.Actor.aroundReceive(Actor.scala:517)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:515)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:653)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:527)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:496)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:257)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:224)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:234)
-	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
-	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
-	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
-	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
-Caused by: java.util.concurrent.CompletionException: javax.persistence.PersistenceException: Query threw SQLException:Columna "INGREDIENTE" no encontrada
-Column "INGREDIENTE" not found; SQL statement:
-select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ?  [42122-194] Bind values:[null] Query was:select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ? 
-	at java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:292)
-	at java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:308)
-	at java.util.concurrent.CompletableFuture.uniApply(CompletableFuture.java:593)
-	at java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:577)
-	at java.util.concurrent.CompletableFuture.uniApplyStage(CompletableFuture.java:617)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:1993)
-	at java.util.concurrent.CompletableFuture.thenApplyAsync(CompletableFuture.java:110)
-	at play.libs.streams.Accumulator$StrictAccumulator.lambda$map$3(Accumulator.java:362)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at java.util.function.Function.lambda$andThen$1(Function.java:88)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:403)
-	at play.libs.streams.Accumulator$StrictAccumulator$1.apply(Accumulator.java:400)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	... 27 common frames omitted
-Caused by: javax.persistence.PersistenceException: Query threw SQLException:Columna "INGREDIENTE" no encontrada
-Column "INGREDIENTE" not found; SQL statement:
-select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ?  [42122-194] Bind values:[null] Query was:select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ? 
-	at io.ebean.config.dbplatform.SqlCodeTranslator.translate(SqlCodeTranslator.java:48)
-	at io.ebean.config.dbplatform.DatabasePlatform.translate(DatabasePlatform.java:195)
-	at io.ebeaninternal.server.query.CQueryEngine.translate(CQueryEngine.java:139)
-	at io.ebeaninternal.server.query.DefaultOrmQueryEngine.translate(DefaultOrmQueryEngine.java:38)
-	at io.ebeaninternal.server.core.OrmQueryRequest.translate(OrmQueryRequest.java:81)
-	at io.ebeaninternal.server.query.CQuery.createPersistenceException(CQuery.java:666)
-	at io.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:373)
-	at io.ebeaninternal.server.query.DefaultOrmQueryEngine.findMany(DefaultOrmQueryEngine.java:126)
-	at io.ebeaninternal.server.core.OrmQueryRequest.findList(OrmQueryRequest.java:371)
-	at io.ebeaninternal.server.core.DefaultServer.findList(DefaultServer.java:1506)
-	at io.ebeaninternal.server.querydefn.DefaultOrmQuery.findList(DefaultOrmQuery.java:1239)
-	at io.ebeaninternal.server.expression.DefaultExpressionList.findList(DefaultExpressionList.java:382)
-	at models.Receta.findByIngredientes(Receta.java:175)
-	at controllers.RecetaController.busqueda(RecetaController.java:270)
-	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$64(Routes.scala:878)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:134)
-	at play.core.routing.HandlerInvokerFactory$$anon$3.resultCall(HandlerInvoker.scala:133)
-	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$8$$anon$2$$anon$1.invocation(HandlerInvoker.scala:108)
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:76)
-	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:31)
-	at play.core.j.JavaAction.$anonfun$apply$2(JavaAction.scala:111)
-	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:653)
-	at scala.util.Success.$anonfun$map$1(Try.scala:251)
-	at scala.util.Success.map(Try.scala:209)
-	at scala.concurrent.Future.$anonfun$map$1(Future.scala:287)
-	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:29)
-	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:29)
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:60)
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
-	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:68)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete(Promise.scala:368)
-	at scala.concurrent.impl.Promise$KeptPromise$Kept.onComplete$(Promise.scala:367)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.onComplete(Promise.scala:375)
-	at scala.concurrent.impl.Promise.transform(Promise.scala:29)
-	at scala.concurrent.impl.Promise.transform$(Promise.scala:27)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.transform(Promise.scala:375)
-	at scala.concurrent.Future.map(Future.scala:287)
-	at scala.concurrent.Future.map$(Future.scala:287)
-	at scala.concurrent.impl.Promise$KeptPromise$Successful.map(Promise.scala:375)
-	at scala.concurrent.Future$.apply(Future.scala:653)
-	at play.core.j.JavaAction.apply(JavaAction.scala:111)
-	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:96)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:174)
-	at scala.util.Try$.apply(Try.scala:209)
-	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:174)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at scala.Function1.$anonfun$andThen$1(Function1.scala:52)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:218)
-	at play.api.libs.streams.StrictAccumulator$$anon$1.apply(Accumulator.scala:217)
-	... 32 common frames omitted
-Caused by: org.h2.jdbc.JdbcSQLException: Columna "INGREDIENTE" no encontrada
-Column "INGREDIENTE" not found; SQL statement:
-select t0.id, t0.nombre, t0.version, t0.fecha_creacion, t0.fecha_modificacion from ingrediente t0 where ingrediente = ?  [42122-194]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
-	at org.h2.message.DbException.get(DbException.java:179)
-	at org.h2.message.DbException.get(DbException.java:155)
-	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:146)
-	at org.h2.expression.Comparison.optimize(Comparison.java:178)
-	at org.h2.command.dml.Select.prepare(Select.java:856)
-	at org.h2.command.Parser.prepareCommand(Parser.java:261)
-	at org.h2.engine.Session.prepareLocal(Session.java:564)
-	at org.h2.engine.Session.prepareCommand(Session.java:505)
-	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1204)
-	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
-	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:288)
-	at com.zaxxer.hikari.pool.ProxyConnection.prepareStatement(ProxyConnection.java:317)
-	at com.zaxxer.hikari.pool.HikariProxyConnection.prepareStatement(HikariProxyConnection.java)
-	at io.ebeaninternal.server.query.CQuery.prepareBindExecuteQueryWithOption(CQuery.java:343)
-	at io.ebeaninternal.server.query.CQuery.prepareBindExecuteQuery(CQuery.java:310)
-	at io.ebeaninternal.server.query.CQueryEngine.findMany(CQueryEngine.java:349)
-	... 76 common frames omitted
-2018-01-08 21:35:28,565 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - ApplicationTimer demo: Stopping application at 2018-01-08T20:35:28.565Z after 99s.
-2018-01-08 21:35:28,580 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - Shutting down connection pool.
-2018-01-08 21:35:28,747 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - Creating Pool for datasource 'default'
-2018-01-08 21:35:28,755 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-43 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:35:28,793 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - ApplicationTimer demo: Starting application at 2018-01-08T20:35:28.792Z
-2018-01-08 21:35:28,865 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-43 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:35:28,874 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-43 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:35:28,875 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-43 - Application started (Dev)
-2018-01-08 21:38:45,054 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - ApplicationTimer demo: Stopping application at 2018-01-08T20:38:45.054Z after 197s.
-2018-01-08 21:38:45,055 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - Shutting down connection pool.
-2018-01-08 21:38:45,178 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - Creating Pool for datasource 'default'
-2018-01-08 21:38:45,188 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-43 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:38:45,286 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-43 - ApplicationTimer demo: Starting application at 2018-01-08T20:38:45.285Z
-2018-01-08 21:38:45,366 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-43 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:38:45,381 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-43 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:38:45,381 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-43 - Application started (Dev)
-2018-01-08 21:39:37,234 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Stopping application at 2018-01-08T20:39:37.234Z after 52s.
-2018-01-08 21:39:37,249 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - Shutting down connection pool.
-2018-01-08 21:39:37,361 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - Creating Pool for datasource 'default'
-2018-01-08 21:39:37,370 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-41 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:39:37,448 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-41 - ApplicationTimer demo: Starting application at 2018-01-08T20:39:37.448Z
-2018-01-08 21:39:37,536 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-41 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:39:37,547 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-41 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:39:37,547 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-41 - Application started (Dev)
-2018-01-08 21:44:56,124 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-34 - ApplicationTimer demo: Stopping application at 2018-01-08T20:44:56.124Z after 319s.
-2018-01-08 21:44:56,147 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-34 - Shutting down connection pool.
-2018-01-08 21:44:56,238 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-34 - Creating Pool for datasource 'default'
-2018-01-08 21:44:56,246 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-34 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:44:56,330 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-34 - ApplicationTimer demo: Starting application at 2018-01-08T20:44:56.330Z
-2018-01-08 21:44:56,393 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-34 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:44:56,403 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-34 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:44:56,403 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-34 - Application started (Dev)
-2018-01-08 21:48:27,841 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-62 - ApplicationTimer demo: Stopping application at 2018-01-08T20:48:27.841Z after 211s.
-2018-01-08 21:48:27,849 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-62 - Shutting down connection pool.
-2018-01-08 21:48:27,962 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-62 - Creating Pool for datasource 'default'
-2018-01-08 21:48:27,972 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-62 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:48:28,056 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-62 - ApplicationTimer demo: Starting application at 2018-01-08T20:48:28.056Z
-2018-01-08 21:48:28,130 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-62 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:48:28,141 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-62 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:48:28,141 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-62 - Application started (Dev)
-2018-01-08 21:50:05,821 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-58 - ApplicationTimer demo: Stopping application at 2018-01-08T20:50:05.821Z after 97s.
-2018-01-08 21:50:05,836 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-58 - Shutting down connection pool.
-2018-01-08 21:50:05,977 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-58 - Creating Pool for datasource 'default'
-2018-01-08 21:50:05,987 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-58 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 21:50:06,094 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-58 - ApplicationTimer demo: Starting application at 2018-01-08T20:50:06.094Z
-2018-01-08 21:50:06,197 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-58 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 21:50:06,215 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-58 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 21:50:06,216 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-58 - Application started (Dev)
-2018-01-08 22:00:16,681 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - ApplicationTimer demo: Stopping application at 2018-01-08T21:00:16.681Z after 610s.
-2018-01-08 22:00:16,690 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - Shutting down connection pool.
-2018-01-08 22:00:16,843 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - Creating Pool for datasource 'default'
-2018-01-08 22:00:16,849 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-60 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 22:00:16,879 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - ApplicationTimer demo: Starting application at 2018-01-08T21:00:16.879Z
-2018-01-08 22:00:16,937 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-60 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 22:00:16,946 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-60 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 22:00:16,947 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-60 - Application started (Dev)
-2018-01-08 22:01:35,156 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - ApplicationTimer demo: Stopping application at 2018-01-08T21:01:35.156Z after 79s.
-2018-01-08 22:01:35,156 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - Shutting down connection pool.
-2018-01-08 22:01:35,280 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - Creating Pool for datasource 'default'
-2018-01-08 22:01:35,287 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-65 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 22:01:35,375 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - ApplicationTimer demo: Starting application at 2018-01-08T21:01:35.375Z
-2018-01-08 22:01:35,461 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-65 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 22:01:35,472 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-65 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 22:01:35,473 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-65 - Application started (Dev)
-2018-01-08 22:02:13,038 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - ApplicationTimer demo: Stopping application at 2018-01-08T21:02:13.038Z after 38s.
-2018-01-08 22:02:13,049 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - Shutting down connection pool.
-2018-01-08 22:02:13,138 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - Creating Pool for datasource 'default'
-2018-01-08 22:02:13,147 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-65 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 22:02:13,230 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-65 - ApplicationTimer demo: Starting application at 2018-01-08T21:02:13.230Z
-2018-01-08 22:02:13,305 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-65 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 22:02:13,315 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-65 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 22:02:13,316 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-65 - Application started (Dev)
-2018-01-08 22:02:50,368 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - ApplicationTimer demo: Stopping application at 2018-01-08T21:02:50.368Z after 37s.
-2018-01-08 22:02:50,375 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - Shutting down connection pool.
-2018-01-08 22:02:50,473 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - Creating Pool for datasource 'default'
-2018-01-08 22:02:50,481 [INFO] from play.api.db.DefaultDBApi in play-dev-mode-akka.actor.default-dispatcher-60 - Database [default] connected at jdbc:h2:~/dbRecetas.db
-2018-01-08 22:02:50,571 [INFO] from application in play-dev-mode-akka.actor.default-dispatcher-60 - ApplicationTimer demo: Starting application at 2018-01-08T21:02:50.571Z
-2018-01-08 22:02:50,663 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in play-dev-mode-akka.actor.default-dispatcher-60 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
-2018-01-08 22:02:50,676 [INFO] from play.api.http.EnabledFilters in play-dev-mode-akka.actor.default-dispatcher-60 - Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-    filters.ExampleFilter
-
-2018-01-08 22:02:50,677 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-60 - Application started (Dev)
+2018-01-09 14:18:40,175 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-20 - Application started (Dev)
+2018-01-09 14:18:46,219 [INFO] from play.core.server.AkkaHttpServer in pool-7-thread-4 - Stopping server...
+2018-01-09 14:18:46,222 [INFO] from application in pool-7-thread-4 - ApplicationTimer demo: Stopping application at 2018-01-09T13:18:46.222Z after 6s.
+2018-01-09 14:18:46,234 [INFO] from application in pool-7-thread-4 - Shutting down connection pool.
+2018-01-09 14:18:57,155 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:03,424 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:03.423Z
+2018-01-09 14:19:03,945 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:04,668 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:04.668Z after 1s.
+2018-01-09 14:19:04,684 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:04,871 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:04,966 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:04.966Z
+2018-01-09 14:19:04,988 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:05,071 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:05.071Z after 1s.
+2018-01-09 14:19:05,078 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:05,195 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:05,278 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:05.278Z
+2018-01-09 14:19:05,294 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:05,380 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:05.380Z after 0s.
+2018-01-09 14:19:05,392 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:05,506 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:05,581 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:05.581Z
+2018-01-09 14:19:05,597 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:05,653 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:05.653Z after 0s.
+2018-01-09 14:19:05,662 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:05,773 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:05,821 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:05.821Z
+2018-01-09 14:19:05,842 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:06,253 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:06.253Z after 1s.
+2018-01-09 14:19:06,266 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:06,375 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:06,456 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:06.456Z
+2018-01-09 14:19:06,470 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:06,532 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:06.532Z after 0s.
+2018-01-09 14:19:06,549 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:06,661 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:06,691 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:06.691Z
+2018-01-09 14:19:06,707 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:06,746 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:06.745Z after 0s.
+2018-01-09 14:19:06,746 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:06,852 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:06,905 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:06.905Z
+2018-01-09 14:19:06,922 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:06,979 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:06.979Z after 0s.
+2018-01-09 14:19:06,988 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:07,078 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:07,132 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:07.132Z
+2018-01-09 14:19:07,149 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:07,246 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:07.246Z after 0s.
+2018-01-09 14:19:07,253 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:07,355 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:07,411 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:07.411Z
+2018-01-09 14:19:07,432 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:07,492 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:07.492Z after 0s.
+2018-01-09 14:19:07,508 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:07,623 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:07,652 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:07.652Z
+2018-01-09 14:19:07,672 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:07,707 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:07.707Z after 0s.
+2018-01-09 14:19:07,708 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:07,859 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:07,884 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:07.884Z
+2018-01-09 14:19:07,895 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:07,935 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:07.935Z after 0s.
+2018-01-09 14:19:07,937 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:08,042 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:08,099 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:08.099Z
+2018-01-09 14:19:08,112 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:08,148 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:08.148Z after 0s.
+2018-01-09 14:19:08,157 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:08,245 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:08,287 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:08.287Z
+2018-01-09 14:19:08,298 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:08,348 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:08.348Z after 0s.
+2018-01-09 14:19:08,355 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:08,457 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:08,483 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:08.483Z
+2018-01-09 14:19:08,489 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:08,532 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:08.532Z after 0s.
+2018-01-09 14:19:08,532 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:08,665 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:08,690 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:08.690Z
+2018-01-09 14:19:08,702 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:08,755 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:08.755Z after 0s.
+2018-01-09 14:19:08,755 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:08,868 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:08,896 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:08.896Z
+2018-01-09 14:19:08,907 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:08,944 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:08.944Z after 0s.
+2018-01-09 14:19:08,945 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:09,044 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:09,071 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:09.071Z
+2018-01-09 14:19:09,086 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:09,129 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:09.129Z after 0s.
+2018-01-09 14:19:09,130 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:09,260 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:09,282 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:09.282Z
+2018-01-09 14:19:09,292 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:09,338 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:09.338Z after 0s.
+2018-01-09 14:19:09,339 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:09,421 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:09,460 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:09.460Z
+2018-01-09 14:19:09,470 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:09,508 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:09.508Z after 0s.
+2018-01-09 14:19:09,522 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:09,604 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:09,646 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:09.646Z
+2018-01-09 14:19:09,655 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:09,693 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:09.692Z after 0s.
+2018-01-09 14:19:09,705 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:09,778 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:09,815 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:09.814Z
+2018-01-09 14:19:09,825 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:09,872 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:09.872Z after 0s.
+2018-01-09 14:19:09,880 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:09,978 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:09,997 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:09.997Z
+2018-01-09 14:19:10,008 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:10,046 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:10.046Z after 1s.
+2018-01-09 14:19:10,046 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:10,134 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:10,177 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:10.177Z
+2018-01-09 14:19:10,192 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:10,239 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:10.239Z after 0s.
+2018-01-09 14:19:10,251 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:10,332 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:10,373 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:10.373Z
+2018-01-09 14:19:10,383 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:10,435 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:10.435Z after 0s.
+2018-01-09 14:19:10,441 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:10,522 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:10,560 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:10.560Z
+2018-01-09 14:19:10,574 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:10,625 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:10.625Z after 0s.
+2018-01-09 14:19:10,639 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.
+2018-01-09 14:19:10,740 [INFO] from application in pool-1-thread-1 - Creating Pool for datasource 'default'
+2018-01-09 14:19:10,763 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Starting application at 2018-01-09T13:19:10.763Z
+2018-01-09 14:19:10,785 [WARN] from org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator in pool-1-thread-1 - HV000184: ParameterMessageInterpolator has been chosen, EL interpolation will not be supported
+2018-01-09 14:19:10,853 [INFO] from application in pool-1-thread-1 - ApplicationTimer demo: Stopping application at 2018-01-09T13:19:10.853Z after 0s.
+2018-01-09 14:19:10,857 [INFO] from application in pool-1-thread-1 - Shutting down connection pool.

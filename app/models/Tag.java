@@ -63,14 +63,6 @@ public class Tag extends ModeloBase {
                 .findOne();
     }
 
-    /*public static List<Tag> busquedaTags(String textoParcial){
-        return find
-                .query()
-                .where()
-                .like("nombre", "%" + textoParcial + "%")
-                .findList();
-    }*/
-
     public static Integer numTags(){
         return find.query().findCount();
     }

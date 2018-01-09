@@ -32,8 +32,6 @@ public class Cocinero extends ModeloBase {
     public List<Receta> recetas = new ArrayList<>();
 
     public static final Finder<Long, Cocinero> find = new Finder<>(Cocinero.class);
-    public static final Finder<Long, Receta> findReceta = new Finder<>(Receta.class);
-
 
     public Cocinero() {
         super();
@@ -114,14 +112,6 @@ public class Cocinero extends ModeloBase {
                 .setMaxRows(25)
                 .setFirstRow(25 * page)
                 .findPagedList();
-    }
-
-    public List<Receta> findRecetas() {
-        return findReceta
-                .query()
-                .where()
-                .eq("r_cocinero.id", this.id)
-                .findList();
     }
 
     public static Integer numCocineros(){

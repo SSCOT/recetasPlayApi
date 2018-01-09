@@ -10,7 +10,6 @@ import play.libs.Json;
 import javax.persistence.*;
 import javax.persistence.OrderBy;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Entity
@@ -37,9 +36,6 @@ public class Receta extends ModeloBase {
     public List<Tag> tags = new ArrayList<>();
 
     public static final Finder<Long, Receta> find = new Finder<>(Receta.class);
-    public static final Finder<Long, Cocinero> findCocinero = new Finder<>(Cocinero.class);
-    public static final Finder<Long, Tag> findTag = new Finder<>(Tag.class);
-    public static final Finder<Long, Ingrediente> findIngrediente = new Finder<>(Ingrediente.class);
 
     public String getTitulo() {
         return titulo;
@@ -102,7 +98,6 @@ public class Receta extends ModeloBase {
     }
 
     public static List<Receta> findByTituloAprox(String titulo) {
-        System.out.println("SEC ** TITAPROX");
         return find.query().where().like("titulo", "%" + titulo + "%").findList();
     }
 
@@ -155,14 +150,8 @@ public class Receta extends ModeloBase {
 
         for (int i = 0; i < tags.length; i++) {
             // Sacamos la lista de tags que tienen ese mismo texto
-            List<Tag> listaTags = findTag.query().where().eq("texto", tags[i]).findList();
-
-            // Iteramos cada uno de los tags para sacar la receta a la que pertenece
-            Iterator<Tag> iterator = listaTags.iterator();
-            while (iterator.hasNext()) {
-                Tag tagTemp = iterator.next();
-                listaRecetas.add(tagTemp.t_receta);
-            }
+            List<Receta> listaRecetasTemporal = find.query().where().eq("tags.texto",tags[i]).findList();
+            listaRecetas.addAll(listaRecetasTemporal);
         }
 
         return listaRecetas;
@@ -172,15 +161,8 @@ public class Receta extends ModeloBase {
         List<Receta> listaRecetas = new ArrayList<Receta>();
 
         for (int i = 0; i < ingredientes.length; i++) {
-            // Sacamos la lista de tags que tienen ese mismo texto
-            List<Ingrediente> listaIngredientes = findIngrediente.query().where().eq("nombre", ingredientes[i]).findList();
-
-            // Iteramos cada uno de los tags para sacar la receta a la que pertenece
-            Iterator<Ingrediente> iterator = listaIngredientes.iterator();
-            while (iterator.hasNext()) {
-                Ingrediente ingredienteTemp = iterator.next();
-                listaRecetas.addAll(ingredienteTemp.recetas);
-            }
+            List<Receta> listaRecetasTemp = find.query().where().eq("ingredientes.nombre",ingredientes[i]).findList();
+            listaRecetas.addAll(listaRecetasTemp);
         }
 
         return listaRecetas;
@@ -190,7 +172,6 @@ public class Receta extends ModeloBase {
     public static List<Receta> findByTitulos(String[] titulos) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
         for (int i = 0; i < titulos.length; i++) {
-            System.out.println("entra en titulos aprox");
             listaRecetas.addAll(Receta.findByTituloAprox(titulos[i]));
         }
 
