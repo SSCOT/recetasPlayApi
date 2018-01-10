@@ -16,7 +16,7 @@ import java.sql.Timestamp;
 public class ModeloBase extends Model {
     @Id
     @GeneratedValue
-
+    @JsonIgnore
     public Long id;
 
     @Version

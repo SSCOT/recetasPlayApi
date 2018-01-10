@@ -64,7 +64,6 @@ public class Cocinero extends ModeloBase {
         this.apellido = apellido;
     }
 
-
     public String getTipo() {
         return tipo;
     }

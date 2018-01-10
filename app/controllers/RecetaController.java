@@ -233,14 +233,6 @@ public class RecetaController extends Controller {
         return Results.ok();
     }
 
-    /*public Result obtenerIngredientes(Long id) {
-        return Results.ok();
-    }*/
-
-    /*public Result anadirPaso(Long idReceta, Long idIngrediente, Long indice) {
-        return Results.ok("Añadimos un paso determinado en el lugar que queremos");
-    }*/
-
     // Búsqueda completa por diferentes parámetros
     public Result busqueda() {
 
