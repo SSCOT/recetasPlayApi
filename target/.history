@@ -209,3 +209,24 @@ h2-browser
 test
 run
 test
+dist
+test
+compile
+test
+clear
+cls
+clear
+test
+h2-browser
+test
+run
+test
+playGenerateSecret
+dist
+ls -l
+run
+h2-browser
+run
+h2-browser
+run
+test

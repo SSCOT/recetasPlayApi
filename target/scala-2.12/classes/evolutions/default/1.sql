@@ -3,15 +3,26 @@
 
 # --- !Ups
 
+create table apikey (
+  id                            bigint auto_increment not null,
+  key                           varchar(255),
+  version                       bigint not null,
+  fecha_creacion                timestamp not null,
+  fecha_modificacion            timestamp not null,
+  constraint pk_apikey primary key (id)
+);
+
 create table cocinero (
   id                            bigint auto_increment not null,
   nombre                        varchar(255),
   apellido                      varchar(255),
   tipo                          varchar(255),
   restaurante                   varchar(255),
+  key_id                        bigint,
   version                       bigint not null,
   fecha_creacion                timestamp not null,
   fecha_modificacion            timestamp not null,
+  constraint uq_cocinero_key_id unique (key_id),
   constraint pk_cocinero primary key (id)
 );
 
@@ -63,6 +74,8 @@ create table tag (
   constraint pk_tag primary key (id)
 );
 
+alter table cocinero add constraint fk_cocinero_key_id foreign key (key_id) references apikey (id) on delete restrict on update restrict;
+
 alter table ingrediente_receta add constraint fk_ingrediente_receta_ingrediente foreign key (ingrediente_id) references ingrediente (id) on delete restrict on update restrict;
 create index ix_ingrediente_receta_ingrediente on ingrediente_receta (ingrediente_id);
 
@@ -81,6 +94,8 @@ create index ix_tag_t_receta_id on tag (t_receta_id);
 
 # --- !Downs
 
+alter table cocinero drop constraint if exists fk_cocinero_key_id;
+
 alter table ingrediente_receta drop constraint if exists fk_ingrediente_receta_ingrediente;
 drop index if exists ix_ingrediente_receta_ingrediente;
 
@@ -95,6 +110,8 @@ drop index if exists ix_receta_r_cocinero_id;
 
 alter table tag drop constraint if exists fk_tag_t_receta_id;
 drop index if exists ix_tag_t_receta_id;
+
+drop table if exists apikey;
 
 drop table if exists cocinero;
 

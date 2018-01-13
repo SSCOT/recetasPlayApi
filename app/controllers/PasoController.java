@@ -150,9 +150,11 @@ public class PasoController extends Controller {
     }
 
     public Result borrarPaso(Long id) {
+        System.out.println("Entra en controlador");
         Paso paso = Paso.findById(id);
 
         if (paso != null){
+            System.out.println("Encuentra el paso");
             Ebean.beginTransaction();
             try{
                 paso.checkAndDelete();

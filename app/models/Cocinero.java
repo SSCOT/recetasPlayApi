@@ -7,6 +7,7 @@ import io.ebean.Ebean;
 import io.ebean.Finder;
 import io.ebean.Model;
 import io.ebean.PagedList;
+import org.apache.commons.lang3.RandomStringUtils;
 import play.libs.Json;
 import scala.util.parsing.json.JSONObject;
 import scala.util.parsing.json.JSONObject$;
@@ -27,6 +28,11 @@ public class Cocinero extends ModeloBase {
     private String apellido;
     private String tipo;
     private String restaurante;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
+    public Apikey key;
+
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "r_cocinero")
     public List<Receta> recetas = new ArrayList<>();
@@ -80,6 +86,14 @@ public class Cocinero extends ModeloBase {
         this.restaurante = restaurante;
     }
 
+    public Apikey getKey() {
+        return key;
+    }
+
+    public void setKey(Apikey key) {
+        this.key = key;
+    }
+
     public List<Receta> getRecetas() {
         return recetas;
     }
@@ -113,13 +127,11 @@ public class Cocinero extends ModeloBase {
                 .findPagedList();
     }
 
-    public static Integer numCocineros(){
+    public static Integer numCocineros() {
         return find.query().findCount();
     }
 
     public boolean checkAndCreate() {
-
-
         // Comprobamos que tiene nombre apellidos y tipo
         if (this.nombre.isEmpty() || this.apellido.isEmpty()) {
             return false;
@@ -129,9 +141,23 @@ public class Cocinero extends ModeloBase {
             return false;
         }
 
+        // Generamos un token único
+        // http://oliviertech.com/java/generate-SHA1-hash-from-a-String/
+        Long keyBase = new Long((int) (Math.random() * 1000000) + 0);
+        String keyFinal = this.nombre + keyBase + this.apellido;
+        String keySha1 = org.apache.commons.codec.digest.DigestUtils.sha1Hex(keyFinal);
+
+
+        // Creamos la ApiKey asociada
+        Apikey apiKeyAsociada = new Apikey();
+        apiKeyAsociada.setKey(keySha1);
+
+        this.setKey(apiKeyAsociada);
+
         // Una vez hechas las comprobaciones creamos el cocinero
         Ebean.beginTransaction();
         try {
+            apiKeyAsociada.save();
             this.save();
             Ebean.commitTransaction();
         } finally {

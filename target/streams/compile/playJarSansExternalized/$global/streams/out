@@ -1,0 +1,179 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT-sans-externalized.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html/index.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html/index.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listacocineros$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listacocineros$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listarecetas.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listarecetas.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listaingredientes$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listaingredientes$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseCocineroController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseCocineroController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listarecetas$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listarecetas$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/stylesheets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/stylesheets[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseHomeController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseHomeController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	router/RoutesPrefix.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/router/RoutesPrefix.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	utils/Cachefunctions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/utils/Cachefunctions.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseHomeController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseHomeController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseRecetaController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseRecetaController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	router/RoutesPrefix$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/router/RoutesPrefix$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/AsyncController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/AsyncController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers[0m
+[0m[[0m[0mdebug[0m] [0m[0m	filters[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/filters[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/javascripts[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/javascripts[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/services[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/images[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/images[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/ingrediente$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/ingrediente$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/IngredienteController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/IngredienteController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseCocineroController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseCocineroController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml[0m
+[0m[[0m[0mdebug[0m] [0m[0m	filters/ExampleFilter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/filters/ExampleFilter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseCountController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseCountController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	router/Routes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/router/Routes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/javascripts/hello.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/javascripts/hello.js[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseRecetaController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseRecetaController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReversePasoController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReversePasoController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Receta.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models/Receta.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Ingrediente.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models/Ingrediente.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/images/favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/images/favicon.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	router[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/router[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services/Counter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/services/Counter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html/welcome$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html/welcome$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseAssets.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseAssets.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services/ApplicationTimer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/services/ApplicationTimer.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/paso.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/paso.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	services/AtomicCounter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/services/AtomicCounter.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseTagController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseTagController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listapasos$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listapasos$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listaingredientes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listaingredientes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/images/header-pattern.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/images/header-pattern.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/tag.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/tag.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/TagController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/TagController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html/main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html/main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/stylesheets/main.css[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/stylesheets/main.css[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseIngredienteController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseIngredienteController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Module.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/Module.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html/main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html/main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/paso$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/paso$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/routes$javascript.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/routes$javascript.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/cocinero.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/cocinero.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReversePasoController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReversePasoController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Cocinero.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models/Cocinero.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/ingrediente.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/ingrediente.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/CountController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/CountController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listatags.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listatags.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/ModeloBase.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models/ModeloBase.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseAsyncController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseAsyncController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listapasos.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listapasos.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/cocinero$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/cocinero$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/receta.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/receta.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	META-INF/resources/webjars/play-java-starter-example/1.0-SNAPSHOT/images/external.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/public/images/external.png[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseAsyncController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseAsyncController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/receta$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/receta$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseCountController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseCountController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/CocineroController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/CocineroController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Paso.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models/Paso.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listacocineros.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listacocineros.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/tag$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/tag$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/routes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/routes.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/PasoController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/PasoController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseTagController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseTagController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/RecetaController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/RecetaController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/ReverseIngredienteController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/ReverseIngredienteController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/javascript/ReverseAssets.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/javascript/ReverseAssets.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html/index$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html/index$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	router/Routes$$anonfun$routes$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/router/Routes$$anonfun$routes$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/xml/listatags$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/xml/listatags$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models[0m
+[0m[[0m[0mdebug[0m] [0m[0m	controllers/HomeController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/controllers/HomeController.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	utils[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/utils[0m
+[0m[[0m[0mdebug[0m] [0m[0m	models/Tag.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/models/Tag.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	views/html/welcome.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/classes/views/html/welcome.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

@@ -159,7 +159,7 @@ public class Paso extends ModeloBase {
     }
 
     public void checkAndDelete() {
-
+        System.out.println("Entra en modelo");
         // Reordenamos los indices de los pasos
         List<Paso> listaPasos = find.query().where().eq("p_receta.id", this.p_receta.id).orderBy("indice").findList();
 
