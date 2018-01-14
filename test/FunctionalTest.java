@@ -21,6 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class FunctionalTest extends WithApplication {
 
     private static Cocinero cocinero;
+    private Apikey key;
     private static Receta receta;
     private static Ingrediente ingrediente;
     private static Tag tag;
@@ -33,6 +34,11 @@ public class FunctionalTest extends WithApplication {
         cocinero.setApellido("tApellido");
         cocinero.setTipo("cocinero");
         cocinero.setRestaurante("tRestaurante");
+        key = new Apikey();
+        key.setKey("aaa");
+        key.setCocinero(cocinero);
+        key.save();
+        cocinero.setKey(key);
         cocinero.save();
 
         receta = new Receta();
@@ -52,7 +58,7 @@ public class FunctionalTest extends WithApplication {
 
         paso = new Paso();
         paso.setDescripcion("tDescripcion");
-        paso.setTiempo(new Long(1));
+        paso.setTiempo(new Long(2));
         paso.setP_receta(receta);
         paso.save();
     }
@@ -76,7 +82,7 @@ public class FunctionalTest extends WithApplication {
     public void testCocineroGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/cocinero/" + cocinero.id);
+                .uri("/cocinero/" + cocinero.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -86,7 +92,7 @@ public class FunctionalTest extends WithApplication {
     public void testCocinerosGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/cocineros/0");
+                .uri("/cocineros/0" + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -104,7 +110,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
-                .uri("/cocinero/")
+                .uri("/cocinero/" + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -124,7 +130,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("PUT")
-                .uri("/cocinero/" + cocinero.id)
+                .uri("/cocinero/" + cocinero.id + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -139,7 +145,7 @@ public class FunctionalTest extends WithApplication {
         cocineroBorrar.save();
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
-                .uri("/cocinero/" + cocineroBorrar.id);
+                .uri("/cocinero/" + cocineroBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r1 = Helpers.route(app, req);
         assertThat(r1.status()).isEqualTo(200);
@@ -152,8 +158,9 @@ public class FunctionalTest extends WithApplication {
         assertThat(r.status()).isEqualTo(404);
     }
 
-
-    // Recetas
+    // ----------------------------------
+    // TEST RECETAS
+    // ----------------------------------
     @Test
     public void testRecetaPost() throws Exception {
 
@@ -164,15 +171,9 @@ public class FunctionalTest extends WithApplication {
                 "\"r_cocinero\":{\"id\":" + cocinero.getId() + "}" +
                 "}");
 
-        System.out.println("{" +
-                "\"titulo\":\"postTitulo\"," +
-                "\"tipo\":\"publica\"," +
-                "\"r_cocinero\":{\"id\":" + cocinero.getId() + "}" +
-                "}");
-
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
-                .uri("/receta/")
+                .uri("/receta/" + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -189,7 +190,7 @@ public class FunctionalTest extends WithApplication {
     public void testRecetaGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/receta/" + receta.id);
+                .uri("/receta/" + receta.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -199,7 +200,7 @@ public class FunctionalTest extends WithApplication {
     public void testRecetasGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/recetas/0");
+                .uri("/recetas/0" + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -212,7 +213,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("PUT")
-                .uri("/receta/" + receta.id)
+                .uri("/receta/" + receta.id + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -230,20 +231,22 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
-                .uri("/receta/" + recetaBorrar.id);
+                .uri("/receta/" + recetaBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r1 = Helpers.route(app, req);
         assertThat(r1.status()).isEqualTo(200);
 
         Http.RequestBuilder reqGet = Helpers.fakeRequest()
                 .method("get")
-                .uri("/receta/" + recetaBorrar.id);
+                .uri("/receta/" + recetaBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, reqGet);
         assertThat(r.status()).isEqualTo(404);
     }
 
-    // Ingredientes
+    // ----------------------------------
+    // TEST INGREDIENTES
+    // ----------------------------------
     @Test
     public void testIngredientePost() throws Exception {
 
@@ -252,7 +255,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
-                .uri("/ingrediente/")
+                .uri("/ingrediente/" + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -269,7 +272,7 @@ public class FunctionalTest extends WithApplication {
     public void testIngredientesGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/ingredientes/0");
+                .uri("/ingredientes/0" + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -282,7 +285,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("PUT")
-                .uri("/ingrediente/" + ingrediente.id)
+                .uri("/ingrediente/" + ingrediente.id + "?apikey=" + cocinero.key.getKey() )
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -297,7 +300,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
-                .uri("/ingrediente/" + ingredienteBorrar.id);
+                .uri("/ingrediente/" + ingredienteBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r1 = Helpers.route(app, req);
         assertThat(r1.status()).isEqualTo(200);
@@ -309,7 +312,6 @@ public class FunctionalTest extends WithApplication {
         Result r = Helpers.route(app, reqGet);
         assertThat(r.status()).isEqualTo(404);
     }
-
 
     // ----------------------------------
     // TEST TAGS
@@ -325,7 +327,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
-                .uri("/tag/")
+                .uri("/tag/" + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -339,7 +341,7 @@ public class FunctionalTest extends WithApplication {
     public void testGetTag() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/tag/" + tag.id);
+                .uri("/tag/" + tag.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -349,7 +351,7 @@ public class FunctionalTest extends WithApplication {
     public void testGetTags() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/tags/" + receta.id);
+                .uri("/tags/" + receta.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -362,7 +364,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("PUT")
-                .uri("/tag/" + tag.id)
+                .uri("/tag/" + tag.id + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -374,18 +376,19 @@ public class FunctionalTest extends WithApplication {
     public void testDeleteTags() {
         Tag tagBorrar = new Tag();
         tagBorrar.setTexto("tagBorrar");
+        tagBorrar.setT_receta(receta);
         tagBorrar.save();
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
-                .uri("/tag/" + tagBorrar.id);
+                .uri("/tag/" + tagBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r1 = Helpers.route(app, req);
         assertThat(r1.status()).isEqualTo(200);
 
         Http.RequestBuilder reqGet = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/tag/" + tagBorrar.id);
+                .uri("/tag/" + tagBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, reqGet);
         assertThat(r.status()).isEqualTo(404);
@@ -404,7 +407,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
-                .uri("/paso/")
+                .uri("/paso/" + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -417,7 +420,7 @@ public class FunctionalTest extends WithApplication {
     public void testGetPaso() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/paso/" + paso.id);
+                .uri("/paso/" + paso.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -427,7 +430,7 @@ public class FunctionalTest extends WithApplication {
     public void testGetPasos() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/pasos/" + receta.id + "/page/0");
+                .uri("/pasos/" + receta.id + "/page/0" + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -440,7 +443,7 @@ public class FunctionalTest extends WithApplication {
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("PUT")
-                .uri("/paso/" + paso.id)
+                .uri("/paso/" + paso.id + "?apikey=" + cocinero.key.getKey())
                 .header("Content-Type", "application/json")
                 .bodyJson(json);
 
@@ -458,18 +461,16 @@ public class FunctionalTest extends WithApplication {
         pasoBorrar.setIndice(new Long(1));
         pasoBorrar.save();
 
-        System.out.println("paso creado con id "+pasoBorrar.id);
-
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
-                .uri("/paso/" + pasoBorrar.id);
+                .uri("/paso/" + pasoBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r1 = Helpers.route(app, req);
         assertThat(r1.status()).isEqualTo(200);
 
         Http.RequestBuilder reqGet = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/paso/" + pasoBorrar.id);
+                .uri("/paso/" + pasoBorrar.id + "?apikey=" + cocinero.key.getKey());
 
         Result r2 = Helpers.route(app, reqGet);
         assertThat(r2.status()).isEqualTo(404);
@@ -479,7 +480,7 @@ public class FunctionalTest extends WithApplication {
     public void testAnadirIngrediente() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
-                .uri("/receta/" + receta.id + "/ingrediente/" + ingrediente.id);
+                .uri("/receta/" + receta.id + "/ingrediente/" + ingrediente.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(201);
@@ -489,12 +490,11 @@ public class FunctionalTest extends WithApplication {
     public void testQuitarIngrediente() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
-                .uri("/receta/" + receta.id + "/ingrediente/" + ingrediente.id);
+                .uri("/receta/" + receta.id + "/ingrediente/" + ingrediente.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
     }
-
     @After
     public void borradoDatos() {
         if (receta != null)

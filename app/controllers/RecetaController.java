@@ -15,13 +15,16 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 import utils.Cachefunctions;
+import utils.SeguridadFunctions;
 
 import javax.inject.Inject;
 
 import java.util.*;
 
-
+@esKeyValida
 public class RecetaController extends Controller {
+
+    public SeguridadFunctions seguridad;
 
     @Inject
     FormFactory frmFactory;
@@ -35,6 +38,7 @@ public class RecetaController extends Controller {
         return ok("RecetaController works!");
     }
 
+    @esCocinero
     public Result crearReceta() {
 
         Form<Receta> frm = frmFactory.form(Receta.class).bindFromRequest();
@@ -153,7 +157,14 @@ public class RecetaController extends Controller {
         }
     }
 
+    @esCocinero
     public Result editarReceta(Long id) {
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(id, key) == false)
+            return Results.badRequest();
+
         Form<Receta> frm = frmFactory.form(Receta.class).bindFromRequest();
         if (frm.hasErrors()) {
             return status(409, frm.errorsAsJson());
@@ -170,7 +181,14 @@ public class RecetaController extends Controller {
         return Results.ok();
     }
 
+    @esCocinero
     public Result borrarReceta(Long id) {
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(id, key) == false)
+            return Results.badRequest();
+
         Receta receta = Receta.findById(id);
 
         if (receta != null) {
@@ -189,12 +207,18 @@ public class RecetaController extends Controller {
         return Results.ok();
     }
 
+    @esCocinero
     public Result anadirIngrediente(Long idReceta, Long idIngrediente) {
 
         // No puede llegar nada nulo
         if (idIngrediente == null || idReceta == null) {
             return Results.badRequest();
         }
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(idReceta, key) == false)
+            return Results.badRequest();
 
         // Tienen que existir tanto la receta como el ingrediente
         Receta receta = Receta.findById(idReceta);
@@ -212,11 +236,17 @@ public class RecetaController extends Controller {
         return Results.badRequest();
     }
 
+    @esCocinero
     public Result quitarIngrediente(Long idReceta, Long idIngrediente) {
         // No puede llegar nada nulo
         if (idIngrediente == null || idReceta == null) {
             return Results.badRequest();
         }
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(idReceta, key) == false)
+            return Results.badRequest();
 
         // Tienen que existir tanto la receta como el ingrediente
         Receta receta = Receta.findById(idReceta);

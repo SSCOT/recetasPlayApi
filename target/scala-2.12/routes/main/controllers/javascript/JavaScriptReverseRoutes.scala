@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Thu Jan 04 16:28:51 CET 2018
+// @DATE:Sun Jan 14 00:58:17 CET 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -32,7 +32,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:50
+  // @LINE:49
   class ReverseTagController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -40,7 +40,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:54
+    // @LINE:53
     def borrarTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.borrarTag",
       """
@@ -50,7 +50,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:52
+    // @LINE:51
     def obtenerTags: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.obtenerTags",
       """
@@ -60,7 +60,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:50
+    // @LINE:49
     def crearTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.crearTag",
       """
@@ -70,7 +70,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:50
     def obtenerTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.obtenerTag",
       """
@@ -80,7 +80,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:52
     def editarTag: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.TagController.editarTag",
       """
@@ -172,7 +172,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:41
+  // @LINE:40
   class ReverseIngredienteController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -180,7 +180,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:44
+    // @LINE:43
     def borrarIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredienteController.borrarIngrediente",
       """
@@ -190,7 +190,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:42
+    // @LINE:41
     def obtenerIngredientes: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredienteController.obtenerIngredientes",
       """
@@ -200,7 +200,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:42
     def editarIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredienteController.editarIngrediente",
       """
@@ -210,7 +210,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:41
+    // @LINE:40
     def crearIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.IngredienteController.crearIngrediente",
       """
@@ -270,7 +270,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:46
+    // @LINE:45
     def anadirIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.anadirIngrediente",
       """
@@ -290,7 +290,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:57
+    // @LINE:56
     def busqueda: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.busqueda",
       """
@@ -300,7 +300,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:30
+    // @LINE:29
     def editarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.editarReceta",
       """
@@ -330,7 +330,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:47
+    // @LINE:46
     def quitarIngrediente: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.quitarIngrediente",
       """
@@ -340,7 +340,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:31
+    // @LINE:30
     def borrarReceta: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RecetaController.borrarReceta",
       """
@@ -362,7 +362,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:34
+  // @LINE:33
   class ReversePasoController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -370,7 +370,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:36
+    // @LINE:35
     def obtenerPasos: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.obtenerPasos",
       """
@@ -380,7 +380,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:35
+    // @LINE:34
     def obtenerPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.obtenerPaso",
       """
@@ -390,7 +390,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:36
     def editarPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.editarPaso",
       """
@@ -400,7 +400,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:34
+    // @LINE:33
     def crearPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.crearPaso",
       """
@@ -410,7 +410,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:38
+    // @LINE:37
     def borrarPaso: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.borrarPaso",
       """

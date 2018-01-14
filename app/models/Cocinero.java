@@ -127,6 +127,11 @@ public class Cocinero extends ModeloBase {
                 .findPagedList();
     }
 
+    public static Cocinero findByKey (String key){
+        Cocinero cocinero = find.query().where().eq("key.key", key).findOne();
+        return cocinero;
+    }
+
     public static Integer numCocineros() {
         return find.query().findCount();
     }
@@ -141,9 +146,10 @@ public class Cocinero extends ModeloBase {
             return false;
         }
 
+
         // Generamos un token único
         // http://oliviertech.com/java/generate-SHA1-hash-from-a-String/
-        Long keyBase = new Long((int) (Math.random() * 1000000) + 0);
+        Long keyBase = new Long((int) (Math.random() * 1000000) + 1);
         String keyFinal = this.nombre + keyBase + this.apellido;
         String keySha1 = org.apache.commons.codec.digest.DigestUtils.sha1Hex(keyFinal);
 

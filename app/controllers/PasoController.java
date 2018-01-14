@@ -13,6 +13,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 import utils.Cachefunctions;
+import utils.SeguridadFunctions;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -32,6 +33,7 @@ public class PasoController extends Controller {
         return ok("PasoController Works!");
     }
 
+    @esCocinero
     public Result crearPaso() {
         // Recogemos los datos por formulario
         Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
@@ -42,6 +44,11 @@ public class PasoController extends Controller {
         }
 
         Paso nuevoPaso = frm.get();
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(nuevoPaso.p_receta.getId(), key) == false)
+            return Results.badRequest();
 
         // Checkeamos y guardamos
         if (nuevoPaso.checkAndCreate()) {
@@ -54,11 +61,20 @@ public class PasoController extends Controller {
 
     }
 
+    @esCocinero
     public Result editarPaso(Long id) {
-        // Comprobamos que el usuario existe
-        if (Paso.findById(id) == null) {
+
+        Paso paso = Paso.findById(id);
+
+        // Comprobamos que el paso existe
+        if (paso == null) {
             return Results.notFound();
         }
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key) == false)
+            return Results.badRequest();
 
         // Recogemos los datos por formulario
         Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
@@ -149,12 +165,16 @@ public class PasoController extends Controller {
         }
     }
 
+    @esCocinero
     public Result borrarPaso(Long id) {
-        System.out.println("Entra en controlador");
         Paso paso = Paso.findById(id);
 
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key) == false)
+            return Results.badRequest();
+
         if (paso != null){
-            System.out.println("Encuentra el paso");
             Ebean.beginTransaction();
             try{
                 paso.checkAndDelete();

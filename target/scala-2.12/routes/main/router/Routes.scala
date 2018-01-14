@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Thu Jan 04 16:28:51 CET 2018
+// @DATE:Sun Jan 14 00:58:17 CET 2018
 
 package router
 
@@ -27,11 +27,11 @@ class Routes(
   CocineroController_5: controllers.CocineroController,
   // @LINE:25
   RecetaController_0: controllers.RecetaController,
-  // @LINE:34
+  // @LINE:33
   PasoController_3: controllers.PasoController,
-  // @LINE:41
+  // @LINE:40
   IngredienteController_7: controllers.IngredienteController,
-  // @LINE:50
+  // @LINE:49
   TagController_6: controllers.TagController,
   val prefix: String
 ) extends GeneratedRouter {
@@ -50,11 +50,11 @@ class Routes(
     CocineroController_5: controllers.CocineroController,
     // @LINE:25
     RecetaController_0: controllers.RecetaController,
-    // @LINE:34
+    // @LINE:33
     PasoController_3: controllers.PasoController,
-    // @LINE:41
+    // @LINE:40
     IngredienteController_7: controllers.IngredienteController,
-    // @LINE:50
+    // @LINE:49
     TagController_6: controllers.TagController
   ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_4, Assets_8, CocineroController_5, RecetaController_0, PasoController_3, IngredienteController_7, TagController_6, "/")
 
@@ -341,7 +341,7 @@ class Routes(
     )
   )
 
-  // @LINE:30
+  // @LINE:29
   private[this] lazy val controllers_RecetaController_editarReceta13_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -354,12 +354,12 @@ class Routes(
       Seq(classOf[Long]),
       "PUT",
       this.prefix + """receta/""" + "$" + """id<[^/]+>""",
-      """GET     /receta/:id/ingredientes        controllers.RecetaController.obtenerIngredientes(id: Long)""",
+      """""",
       Seq()
     )
   )
 
-  // @LINE:31
+  // @LINE:30
   private[this] lazy val controllers_RecetaController_borrarReceta14_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -377,7 +377,7 @@ class Routes(
     )
   )
 
-  // @LINE:34
+  // @LINE:33
   private[this] lazy val controllers_PasoController_crearPaso15_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/")))
   )
@@ -395,7 +395,7 @@ class Routes(
     )
   )
 
-  // @LINE:35
+  // @LINE:34
   private[this] lazy val controllers_PasoController_obtenerPaso16_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -413,7 +413,7 @@ class Routes(
     )
   )
 
-  // @LINE:36
+  // @LINE:35
   private[this] lazy val controllers_PasoController_obtenerPasos17_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("pasos/"), DynamicPart("idReceta", """[^/]+""",true), StaticPart("/page/"), DynamicPart("page", """[^/]+""",true)))
   )
@@ -431,7 +431,7 @@ class Routes(
     )
   )
 
-  // @LINE:37
+  // @LINE:36
   private[this] lazy val controllers_PasoController_editarPaso18_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -449,7 +449,7 @@ class Routes(
     )
   )
 
-  // @LINE:38
+  // @LINE:37
   private[this] lazy val controllers_PasoController_borrarPaso19_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("paso/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -467,7 +467,7 @@ class Routes(
     )
   )
 
-  // @LINE:41
+  // @LINE:40
   private[this] lazy val controllers_IngredienteController_crearIngrediente20_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ingrediente/")))
   )
@@ -485,7 +485,7 @@ class Routes(
     )
   )
 
-  // @LINE:42
+  // @LINE:41
   private[this] lazy val controllers_IngredienteController_obtenerIngredientes21_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ingredientes/"), DynamicPart("page", """[^/]+""",true)))
   )
@@ -503,7 +503,7 @@ class Routes(
     )
   )
 
-  // @LINE:43
+  // @LINE:42
   private[this] lazy val controllers_IngredienteController_editarIngrediente22_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ingrediente/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -521,7 +521,7 @@ class Routes(
     )
   )
 
-  // @LINE:44
+  // @LINE:43
   private[this] lazy val controllers_IngredienteController_borrarIngrediente23_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("ingrediente/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -539,7 +539,7 @@ class Routes(
     )
   )
 
-  // @LINE:46
+  // @LINE:45
   private[this] lazy val controllers_RecetaController_anadirIngrediente24_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/"), DynamicPart("idR", """[^/]+""",true), StaticPart("/ingrediente/"), DynamicPart("idI", """[^/]+""",true)))
   )
@@ -557,7 +557,7 @@ class Routes(
     )
   )
 
-  // @LINE:47
+  // @LINE:46
   private[this] lazy val controllers_RecetaController_quitarIngrediente25_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("receta/"), DynamicPart("idR", """[^/]+""",true), StaticPart("/ingrediente/"), DynamicPart("idI", """[^/]+""",true)))
   )
@@ -575,7 +575,7 @@ class Routes(
     )
   )
 
-  // @LINE:50
+  // @LINE:49
   private[this] lazy val controllers_TagController_crearTag26_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/")))
   )
@@ -593,7 +593,7 @@ class Routes(
     )
   )
 
-  // @LINE:51
+  // @LINE:50
   private[this] lazy val controllers_TagController_obtenerTag27_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -611,7 +611,7 @@ class Routes(
     )
   )
 
-  // @LINE:52
+  // @LINE:51
   private[this] lazy val controllers_TagController_obtenerTags28_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tags/"), DynamicPart("idReceta", """[^/]+""",true)))
   )
@@ -629,7 +629,7 @@ class Routes(
     )
   )
 
-  // @LINE:53
+  // @LINE:52
   private[this] lazy val controllers_TagController_editarTag29_route = Route("PUT",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -647,7 +647,7 @@ class Routes(
     )
   )
 
-  // @LINE:54
+  // @LINE:53
   private[this] lazy val controllers_TagController_borrarTag30_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tag/"), DynamicPart("id", """[^/]+""",true)))
   )
@@ -665,7 +665,7 @@ class Routes(
     )
   )
 
-  // @LINE:57
+  // @LINE:56
   private[this] lazy val controllers_RecetaController_busqueda31_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("busqueda/")))
   )
@@ -764,115 +764,115 @@ class Routes(
         controllers_RecetaController_obtenerRecetasCocinero12_invoker.call(RecetaController_0.obtenerRecetasCocinero(idCocinero, page))
       }
   
-    // @LINE:30
+    // @LINE:29
     case controllers_RecetaController_editarReceta13_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_RecetaController_editarReceta13_invoker.call(RecetaController_0.editarReceta(id))
       }
   
-    // @LINE:31
+    // @LINE:30
     case controllers_RecetaController_borrarReceta14_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_RecetaController_borrarReceta14_invoker.call(RecetaController_0.borrarReceta(id))
       }
   
-    // @LINE:34
+    // @LINE:33
     case controllers_PasoController_crearPaso15_route(params@_) =>
       call { 
         controllers_PasoController_crearPaso15_invoker.call(PasoController_3.crearPaso())
       }
   
-    // @LINE:35
+    // @LINE:34
     case controllers_PasoController_obtenerPaso16_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_PasoController_obtenerPaso16_invoker.call(PasoController_3.obtenerPaso(id))
       }
   
-    // @LINE:36
+    // @LINE:35
     case controllers_PasoController_obtenerPasos17_route(params@_) =>
       call(params.fromPath[Long]("idReceta", None), params.fromPath[Integer]("page", None)) { (idReceta, page) =>
         controllers_PasoController_obtenerPasos17_invoker.call(PasoController_3.obtenerPasos(idReceta, page))
       }
   
-    // @LINE:37
+    // @LINE:36
     case controllers_PasoController_editarPaso18_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_PasoController_editarPaso18_invoker.call(PasoController_3.editarPaso(id))
       }
   
-    // @LINE:38
+    // @LINE:37
     case controllers_PasoController_borrarPaso19_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_PasoController_borrarPaso19_invoker.call(PasoController_3.borrarPaso(id))
       }
   
-    // @LINE:41
+    // @LINE:40
     case controllers_IngredienteController_crearIngrediente20_route(params@_) =>
       call { 
         controllers_IngredienteController_crearIngrediente20_invoker.call(IngredienteController_7.crearIngrediente())
       }
   
-    // @LINE:42
+    // @LINE:41
     case controllers_IngredienteController_obtenerIngredientes21_route(params@_) =>
       call(params.fromPath[Integer]("page", None)) { (page) =>
         controllers_IngredienteController_obtenerIngredientes21_invoker.call(IngredienteController_7.obtenerIngredientes(page))
       }
   
-    // @LINE:43
+    // @LINE:42
     case controllers_IngredienteController_editarIngrediente22_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_IngredienteController_editarIngrediente22_invoker.call(IngredienteController_7.editarIngrediente(id))
       }
   
-    // @LINE:44
+    // @LINE:43
     case controllers_IngredienteController_borrarIngrediente23_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_IngredienteController_borrarIngrediente23_invoker.call(IngredienteController_7.borrarIngrediente(id))
       }
   
-    // @LINE:46
+    // @LINE:45
     case controllers_RecetaController_anadirIngrediente24_route(params@_) =>
       call(params.fromPath[Long]("idR", None), params.fromPath[Long]("idI", None)) { (idR, idI) =>
         controllers_RecetaController_anadirIngrediente24_invoker.call(RecetaController_0.anadirIngrediente(idR, idI))
       }
   
-    // @LINE:47
+    // @LINE:46
     case controllers_RecetaController_quitarIngrediente25_route(params@_) =>
       call(params.fromPath[Long]("idR", None), params.fromPath[Long]("idI", None)) { (idR, idI) =>
         controllers_RecetaController_quitarIngrediente25_invoker.call(RecetaController_0.quitarIngrediente(idR, idI))
       }
   
-    // @LINE:50
+    // @LINE:49
     case controllers_TagController_crearTag26_route(params@_) =>
       call { 
         controllers_TagController_crearTag26_invoker.call(TagController_6.crearTag())
       }
   
-    // @LINE:51
+    // @LINE:50
     case controllers_TagController_obtenerTag27_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_TagController_obtenerTag27_invoker.call(TagController_6.obtenerTag(id))
       }
   
-    // @LINE:52
+    // @LINE:51
     case controllers_TagController_obtenerTags28_route(params@_) =>
       call(params.fromPath[Long]("idReceta", None)) { (idReceta) =>
         controllers_TagController_obtenerTags28_invoker.call(TagController_6.obtenerTags(idReceta))
       }
   
-    // @LINE:53
+    // @LINE:52
     case controllers_TagController_editarTag29_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_TagController_editarTag29_invoker.call(TagController_6.editarTag(id))
       }
   
-    // @LINE:54
+    // @LINE:53
     case controllers_TagController_borrarTag30_route(params@_) =>
       call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_TagController_borrarTag30_invoker.call(TagController_6.borrarTag(id))
       }
   
-    // @LINE:57
+    // @LINE:56
     case controllers_RecetaController_busqueda31_route(params@_) =>
       call { 
         controllers_RecetaController_busqueda31_invoker.call(RecetaController_0.busqueda())

@@ -6,7 +6,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Apikey extends ModeloBase {
 
-    String key;
+    public String key;
 
     @OneToOne(mappedBy = "key")
     public Cocinero cocinero;

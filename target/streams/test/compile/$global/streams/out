@@ -1,4 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/test/FunctionalTest.java:9:1: package com.sun.tools.doclets.formats.html.markup does not exist[0m
-[0m[[0m[31merror[0m] [0m[0mimport static com.sun.tools.doclets.formats.html.markup.HtmlStyle.header;[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/test/FunctionalTest.java:9:1: static import only from classes and interfaces[0m
-[0m[[0m[31merror[0m] [0m[0mimport static com.sun.tools.doclets.formats.html.markup.HtmlStyle.header;[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/test/FunctionalTest.java:46:1: ')' expected[0m
+[0m[[0m[31merror[0m] [0m[0m        System.out.println("____ "+receta.r_cocinero.getNombre();[0m

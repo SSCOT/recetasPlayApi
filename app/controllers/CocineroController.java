@@ -14,10 +14,9 @@ import play.mvc.Results;
 import utils.Cachefunctions;
 
 import javax.inject.Inject;
-import java.util.ArrayList;
 import java.util.List;
 
-
+@esKeyValida
 public class CocineroController extends Controller {
 
     @Inject
@@ -32,6 +31,7 @@ public class CocineroController extends Controller {
         return ok("CocineroController");
     }
 
+    @esCocinero
     public Result crearCocinero() {
         // Recogemos los datos por formulario
         Form<Cocinero> frm = frmFactory.form(Cocinero.class).bindFromRequest();
@@ -59,6 +59,7 @@ public class CocineroController extends Controller {
 
     }
 
+    @esCocinero
     public Result editarCocinero(Long id) {
         // Comprobamos que el usuario existe
         if (Cocinero.findById(id) == null) {
@@ -156,6 +157,7 @@ public class CocineroController extends Controller {
         }
     }
 
+    @esCocinero
     public Result borrarCocinero(Long id) {
         Cocinero cocinero = Cocinero.findById(id);
         // Si encuentra al cocinero lo elimina

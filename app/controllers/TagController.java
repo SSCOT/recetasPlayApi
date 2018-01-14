@@ -13,11 +13,12 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 import utils.Cachefunctions;
+import utils.SeguridadFunctions;
 
 import javax.inject.Inject;
 import java.util.List;
 
-
+@esKeyValida
 public class TagController extends Controller {
 
     @Inject
@@ -32,6 +33,7 @@ public class TagController extends Controller {
         return ok("TagController Works!");
     }
 
+    @esCocinero
     public Result crearTag() {
         Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
 
@@ -40,6 +42,11 @@ public class TagController extends Controller {
         }
 
         Tag nuevoTag = frm.get();
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(nuevoTag.t_receta.getId(), key) == false)
+            return Results.badRequest();
 
         // Checkeamos y guardamos
         if (nuevoTag.checkAndCreate()) {
@@ -51,12 +58,20 @@ public class TagController extends Controller {
         }
     }
 
+    @esCocinero
     public Result editarTag(Long id) {
+        Tag tag = Tag.findById(id);
+
         if (id == null) {
             return Results.badRequest();
-        } else if (Tag.findById(id) == null) {
+        } else if (tag == null) {
             return Results.notFound();
         }
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (SeguridadFunctions.esAutorReceta(tag.t_receta.getId(), key) == false)
+            return Results.badRequest();
 
         Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
         if (frm.hasErrors()) {
@@ -145,8 +160,14 @@ public class TagController extends Controller {
         }
     }
 
+    @esCocinero
     public Result borrarTag(Long id) {
         Tag tag = Tag.findById(id);
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (!SeguridadFunctions.esAutorReceta(tag.t_receta.getId(), key))
+            return Results.badRequest();
 
         if (tag != null) {
             Ebean.beginTransaction();

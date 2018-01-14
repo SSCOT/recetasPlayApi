@@ -15,7 +15,7 @@ import utils.Cachefunctions;
 import javax.inject.Inject;
 import java.util.List;
 
-
+@esKeyValida
 public class IngredienteController extends Controller {
 
     @Inject
@@ -30,6 +30,7 @@ public class IngredienteController extends Controller {
         return ok("IngredienteController");
     }
 
+    @esCocinero
     public Result crearIngrediente() {
 
         Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
@@ -50,6 +51,7 @@ public class IngredienteController extends Controller {
         }
     }
 
+    @esCocinero
     public Result editarIngrediente(Long id) {
 
         if (id == null) {
@@ -75,6 +77,7 @@ public class IngredienteController extends Controller {
 
     }
 
+    @esCocinero
     public Result borrarIngrediente(Long id) {
         Ingrediente ingredienteBorrar = Ingrediente.findById(id);
         if (ingredienteBorrar != null) {
