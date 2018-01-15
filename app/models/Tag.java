@@ -39,7 +39,7 @@ public class Tag extends ModeloBase {
 
 
     //========================================
-    //    MÉTODOS DE BASE DE DATOS
+    //    MÉTODOS DE BÚSQUEDA
     //========================================
 
     public static Tag findById(Long id) {
@@ -63,9 +63,9 @@ public class Tag extends ModeloBase {
                 .findOne();
     }
 
-    public static Integer numTags(){
-        return find.query().findCount();
-    }
+    //========================================
+    //    MÉTODOS DE CHEQUEO
+    //========================================
 
     public boolean checkAndCreate() {
         if (this.texto.isEmpty()) {
@@ -94,40 +94,13 @@ public class Tag extends ModeloBase {
         return true;
     }
 
-    /*public boolean checkAndUpdate() {
-        System.out.println("_____________LLEGA => "+this.texto+" "+this.t_receta.id);
-
-        if (this.texto.isEmpty()) {
-            return false;
-        }
-
-        // Su nuevo nombre no existe
-        if(Tag.findByTexto(this.texto, this.t_receta.getId()) != null){
-            return false;
-        }
-        *//*if(Tag.findByTexto(this.texto, this.t_receta.id) != null){
-            return false;
-        }*//*
-
-        System.out.println("_____________LLEGA");
-
-        Ebean.beginTransaction();
-        try {
-            // No permitimos que se modifique la receta asociada
-            Tag tagUpdate = new Tag();
-            tagUpdate.setId(this.id);
-            tagUpdate.setTexto(this.texto);
-            tagUpdate.update();
-            Ebean.commitTransaction();
-        } finally {
-            Ebean.endTransaction();
-        }
-        return true;
-    }*/
-
     //========================================
-    //    MÉTODOS DE MUESTREO
+    //    OTROS
     //========================================
+
+    public static Integer numTags(){
+        return find.query().findCount();
+    }
 
     public JsonNode toJson() {
         return Json.toJson(this);

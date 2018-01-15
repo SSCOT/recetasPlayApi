@@ -37,6 +37,10 @@ public class Receta extends ModeloBase {
 
     public static final Finder<Long, Receta> find = new Finder<>(Receta.class);
 
+    //========================================
+    //    GETTERS AND SETTERS
+    //========================================
+
     public String getTitulo() {
         return titulo;
     }
@@ -86,7 +90,7 @@ public class Receta extends ModeloBase {
     }
 
     //========================================
-    //    MÉTODOS DE BASE DE DATOS
+    //    MÉTODOS DE BÚSQUEDA
     //========================================
 
     public static Receta findById(long id) {
@@ -135,7 +139,7 @@ public class Receta extends ModeloBase {
                 .findList();
     }
 
-    // BUSQUEDA
+    // Para el filtrado de recetas
     public static List<Receta> findByCocineros(String[] idsCocineros) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
         for (int i = 0; i < idsCocineros.length; i++) {
@@ -144,7 +148,6 @@ public class Receta extends ModeloBase {
 
         return listaRecetas;
     }
-
     public static List<Receta> findByTags(String[] tags) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
 
@@ -156,7 +159,6 @@ public class Receta extends ModeloBase {
 
         return listaRecetas;
     }
-
     public static List<Receta> findByIngredientes(String[] ingredientes) {
         List<Receta> listaRecetas = new ArrayList<Receta>();
 
@@ -178,14 +180,13 @@ public class Receta extends ModeloBase {
         return listaRecetas;
     }
 
-
-    public static Integer numRecetas() {
-        return find.query().findCount();
-    }
+    //========================================
+    //    MÉTODOS DE CHEQUEO
+    //========================================
 
     public boolean checkAndCreate() {
-        // Comprobación de título y cocinero
-        if (this.titulo.isEmpty() || this.r_cocinero == null) {
+
+        if (this.titulo.isEmpty()) {
             return false;
         }
 
@@ -194,14 +195,8 @@ public class Receta extends ModeloBase {
             return false;
         }
 
-        // Comprobamos que el cocinero existe
-        Cocinero autor = Cocinero.findById(this.r_cocinero.id);
-        if (autor == null) {
-            return false;
-        }
-
         // Comprobamos si existe una receta con ese cocinero
-        Receta recetaExistente = Receta.findByTituloAndAutor(this.titulo, autor);
+        Receta recetaExistente = Receta.findByTituloAndAutor(this.titulo, this.r_cocinero);
         if (recetaExistente != null) {
             return false;
         }
@@ -232,6 +227,10 @@ public class Receta extends ModeloBase {
 
         return true;
     }
+
+    //========================================
+    //    OTROS
+    //========================================
 
     public static boolean asignarIngrediente(Receta receta, Ingrediente ingrediente) {
         // Comprobamos que no exista ya la relación
@@ -270,6 +269,10 @@ public class Receta extends ModeloBase {
         } else {
             return false;
         }
+    }
+
+    public static Integer numRecetas() {
+        return find.query().findCount();
     }
 
     public JsonNode toJson() {

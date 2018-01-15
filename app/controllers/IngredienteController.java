@@ -15,7 +15,7 @@ import utils.Cachefunctions;
 import javax.inject.Inject;
 import java.util.List;
 
-@esKeyValida
+@_esKeyValida
 public class IngredienteController extends Controller {
 
     @Inject
@@ -24,13 +24,11 @@ public class IngredienteController extends Controller {
     @Inject
     private SyncCacheApi cache;
 
-    private Cachefunctions cachefunctions;
-
     public Result index() {
         return ok("IngredienteController");
     }
 
-    @esCocinero
+    @_esCocinero
     public Result crearIngrediente() {
 
         Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
@@ -44,49 +42,11 @@ public class IngredienteController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoIngrediente.checkAndCreate()) {
-            cachefunctions.vaciarCacheListas("ingredientes", Ingrediente.numIngredientes(), cache);
+            Cachefunctions.vaciarCacheListas("ingredientes", Ingrediente.numIngredientes(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
         }
-    }
-
-    @esCocinero
-    public Result editarIngrediente(Long id) {
-
-        if (id == null) {
-            return Results.badRequest();
-        } else if (Ingrediente.findById(id) == null) {
-            return Results.notFound();
-        }
-
-        Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        Ingrediente ingredienteUpdate = frm.get();
-        ingredienteUpdate.setId(id);
-
-        if (ingredienteUpdate.checkAndUpdate()) {
-            cachefunctions.vaciarCacheCompleta("ingrediente"+id, "ingredientes", Ingrediente.numIngredientes(), cache);
-            return Results.ok();
-        } else {
-            return Results.badRequest();
-        }
-
-    }
-
-    @esCocinero
-    public Result borrarIngrediente(Long id) {
-        Ingrediente ingredienteBorrar = Ingrediente.findById(id);
-        if (ingredienteBorrar != null) {
-            if (!ingredienteBorrar.delete()) {
-                return Results.internalServerError();
-            }
-        }
-        cachefunctions.vaciarCacheCompleta("ingrediente"+id, "ingredientes", Ingrediente.numIngredientes(), cache);
-        return Results.ok();
     }
 
     public Result obtenerIngredientes(Integer page) {
@@ -120,23 +80,41 @@ public class IngredienteController extends Controller {
         }
     }
 
-    public Result obtenerIngrediente(Long id) {
-        Ingrediente ingrediente = Ingrediente.findById(id);
+    @_esCocinero
+    public Result editarIngrediente(Long id) {
 
-        if (ingrediente == null) {
+        if (id == null) {
+            return Results.badRequest();
+        } else if (Ingrediente.findById(id) == null) {
             return Results.notFound();
         }
 
-
-        if (request().accepts("application/xml")) {
-            return Results
-                    .ok(views.xml.ingrediente.render(ingrediente));
-        } else if (request().accepts("application/json")) {
-            return Results
-                    .ok(ingrediente.toJson());
-        } else {
-            return Results
-                    .status(415);
+        Form<Ingrediente> frm = frmFactory.form(Ingrediente.class).bindFromRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
         }
+
+        Ingrediente ingredienteUpdate = frm.get();
+        ingredienteUpdate.setId(id);
+
+        if (ingredienteUpdate.checkAndUpdate()) {
+            Cachefunctions.vaciarCacheCompleta("ingrediente"+id, "ingredientes", Ingrediente.numIngredientes(), cache);
+            return Results.ok();
+        } else {
+            return Results.badRequest();
+        }
+
+    }
+
+    @_esCocinero
+    public Result borrarIngrediente(Long id) {
+        Ingrediente ingredienteBorrar = Ingrediente.findById(id);
+        if (ingredienteBorrar != null) {
+            if (!ingredienteBorrar.delete()) {
+                return Results.internalServerError();
+            }
+        }
+        Cachefunctions.vaciarCacheCompleta("ingrediente"+id, "ingredientes", Ingrediente.numIngredientes(), cache);
+        return Results.ok();
     }
 }

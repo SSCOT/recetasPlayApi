@@ -12,11 +12,12 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Results;
 import utils.Cachefunctions;
+import utils.SeguridadFunctions;
 
 import javax.inject.Inject;
 import java.util.List;
 
-@esKeyValida
+@_esKeyValida
 public class CocineroController extends Controller {
 
     @Inject
@@ -25,13 +26,11 @@ public class CocineroController extends Controller {
     @Inject
     private SyncCacheApi cache;
 
-    Cachefunctions cachefunctions;
-
     public Result index() {
         return ok("CocineroController");
     }
 
-    @esCocinero
+    @_esCocinero
     public Result crearCocinero() {
         // Recogemos los datos por formulario
         Form<Cocinero> frm = frmFactory.form(Cocinero.class).bindFromRequest();
@@ -51,41 +50,12 @@ public class CocineroController extends Controller {
 
         // Checkeamos y guardamos
         if (nuevoCocinero.checkAndCreate()) {
-            cachefunctions.vaciarCacheListas("cocineros", Cocinero.numCocineros(), cache);
+            Cachefunctions.vaciarCacheListas("cocineros", Cocinero.numCocineros(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
         }
 
-    }
-
-    @esCocinero
-    public Result editarCocinero(Long id) {
-        // Comprobamos que el usuario existe
-        if (Cocinero.findById(id) == null) {
-            return Results.notFound();
-        }
-
-        // Recogemos los datos por formulario
-        Form<Cocinero> frm = frmFactory.form(Cocinero.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        Cocinero cocineroUpdate = frm.get();
-        cocineroUpdate.setId(id);
-
-        Ebean.beginTransaction();
-        try {
-            // vaciamos caché
-            cachefunctions.vaciarCacheCompleta("cocinero" + id, "cocineros", Cocinero.numCocineros(), cache);
-            cocineroUpdate.update();
-            Ebean.commitTransaction();
-        } finally {
-            Ebean.endTransaction();
-        }
-
-        return Results.ok();
     }
 
     public Result obtenerCocineros(Integer page) {
@@ -157,20 +127,49 @@ public class CocineroController extends Controller {
         }
     }
 
-    @esCocinero
+    @_esCocinero
+    public Result editarCocinero(Long id) {
+        // Comprobamos que el usuario existe
+        Cocinero cocinero = Cocinero.findById(id);
+        if (cocinero == null) {
+            return Results.notFound();
+        }
+
+        String key = request().getQueryString("apikey");
+        if (!SeguridadFunctions.tengoPermisoCocinero(cocinero.getId(), key))
+            return status(401);
+
+        // Recogemos los datos por formulario
+        Form<Cocinero> frm = frmFactory.form(Cocinero.class).bindFromRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
+        }
+
+        Cocinero cocineroUpdate = frm.get();
+        cocineroUpdate.setId(id);
+
+        Ebean.beginTransaction();
+        try {
+            // vaciamos caché
+            Cachefunctions.vaciarCacheCompleta("cocinero" + id, "cocineros", Cocinero.numCocineros(), cache);
+            cocineroUpdate.update();
+            Ebean.commitTransaction();
+        } finally {
+            Ebean.endTransaction();
+        }
+
+        return Results.ok();
+    }
+
+    @_esCocinero
     public Result borrarCocinero(Long id) {
         Cocinero cocinero = Cocinero.findById(id);
-        // Si encuentra al cocinero lo elimina
-        if (cocinero != null) {
-            Ebean.beginTransaction();
-            try {
-                cachefunctions.vaciarCacheCompleta("cocinero" + id, "cocineros", Cocinero.numCocineros(), cache);
-                cocinero.delete();
-                Ebean.commitTransaction();
-            } finally {
-                Ebean.endTransaction();
-            }
-        }
+        String key = request().getQueryString("apikey");
+        if (!SeguridadFunctions.tengoPermisoCocinero(cocinero.getId(), key))
+            return status(401);
+
+        Cachefunctions.vaciarCacheCompleta("cocinero" + id, "cocineros", Cocinero.numCocineros(), cache);
+        cocinero.delete();
 
         // Siempre devuelve OK para la idempotencia
         return Results.ok();

@@ -142,6 +142,7 @@ public class FunctionalTest extends WithApplication {
     public void testCocineroDelete() {
         Cocinero cocineroBorrar = new Cocinero();
         cocineroBorrar.setNombre("cocineroBorrar");
+        cocineroBorrar.setTipo("estudiante");
         cocineroBorrar.save();
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("DELETE")
@@ -167,9 +168,7 @@ public class FunctionalTest extends WithApplication {
         // https://stackoverflow.com/questions/35265408/test-post-request-on-playframework-2-4-x
         JsonNode json = (new ObjectMapper()).readTree("{" +
                 "\"titulo\":\"postTitulo\"," +
-                "\"tipo\":\"publica\"," +
-                "\"r_cocinero\":{\"id\":" + cocinero.getId() + "}" +
-                "}");
+                "\"tipo\":\"publica\"}");
 
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("POST")
@@ -317,7 +316,7 @@ public class FunctionalTest extends WithApplication {
     // TEST TAGS
     // ----------------------------------
     @Test
-    public void testPostTag() throws Exception {
+    public void testTagPost() throws Exception {
 
         // https://stackoverflow.com/questions/35265408/test-post-request-on-playframework-2-4-x
         JsonNode json = (new ObjectMapper()).readTree("{" +
@@ -336,9 +335,8 @@ public class FunctionalTest extends WithApplication {
 
     }
 
-
     @Test
-    public void testGetTag() {
+    public void testTagGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
                 .uri("/tag/" + tag.id + "?apikey=" + cocinero.key.getKey());
@@ -348,7 +346,7 @@ public class FunctionalTest extends WithApplication {
     }
 
     @Test
-    public void testGetTags() {
+    public void testTagsGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
                 .uri("/tags/" + receta.id + "?apikey=" + cocinero.key.getKey());
@@ -358,7 +356,7 @@ public class FunctionalTest extends WithApplication {
     }
 
     @Test
-    public void testPutTag() throws Exception {
+    public void testTagPut() throws Exception {
         JsonNode json = (new ObjectMapper()).readTree("{" +
                 "\"texto\":\"tTag_mod\"}");
 
@@ -373,7 +371,7 @@ public class FunctionalTest extends WithApplication {
     }
 
     @Test
-    public void testDeleteTags() {
+    public void testTagDelete() {
         Tag tagBorrar = new Tag();
         tagBorrar.setTexto("tagBorrar");
         tagBorrar.setT_receta(receta);
@@ -398,7 +396,7 @@ public class FunctionalTest extends WithApplication {
     // TEST PASOS
     // ----------------------------------
     @Test
-    public void testPostPaso() throws Exception {
+    public void testPasoPost() throws Exception {
         // https://stackoverflow.com/questions/35265408/test-post-request-on-playframework-2-4-x
         JsonNode json = (new ObjectMapper()).readTree("{" +
                 "\"descripcion\":\"postPaso\"," +
@@ -415,9 +413,8 @@ public class FunctionalTest extends WithApplication {
         assertThat(r.status()).isEqualTo(201);
     }
 
-
     @Test
-    public void testGetPaso() {
+    public void testPasoGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
                 .uri("/paso/" + paso.id + "?apikey=" + cocinero.key.getKey());
@@ -427,7 +424,7 @@ public class FunctionalTest extends WithApplication {
     }
 
     @Test
-    public void testGetPasos() {
+    public void testPasosGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
                 .uri("/pasos/" + receta.id + "/page/0" + "?apikey=" + cocinero.key.getKey());
@@ -437,7 +434,7 @@ public class FunctionalTest extends WithApplication {
     }
 
     @Test
-    public void testPutPaso() throws Exception {
+    public void testPasoPut() throws Exception {
         JsonNode json = (new ObjectMapper()).readTree("{" +
                 "\"descripcion\":\"tPaso_mod\"}");
 
@@ -452,7 +449,7 @@ public class FunctionalTest extends WithApplication {
     }
 
     @Test
-    public void testDeletePasos() {
+    public void testPasoDelete() {
 
         Paso pasoBorrar = new Paso();
         pasoBorrar.setTiempo(new Long(1));
@@ -495,6 +492,8 @@ public class FunctionalTest extends WithApplication {
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
     }
+
+
     @After
     public void borradoDatos() {
         if (receta != null)

@@ -2,7 +2,6 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Ebean;
-import models.Paso;
 import models.Receta;
 import models.Tag;
 import play.cache.SyncCacheApi;
@@ -18,7 +17,7 @@ import utils.SeguridadFunctions;
 import javax.inject.Inject;
 import java.util.List;
 
-@esKeyValida
+@_esKeyValida
 public class TagController extends Controller {
 
     @Inject
@@ -27,13 +26,11 @@ public class TagController extends Controller {
     @Inject
     private SyncCacheApi cache;
 
-    Cachefunctions cachefunctions;
-
     public Result index() {
         return ok("TagController Works!");
     }
 
-    @esCocinero
+    @_esCocinero
     public Result crearTag() {
         Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
 
@@ -45,51 +42,17 @@ public class TagController extends Controller {
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(nuevoTag.t_receta.getId(), key) == false)
+        if (!SeguridadFunctions.esAutorReceta(nuevoTag.t_receta.getId(), key))
             return Results.badRequest();
 
         // Checkeamos y guardamos
         if (nuevoTag.checkAndCreate()) {
-            cachefunctions.vaciarCacheListas("tags", Tag.numTags(), cache);
-            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+            Cachefunctions.vaciarCacheListas("tags", Tag.numTags(), cache);
+            Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
         }
-    }
-
-    @esCocinero
-    public Result editarTag(Long id) {
-        Tag tag = Tag.findById(id);
-
-        if (id == null) {
-            return Results.badRequest();
-        } else if (tag == null) {
-            return Results.notFound();
-        }
-
-        // Comprobar autor
-        String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(tag.t_receta.getId(), key) == false)
-            return Results.badRequest();
-
-        Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        Tag tagUpdate = frm.get();
-        tagUpdate.setId(id);
-
-        if (tagUpdate.getTexto().isEmpty()) {
-            return Results.badRequest();
-        }
-
-        tagUpdate.update();
-        cachefunctions.vaciarCacheCompleta("tag" + id, "tags", Tag.numTags(), cache);
-        cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
-        return Results.ok();
-
     }
 
     // obtener los tags de una receta
@@ -145,7 +108,6 @@ public class TagController extends Controller {
         if (request().accepts("application/xml")) {
             return Results
                     .ok(views.xml.tag.render(tag));
-            // return Results.ok();
         } else if (request().accepts("application/json")) {
             JsonNode resultado = cache.get(keyResJson);
             if (resultado == null) {
@@ -160,7 +122,41 @@ public class TagController extends Controller {
         }
     }
 
-    @esCocinero
+    @_esCocinero
+    public Result editarTag(Long id) {
+        Tag tag = Tag.findById(id);
+
+        if (id == null) {
+            return Results.badRequest();
+        } else if (tag == null) {
+            return Results.notFound();
+        }
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (!SeguridadFunctions.esAutorReceta(tag.t_receta.getId(), key))
+            return Results.badRequest();
+
+        Form<Tag> frm = frmFactory.form(Tag.class).bindFromRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
+        }
+
+        Tag tagUpdate = frm.get();
+        tagUpdate.setId(id);
+
+        if (tagUpdate.getTexto().isEmpty()) {
+            return Results.badRequest();
+        }
+
+        tagUpdate.update();
+        Cachefunctions.vaciarCacheCompleta("tag" + id, "tags", Tag.numTags(), cache);
+        Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+        return Results.ok();
+
+    }
+
+    @_esCocinero
     public Result borrarTag(Long id) {
         Tag tag = Tag.findById(id);
 
@@ -173,15 +169,14 @@ public class TagController extends Controller {
             Ebean.beginTransaction();
             try {
                 tag.delete();
-                cachefunctions.vaciarCacheCompleta("tag" + id, "tags", Tag.numTags(), cache);
-                cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+                Cachefunctions.vaciarCacheCompleta("tag" + id, "tags", Tag.numTags(), cache);
+                Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {
                 Ebean.endTransaction();
             }
         }
 
-        // idempotencia
         return Results.ok();
     }
 

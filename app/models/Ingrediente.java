@@ -24,6 +24,10 @@ public class Ingrediente extends ModeloBase {
 
     public static final Finder<Long, Ingrediente> find = new Finder<>(Ingrediente.class);
 
+    //========================================
+    //    GETTERS Y SETTERS
+    //========================================
+
     public String getNombre() {
         return nombre;
     }
@@ -40,9 +44,8 @@ public class Ingrediente extends ModeloBase {
         this.recetas = recetas;
     }
 
-
     //========================================
-    //    MÉTODOS DE BASE DE DATOS
+    //    MÉTODOS DE BÚSQUEDA
     //========================================
 
     public static Ingrediente findById(Long id) {
@@ -57,14 +60,6 @@ public class Ingrediente extends ModeloBase {
                 .findOne();
     }
 
-    public static List<Ingrediente> busquedaIngrediente(String nombreParcial) {
-        return find
-                .query()
-                .where()
-                .like("nombre", "%" + nombreParcial + "%")
-                .findList();
-    }
-
     public static PagedList<Ingrediente> findAll(Integer page) {
         return find.query()
                 .setMaxRows(25)
@@ -72,9 +67,9 @@ public class Ingrediente extends ModeloBase {
                 .findPagedList();
     }
 
-    public static Integer numIngredientes(){
-        return find.query().findCount();
-    }
+    //========================================
+    //    MÉTODOS DE CHEQUEO
+    //========================================
 
     public boolean checkAndCreate() {
         // Comprobamos que tiene nombre
@@ -107,8 +102,12 @@ public class Ingrediente extends ModeloBase {
     }
 
     //========================================
-    //    MÉTODOS DE MUESTREO
+    //    OTROS
     //========================================
+
+    public static Integer numIngredientes(){
+        return find.query().findCount();
+    }
 
     public JsonNode toJson() {
         return Json.toJson(this);

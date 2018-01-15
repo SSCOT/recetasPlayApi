@@ -102,9 +102,8 @@ public class Cocinero extends ModeloBase {
         this.recetas = recetas;
     }
 
-
     //========================================
-    //    MÉTODOS DE BASE DE DATOS
+    //    MÉTODOS DE BÚSQUEDA
     //========================================
 
     public static Cocinero findById(Long id) {
@@ -132,9 +131,9 @@ public class Cocinero extends ModeloBase {
         return cocinero;
     }
 
-    public static Integer numCocineros() {
-        return find.query().findCount();
-    }
+    //========================================
+    //    MÉTODOS DE CHEQUEO
+    //========================================
 
     public boolean checkAndCreate() {
         // Comprobamos que tiene nombre apellidos y tipo
@@ -174,20 +173,14 @@ public class Cocinero extends ModeloBase {
     }
 
     //========================================
-    //    MÉTODOS DE MUESTREO
+    //    OTROS
     //========================================
+
+    public static Integer numCocineros() {
+        return find.query().findCount();
+    }
 
     public JsonNode toJson() {
         return Json.toJson(this);
     }
-
-    @Override
-    public String toString() {
-        return "Cocinero{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                '}';
-    }
-
-
 }

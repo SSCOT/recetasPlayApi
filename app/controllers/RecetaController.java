@@ -4,6 +4,7 @@ package controllers;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.ebean.Ebean;
 import io.ebean.PagedList;
+import models.Cocinero;
 import models.Ingrediente;
 import models.Receta;
 
@@ -21,7 +22,7 @@ import javax.inject.Inject;
 
 import java.util.*;
 
-@esKeyValida
+@_esKeyValida
 public class RecetaController extends Controller {
 
     public SeguridadFunctions seguridad;
@@ -32,25 +33,25 @@ public class RecetaController extends Controller {
     @Inject
     private SyncCacheApi cache;
 
-    private Cachefunctions cachefunctions;
-
     public Result index() {
-        return ok("RecetaController works!");
+        return ok("RecetaController");
     }
 
-    @esCocinero
+    @_esCocinero
     public Result crearReceta() {
-
+        String key = request().getQueryString("apikey");
         Form<Receta> frm = frmFactory.form(Receta.class).bindFromRequest();
 
         if (frm.hasErrors()) {
             return status(409, frm.errorsAsJson());
         }
         Receta nuevaReceta = frm.get();
+        // Asignamos el autor al mismo que está creando la receta de forma automática
+        nuevaReceta.r_cocinero = Cocinero.findByKey(key);
 
         // Checkeamos y guardamos
         if (nuevaReceta.checkAndCreate()) {
-            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+            Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
@@ -90,7 +91,6 @@ public class RecetaController extends Controller {
     }
 
     public Result obtenerRecetas(Integer page) {
-        //Long start = System.currentTimeMillis();
         String key = "recetas" + page;
         String keyResJson = "recetas" + page + "resJson";
         List<Receta> listaRecetas = cache.get(key);
@@ -99,8 +99,6 @@ public class RecetaController extends Controller {
             listaRecetas = listaPaginadaRecetas.getList();
             cache.set(key, listaRecetas);
         }
-        //Long end = System.currentTimeMillis();
-        //System.out.println("-----------> TIME = " + (end - start));
 
         if (listaRecetas == null) {
             return Results.badRequest();
@@ -124,7 +122,6 @@ public class RecetaController extends Controller {
     }
 
     public Result obtenerRecetasCocinero(Long idCocinero, Integer page) {
-        //Long start = System.currentTimeMillis();
         String key = "recetasAutor" + page + "cocinero" + idCocinero;
         String keyResJson = "recetasAutor" + page + "cocinero" + idCocinero + "resJson";
         List<Receta> listaRecetas = cache.get(key);
@@ -133,8 +130,6 @@ public class RecetaController extends Controller {
             listaRecetas = listaPaginadaRecetas.getList();
             cache.set(key, listaRecetas);
         }
-        //Long end = System.currentTimeMillis();
-        //System.out.println("-----------> TIME = " + (end - start));
 
         if (listaRecetas == null) {
             return Results.badRequest();
@@ -157,12 +152,12 @@ public class RecetaController extends Controller {
         }
     }
 
-    @esCocinero
+    @_esCocinero
     public Result editarReceta(Long id) {
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(id, key) == false)
+        if (!SeguridadFunctions.esAutorReceta(id, key))
             return Results.badRequest();
 
         Form<Receta> frm = frmFactory.form(Receta.class).bindFromRequest();
@@ -177,16 +172,16 @@ public class RecetaController extends Controller {
         Receta recetaUpdate = frm.get();
         recetaUpdate.setId(id);
         recetaUpdate.update();
-        cachefunctions.vaciarCacheCompleta("receta" + id, "recetas", Receta.numRecetas(), cache);
+        Cachefunctions.vaciarCacheCompleta("receta" + id, "recetas", Receta.numRecetas(), cache);
         return Results.ok();
     }
 
-    @esCocinero
+    @_esCocinero
     public Result borrarReceta(Long id) {
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(id, key) == false)
+        if (!SeguridadFunctions.esAutorReceta(id, key))
             return Results.badRequest();
 
         Receta receta = Receta.findById(id);
@@ -195,7 +190,7 @@ public class RecetaController extends Controller {
             Ebean.beginTransaction();
             try {
                 receta.delete();
-                cachefunctions.vaciarCacheCompleta("receta" + id, "recetas", Receta.numRecetas(), cache);
+                Cachefunctions.vaciarCacheCompleta("receta" + id, "recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {
                 Ebean.endTransaction();
@@ -207,7 +202,7 @@ public class RecetaController extends Controller {
         return Results.ok();
     }
 
-    @esCocinero
+    @_esCocinero
     public Result anadirIngrediente(Long idReceta, Long idIngrediente) {
 
         // No puede llegar nada nulo
@@ -217,7 +212,7 @@ public class RecetaController extends Controller {
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(idReceta, key) == false)
+        if (!SeguridadFunctions.esAutorReceta(idReceta, key))
             return Results.badRequest();
 
         // Tienen que existir tanto la receta como el ingrediente
@@ -229,14 +224,14 @@ public class RecetaController extends Controller {
         }
 
         if (Receta.asignarIngrediente(receta, ingrediente)) {
-            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+            Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         }
 
         return Results.badRequest();
     }
 
-    @esCocinero
+    @_esCocinero
     public Result quitarIngrediente(Long idReceta, Long idIngrediente) {
         // No puede llegar nada nulo
         if (idIngrediente == null || idReceta == null) {
@@ -245,7 +240,7 @@ public class RecetaController extends Controller {
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(idReceta, key) == false)
+        if (!SeguridadFunctions.esAutorReceta(idReceta, key))
             return Results.badRequest();
 
         // Tienen que existir tanto la receta como el ingrediente
@@ -257,7 +252,7 @@ public class RecetaController extends Controller {
         }
 
         Receta.quitarIngrediente(receta, ingrediente);
-        cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+        Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
 
         // Idempotencia
         return Results.ok();
@@ -301,7 +296,7 @@ public class RecetaController extends Controller {
         listaRecetas.addAll(listaRecetasIngredientes);
         listaRecetas.addAll(listaRecetasTitulos);
 
-        // Docu: https://stackoverflow.com/questions/15907996/how-to-get-query-string-parameters-in-java-play-framework
+
         // Eliminamos duplicados
         List<Receta> listaRecetasFinal = new ArrayList<>();
         Iterator<Receta> iterator = listaRecetas.iterator();

@@ -8,9 +8,6 @@ public class Cachefunctions {
 
     private static Integer REGISTROS_PAGINA = 25;
 
-    /*@Inject
-    private static SyncCacheApi cache;*/
-
     public static void vaciarCacheListas(String key, Integer numRegistros,  SyncCacheApi cache) {
         // Vaciamos caché de las listas (y su resultado json)
         int numPaginas, resto;

@@ -18,7 +18,7 @@ import utils.SeguridadFunctions;
 import javax.inject.Inject;
 import java.util.List;
 
-
+@_esKeyValida
 public class PasoController extends Controller {
 
     @Inject
@@ -27,13 +27,11 @@ public class PasoController extends Controller {
     @Inject
     private SyncCacheApi cache;
 
-    private Cachefunctions cachefunctions;
-
     public Result index() {
-        return ok("PasoController Works!");
+        return ok("PasoController");
     }
 
-    @esCocinero
+    @_esCocinero
     public Result crearPaso() {
         // Recogemos los datos por formulario
         Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
@@ -47,52 +45,17 @@ public class PasoController extends Controller {
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(nuevoPaso.p_receta.getId(), key) == false)
+        if (!SeguridadFunctions.esAutorReceta(nuevoPaso.p_receta.getId(), key))
             return Results.badRequest();
 
         // Checkeamos y guardamos
         if (nuevoPaso.checkAndCreate()) {
-            cachefunctions.vaciarCacheListas("pasos", Paso.numPasos(), cache);
-            cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+            Cachefunctions.vaciarCacheListas("pasos", Paso.numPasos(), cache);
+            Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
             return Results.created();
         } else {
             return Results.badRequest();
         }
-
-    }
-
-    @esCocinero
-    public Result editarPaso(Long id) {
-
-        Paso paso = Paso.findById(id);
-
-        // Comprobamos que el paso existe
-        if (paso == null) {
-            return Results.notFound();
-        }
-
-        // Comprobar autor
-        String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key) == false)
-            return Results.badRequest();
-
-        // Recogemos los datos por formulario
-        Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
-        if (frm.hasErrors()) {
-            return status(409, frm.errorsAsJson());
-        }
-
-        // El indice de ordenación no se puede editar. Lo controlamos
-        Paso pasoInicial = frm.get();
-        Paso pasoUpdate = new Paso();
-        pasoUpdate.setId(id);
-        pasoUpdate.setDescripcion(pasoInicial.getDescripcion());
-        pasoUpdate.setTiempo(pasoInicial.getTiempo());
-        pasoUpdate.update();
-        cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
-        cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
-
-        return Results.ok();
 
     }
 
@@ -148,7 +111,6 @@ public class PasoController extends Controller {
         if (request().accepts("application/xml")) {
             return Results
                     .ok(views.xml.paso.render(paso));
-            // return Results.ok();
         } else if (request().accepts("application/json")) {
 
             JsonNode resultado = cache.get(keyResJson);
@@ -165,21 +127,56 @@ public class PasoController extends Controller {
         }
     }
 
-    @esCocinero
+    @_esCocinero
+    public Result editarPaso(Long id) {
+
+        Paso paso = Paso.findById(id);
+
+        // Comprobamos que el paso existe
+        if (paso == null) {
+            return Results.notFound();
+        }
+
+        // Comprobar autor
+        String key = request().getQueryString("apikey");
+        if (!SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key))
+            return Results.badRequest();
+
+        // Recogemos los datos por formulario
+        Form<Paso> frm = frmFactory.form(Paso.class).bindFromRequest();
+        if (frm.hasErrors()) {
+            return status(409, frm.errorsAsJson());
+        }
+
+        // El indice de ordenación no se puede editar. Lo controlamos
+        Paso pasoInicial = frm.get();
+        Paso pasoUpdate = new Paso();
+        pasoUpdate.setId(id);
+        pasoUpdate.setDescripcion(pasoInicial.getDescripcion());
+        pasoUpdate.setTiempo(pasoInicial.getTiempo());
+        pasoUpdate.update();
+        Cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+        Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+
+        return Results.ok();
+
+    }
+
+    @_esCocinero
     public Result borrarPaso(Long id) {
         Paso paso = Paso.findById(id);
 
         // Comprobar autor
         String key = request().getQueryString("apikey");
-        if (SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key) == false)
+        if (!SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key))
             return Results.badRequest();
 
         if (paso != null){
             Ebean.beginTransaction();
             try{
                 paso.checkAndDelete();
-                cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
-                cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
+                Cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+                Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {
                 Ebean.endTransaction();

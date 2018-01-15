@@ -25,6 +25,10 @@ public class Paso extends ModeloBase {
 
     public static final Finder<Long, Paso> find = new Finder<>(Paso.class);
 
+    //========================================
+    //    GETTERS AND SETTERS
+    //========================================
+
     public Long getTiempo() {
         return tiempo;
     }
@@ -59,7 +63,7 @@ public class Paso extends ModeloBase {
 
 
     //========================================
-    //    MÉTODOS DE BASE DE DATOS
+    //    MÉTODOS DE BUSQUEDA
     //========================================
 
     public static Paso findById(Long id) {
@@ -86,9 +90,9 @@ public class Paso extends ModeloBase {
                 .findOne();
     }
 
-    public static Integer numPasos() {
-        return find.query().findCount();
-    }
+    //========================================
+    //    MÉTODOS DE CHEQUEO
+    //========================================
 
     public boolean checkAndCreate() {
         // Comprobamos que exista una descripción, dado que es el único aspecto obligatorio
@@ -181,8 +185,12 @@ public class Paso extends ModeloBase {
     }
 
     //========================================
-    //    MÉTODOS DE MUESTREO
+    //    OTROS
     //========================================
+
+    public static Integer numPasos() {
+        return find.query().findCount();
+    }
 
     public JsonNode toJson() {
         return Json.toJson(this);
