@@ -6,42 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec9897ba-90c9-4d94-802d-27b111ca6b8d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/esCocinero.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/esCocineroAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/esKeyValida.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/esKeyValidaAction.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/models/Receta.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/esCocinero.java" afterPath="$PROJECT_DIR$/app/controllers/_esCocinero.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/esCocineroAction.java" afterPath="$PROJECT_DIR$/app/controllers/_esCocineroAction.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/esKeyValida.java" afterPath="$PROJECT_DIR$/app/controllers/_esKeyValida.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/controllers/esKeyValidaAction.java" afterPath="$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/CocineroController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/CocineroController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/IngredienteController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/IngredienteController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/PasoController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/PasoController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/RecetaController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/RecetaController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/TagController.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/TagController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/FunctionalTest.class" afterPath="$PROJECT_DIR$/target/scala-2.12/test-classes/FunctionalTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/_esCocineroAction.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/_esCocineroAction.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/_esKeyValidaAction.class" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/controllers/_esKeyValidaAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterPath="$PROJECT_DIR$/target/streams/test/compileIncSetup/$global/streams/inc_compile_2.12.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/CocineroController.java" afterPath="$PROJECT_DIR$/app/controllers/CocineroController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/IngredienteController.java" afterPath="$PROJECT_DIR$/app/controllers/IngredienteController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/PasoController.java" afterPath="$PROJECT_DIR$/app/controllers/PasoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/RecetaController.java" afterPath="$PROJECT_DIR$/app/controllers/RecetaController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/TagController.java" afterPath="$PROJECT_DIR$/app/controllers/TagController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Cocinero.java" afterPath="$PROJECT_DIR$/app/models/Cocinero.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Ingrediente.java" afterPath="$PROJECT_DIR$/app/models/Ingrediente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Paso.java" afterPath="$PROJECT_DIR$/app/models/Paso.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Receta.java" afterPath="$PROJECT_DIR$/app/models/Receta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Tag.java" afterPath="$PROJECT_DIR$/app/models/Tag.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/Cachefunctions.java" afterPath="$PROJECT_DIR$/app/utils/Cachefunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/SeguridadFunctions.java" afterPath="$PROJECT_DIR$/app/utils/SeguridadFunctions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/_esCocineroAction.java" afterPath="$PROJECT_DIR$/app/controllers/_esCocineroAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java" afterPath="$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/compile/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/compile/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/test/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/test/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" />
@@ -49,7 +25,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/FunctionalTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/FunctionalTest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/UnitTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/UnitTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/FunctionalTest.java" afterPath="$PROJECT_DIR$/test/FunctionalTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -68,54 +43,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Paso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Paso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="92" column="4" lean-forward="false" selection-start-line="92" selection-start-column="4" selection-end-line="94" selection-end-column="46" />
-              <folding>
-                <element signature="method#findByReceta#0;class#Paso#0" expanded="false" />
-                <element signature="method#findByIndice#0;class#Paso#0" expanded="false" />
-                <element signature="method#checkAndCreate#0;class#Paso#0" expanded="false" />
-                <element signature="method#checkAndDelete#0;class#Paso#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Receta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Receta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-              <folding>
-                <element signature="e#502#512#0" expanded="false" />
-                <element signature="e#573#633#0" expanded="false" />
-                <element signature="e#737#797#0" expanded="false" />
-                <element signature="e#892#952#0" expanded="false" />
-                <element signature="e#1112#1154#0" expanded="false" />
-                <element signature="method#findByTituloAprox#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByTituloAndAutor#0;class#Receta#0" expanded="false" />
-                <element signature="method#findAll#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByCodineroPaged#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByCocinero#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByCocineros#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByTags#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByIngredientes#0;class#Receta#0" expanded="false" />
-                <element signature="method#findByTitulos#0;class#Receta#0" expanded="false" />
-                <element signature="method#checkAndCreate#0;class#Receta#0" expanded="false" />
-                <element signature="e#6151#6250#0" expanded="false" />
-                <element signature="method#asignarIngrediente#0;class#Receta#0" expanded="false" />
-                <element signature="method#quitarIngrediente#0;class#Receta#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TagController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/TagController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
+            <state relative-caret-position="986">
               <caret line="159" column="37" lean-forward="false" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
               <folding>
                 <element signature="method#crearTag#0;class#TagController#0" expanded="false" />
@@ -154,19 +85,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cocinero.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cocinero.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Cocinero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="814">
-              <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+            <state relative-caret-position="605">
+              <caret line="160" column="0" lean-forward="true" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
               <folding>
                 <element signature="e#575#617#0" expanded="false" />
                 <element signature="method#Cocinero#1;class#Cocinero#0" expanded="false" />
                 <element signature="method#findByNombre#0;class#Cocinero#0" expanded="false" />
                 <element signature="method#findAll#0;class#Cocinero#0" expanded="false" />
                 <element signature="method#findByKey#0;class#Cocinero#0" expanded="false" />
-                <element signature="method#checkAndCreate#0;class#Cocinero#0" expanded="false" />
-                <element signature="e#3669#3696#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_esKeyValida.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/_esKeyValida.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_esKeyValidaAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_esCocineroAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/_esCocineroAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CocineroController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/CocineroController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="51" />
+              <folding>
+                <element signature="method#obtenerCocineros#0;class#CocineroController#0" expanded="false" />
+                <element signature="method#obtenerCocinero#0;class#CocineroController#0" expanded="false" />
+                <element signature="method#editarCocinero#0;class#CocineroController#0" expanded="false" />
+                <element signature="method#borrarCocinero#0;class#CocineroController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -287,6 +263,8 @@
         <option value="$PROJECT_DIR$/app/models/Tag.java" />
         <option value="$PROJECT_DIR$/app/models/Cocinero.java" />
         <option value="$PROJECT_DIR$/app/models/Ingrediente.java" />
+        <option value="$PROJECT_DIR$/app/controllers/_esCocineroAction.java" />
+        <option value="$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java" />
       </list>
     </option>
   </component>
@@ -387,9 +365,9 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -587,15 +565,18 @@
       <workItem from="1515757229882" duration="604000" />
       <workItem from="1515790884618" duration="7531000" />
       <workItem from="1515872916316" duration="19390000" />
-      <workItem from="1515982946683" duration="8013000" />
+      <workItem from="1515982946683" duration="8261000" />
+      <workItem from="1515994584475" duration="1808000" />
+      <workItem from="1516060717448" duration="1461000" />
+      <workItem from="1516124431175" duration="3027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238450000" />
+    <option name="totallyTimeSpent" value="244994000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="22" width="1880" height="1058" extended-state="6" />
+    <frame x="40" y="22" width="1880" height="1058" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -615,14 +596,13 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2274211" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23177366" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -630,6 +610,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -656,8 +637,6 @@
             <element signature="method#findByNombre#0;class#Cocinero#0" expanded="false" />
             <element signature="method#findAll#0;class#Cocinero#0" expanded="false" />
             <element signature="method#findByKey#0;class#Cocinero#0" expanded="false" />
-            <element signature="method#checkAndCreate#0;class#Cocinero#0" expanded="false" />
-            <element signature="e#3669#3696#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -666,14 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding>
-            <element signature="e#477#487#0" expanded="false" />
-            <element signature="e#1349#1391#0" expanded="false" />
-            <element signature="method#findByReceta#0;class#Paso#0" expanded="false" />
-            <element signature="method#findByIndice#0;class#Paso#0" expanded="false" />
-            <element signature="method#checkAndCreate#0;class#Paso#0" expanded="false" />
-            <element signature="e#5488#5530#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,7 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="72" column="7" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="72" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -805,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,9 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="789">
           <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,12 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="27" column="7" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
-          <folding>
-            <element signature="e#309#310#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#421#422#0" expanded="false" />
-            <element signature="e#469#470#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,22 +838,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/esAutor.java" />
     <entry file="file://$PROJECT_DIR$/app/controllers/esAutorAction.java" />
-    <entry file="file://$PROJECT_DIR$/app/controllers/_esKeyValida.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="44" lean-forward="false" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-94">
@@ -907,17 +851,7 @@
         <state relative-caret-position="204">
           <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/_esCocineroAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -926,7 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,21 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/CocineroController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="method#crearCocinero#0;class#CocineroController#0" expanded="false" />
-            <element signature="method#obtenerCocineros#0;class#CocineroController#0" expanded="false" />
-            <element signature="method#obtenerCocinero#0;class#CocineroController#0" expanded="false" />
-            <element signature="method#editarCocinero#0;class#CocineroController#0" expanded="false" />
-            <element signature="method#borrarCocinero#0;class#CocineroController#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,52 +919,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#preparacionDatos#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#renderTemplate#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="e#1828#1905#0" expanded="false" />
-            <element signature="method#testCocineroGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testCocinerosGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testCocineroPost#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testCocineroPut#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testCocineroDelete#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testRecetaPost#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testRecetaGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testRecetasGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testRecetaPut#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testRecetaDelete#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testIngredientePost#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testIngredientesGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testIngredientePut#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testIngredienteDelete#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testTagPost#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testTagGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testTagsGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testTagPut#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testTagDelete#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testPasoPost#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testPasoGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testPasosGet#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testPasoPut#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testPasoDelete#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testAnadirIngrediente#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#testQuitarIngrediente#0;class#FunctionalTest#0" expanded="false" />
-            <element signature="method#borradoDatos#0;class#FunctionalTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Paso.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
+        <state relative-caret-position="816">
           <caret line="92" column="4" lean-forward="false" selection-start-line="92" selection-start-column="4" selection-end-line="94" selection-end-column="46" />
-          <folding>
-            <element signature="method#findByReceta#0;class#Paso#0" expanded="false" />
-            <element signature="method#findByIndice#0;class#Paso#0" expanded="false" />
-            <element signature="method#checkAndCreate#0;class#Paso#0" expanded="false" />
-            <element signature="method#checkAndDelete#0;class#Paso#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,32 +933,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="103" column="16" lean-forward="false" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-          <folding>
-            <element signature="e#502#512#0" expanded="false" />
-            <element signature="e#573#633#0" expanded="false" />
-            <element signature="e#737#797#0" expanded="false" />
-            <element signature="e#892#952#0" expanded="false" />
-            <element signature="e#1112#1154#0" expanded="false" />
-            <element signature="method#findByTituloAprox#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByTituloAndAutor#0;class#Receta#0" expanded="false" />
-            <element signature="method#findAll#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByCodineroPaged#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByCocinero#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByCocineros#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByTags#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByIngredientes#0;class#Receta#0" expanded="false" />
-            <element signature="method#findByTitulos#0;class#Receta#0" expanded="false" />
-            <element signature="method#checkAndCreate#0;class#Receta#0" expanded="false" />
-            <element signature="e#6151#6250#0" expanded="false" />
-            <element signature="method#asignarIngrediente#0;class#Receta#0" expanded="false" />
-            <element signature="method#quitarIngrediente#0;class#Receta#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/TagController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
+        <state relative-caret-position="986">
           <caret line="159" column="37" lean-forward="false" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
           <folding>
             <element signature="method#crearTag#0;class#TagController#0" expanded="false" />
@@ -1134,18 +993,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/_esKeyValida.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CocineroController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="39" column="51" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="51" />
+          <folding>
+            <element signature="method#obtenerCocineros#0;class#CocineroController#0" expanded="false" />
+            <element signature="method#obtenerCocinero#0;class#CocineroController#0" expanded="false" />
+            <element signature="method#editarCocinero#0;class#CocineroController#0" expanded="false" />
+            <element signature="method#borrarCocinero#0;class#CocineroController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Cocinero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+        <state relative-caret-position="605">
+          <caret line="160" column="0" lean-forward="true" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
             <element signature="e#575#617#0" expanded="false" />
             <element signature="method#Cocinero#1;class#Cocinero#0" expanded="false" />
             <element signature="method#findByNombre#0;class#Cocinero#0" expanded="false" />
             <element signature="method#findAll#0;class#Cocinero#0" expanded="false" />
             <element signature="method#findByKey#0;class#Cocinero#0" expanded="false" />
-            <element signature="method#checkAndCreate#0;class#Cocinero#0" expanded="false" />
-            <element signature="e#3669#3696#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/_esCocineroAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

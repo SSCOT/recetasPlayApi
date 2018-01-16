@@ -1,10 +1,9 @@
 package controllers;
 
 import models.Cocinero;
-import play.mvc.Action;
-import play.mvc.Http;
-import play.mvc.Result;
+import play.mvc.*;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
 import static play.mvc.Controller.request;
@@ -20,7 +19,7 @@ public class _esCocineroAction extends Action<_esCocinero> {
         // Recogemos la key
         String key = request().getQueryString("apikey");
         if(key.equals(null)){
-            return null;
+            return CompletableFuture.completedFuture(Results.unauthorized());
         }
         // Sacamos el tipo de cocinero que tiene esa key
         Cocinero cocinero = Cocinero.findByKey(key);
@@ -28,12 +27,9 @@ public class _esCocineroAction extends Action<_esCocinero> {
 
         CompletionStage<Result> result;
 
-        if (cocineroTipo.equals("cocinero")) {
-            result = this.delegate.call(ctx);
-        } else {
-            result = null;
-        }
+        if (!cocineroTipo.equals("cocinero"))
+            return CompletableFuture.completedFuture(Results.unauthorized());
 
-        return result;
+        return this.delegate.call(ctx);
     }
 }
