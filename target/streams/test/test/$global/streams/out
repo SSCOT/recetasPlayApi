@@ -2,76 +2,82 @@
 [0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m
 [0m[[0m[0mdebug[0m] [0m[0mCreate a single-thread test executor[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(UnitTest, sbt.ForkMain$AnnotatedFingerscan@1592aede, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(UnitTest, sbt.ForkMain$AnnotatedFingerscan@6e2c7e04, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mUnitTest[0m.[36msimpleCheck[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mUnitTest[0m.[36msimpleCheck[0m finished, took 0.088 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mUnitTest[0m.[36msimpleCheck[0m finished, took 0.073 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mUnitTest[0m.[36mtestAsync[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mUnitTest[0m.[36mtestAsync[0m finished, took 2.171 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mUnitTest[0m.[36mtestAsync[0m finished, took 2.119 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mUnitTest[0m.[36mtestCount[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mUnitTest[0m.[36mtestCount[0m finished, took 0.005 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 2.273s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mUnitTest[0m.[36mtestCount[0m finished, took 0.004 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 2.204s[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 3 events.[0m
-[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(FunctionalTest, sbt.ForkMain$AnnotatedFingerscan@318f5dce, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m  Running TaskDef(FunctionalTest, sbt.ForkMain$AnnotatedFingerscan@6da394c8, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[34mTest run started[0m[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagPost[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagPost[0m finished, took 4.059 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagPost[0m finished, took 4.329 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagsGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagsGet[0m finished, took 0.369 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagsGet[0m finished, took 0.34 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestSeguridadEsCocineroApi[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestSeguridadEsCocineroApi[0m finished, took 0.263 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroDelete[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroDelete[0m finished, took 0.293 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroDelete[0m finished, took 0.26 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestSeguridadPermisoCocineroApi[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestSeguridadPermisoCocineroApi[0m finished, took 0.307 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroGet[0m finished, took 0.319 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroGet[0m finished, took 0.321 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroPut[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroPut[0m finished, took 0.335 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroPut[0m finished, took 0.302 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoGet[0m finished, took 0.222 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoGet[0m finished, took 0.194 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoPut[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoPut[0m finished, took 0.238 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoPut[0m finished, took 0.211 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientePost[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientePost[0m finished, took 0.227 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientePost[0m finished, took 0.217 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientesGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientesGet[0m finished, took 0.214 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientesGet[0m finished, took 0.212 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientePut[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientePut[0m finished, took 0.235 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredientePut[0m finished, took 0.259 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredienteDelete[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredienteDelete[0m finished, took 0.235 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestIngredienteDelete[0m finished, took 0.294 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaPost[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaPost[0m finished, took 0.226 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaPost[0m finished, took 0.264 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetasGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetasGet[0m finished, took 0.189 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetasGet[0m finished, took 0.225 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaDelete[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaDelete[0m finished, took 0.191 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaDelete[0m finished, took 0.253 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoDelete[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoDelete[0m finished, took 0.189 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoDelete[0m finished, took 0.203 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestQuitarIngrediente[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestQuitarIngrediente[0m finished, took 0.23 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestQuitarIngrediente[0m finished, took 0.221 sec[0m
+[0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestSeguridadNoApiKey[0m started[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestSeguridadNoApiKey[0m finished, took 0.212 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mrenderTemplate[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mrenderTemplate[0m finished, took 0.183 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mrenderTemplate[0m finished, took 0.218 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaGet[0m finished, took 0.184 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaGet[0m finished, took 0.169 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaPut[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaPut[0m finished, took 0.185 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestRecetaPut[0m finished, took 0.234 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroPost[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroPost[0m finished, took 0.19 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocineroPost[0m finished, took 0.222 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocinerosGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocinerosGet[0m finished, took 0.165 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestCocinerosGet[0m finished, took 0.239 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestAnadirIngrediente[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestAnadirIngrediente[0m finished, took 0.175 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestAnadirIngrediente[0m finished, took 0.202 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagGet[0m finished, took 0.19 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagGet[0m finished, took 0.17 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagPut[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagPut[0m finished, took 0.163 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagPut[0m finished, took 0.189 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoPost[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoPost[0m finished, took 0.161 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasoPost[0m finished, took 0.192 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasosGet[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasosGet[0m finished, took 0.14 sec[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestPasosGet[0m finished, took 0.183 sec[0m
 [0m[[0m[0minfo[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagDelete[0m started[0m
-[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagDelete[0m finished, took 0.151 sec[0m
-[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 27 total, 9.676s[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 27 events.[0m
+[0m[[0m[0mdebug[0m] [0m[0mTest [33mFunctionalTest[0m.[36mtestTagDelete[0m finished, took 0.188 sec[0m
+[0m[[0m[0minfo[0m] [0m[0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 30 total, 11.102s[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0m    Produced 0 nested tasks and 30 events.[0m
 [0m[[0m[0mdebug[0m] [0m[0mSummary for JUnit not available.[0m
-[0m[[0m[0minfo[0m] [0m[0mPassed: Total 30, Failed 0, Errors 0, Passed 30[0m
+[0m[[0m[0minfo[0m] [0m[0mPassed: Total 33, Failed 0, Errors 0, Passed 33[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	UnitTest[0m
 [0m[[0m[0mdebug[0m] [0m[0m	FunctionalTest[0m

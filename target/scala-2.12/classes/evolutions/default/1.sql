@@ -14,7 +14,7 @@ create table apikey (
 
 create table cocinero (
   id                            bigint auto_increment not null,
-  nombre                        varchar(255),
+  nombre                        varchar(255) not null,
   apellido                      varchar(255),
   tipo                          varchar(255),
   restaurante                   varchar(255),
@@ -28,7 +28,7 @@ create table cocinero (
 
 create table ingrediente (
   id                            bigint auto_increment not null,
-  nombre                        varchar(255),
+  nombre                        varchar(255) not null,
   version                       bigint not null,
   fecha_creacion                timestamp not null,
   fecha_modificacion            timestamp not null,
@@ -44,7 +44,7 @@ create table ingrediente_receta (
 create table paso (
   id                            bigint auto_increment not null,
   tiempo                        bigint,
-  descripcion                   varchar(255),
+  descripcion                   varchar(255) not null,
   indice                        bigint,
   p_receta_id                   bigint,
   version                       bigint not null,
@@ -55,7 +55,7 @@ create table paso (
 
 create table receta (
   id                            bigint auto_increment not null,
-  titulo                        varchar(255),
+  titulo                        varchar(255) not null,
   tipo                          varchar(255),
   r_cocinero_id                 bigint,
   version                       bigint not null,
@@ -66,7 +66,7 @@ create table receta (
 
 create table tag (
   id                            bigint auto_increment not null,
-  texto                         varchar(255),
+  texto                         varchar(255) not null,
   t_receta_id                   bigint,
   version                       bigint not null,
   fecha_creacion                timestamp not null,

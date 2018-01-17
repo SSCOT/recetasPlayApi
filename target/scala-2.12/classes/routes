@@ -32,7 +32,7 @@ DELETE  /receta/:id                     controllers.RecetaController.borrarRecet
 # Pasos
 POST    /paso/                          controllers.PasoController.crearPaso()
 GET     /paso/:id                       controllers.PasoController.obtenerPaso(id: Long)
-GET     /pasos/:idReceta/page/:page   controllers.PasoController.obtenerPasos(idReceta: Long, page: Integer)
+GET     /pasos/:page/receta/:idReceta   controllers.PasoController.obtenerPasos(page: Integer, idReceta: Long)
 PUT     /paso/:id                       controllers.PasoController.editarPaso(id: Long)
 DELETE  /paso/:id                       controllers.PasoController.borrarPaso(id: Long)
 
@@ -48,9 +48,9 @@ DELETE  /receta/:idR/ingrediente/:idI   controllers.RecetaController.quitarIngre
 # tags
 POST    /tag/                          controllers.TagController.crearTag()
 GET     /tag/:id                       controllers.TagController.obtenerTag(id: Long)
-GET     /tags/:idReceta                controllers.TagController.obtenerTags(idReceta: Long)
+GET     /tags/receta/:idReceta                controllers.TagController.obtenerTags(idReceta: Long)
 PUT     /tag/:id                       controllers.TagController.editarTag(id: Long)
 DELETE  /tag/:id                       controllers.TagController.borrarTag(id: Long)
 
 # búsqueda
-GET     /busqueda/                    controllers.RecetaController.busqueda()
+GET     /recetas/busqueda/                    controllers.RecetaController.busqueda()

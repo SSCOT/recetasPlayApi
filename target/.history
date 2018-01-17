@@ -269,3 +269,14 @@ test
 run
 test
 run
+test
+run
+test
+h2-browser
+test
+compile
+play generated secret
+playGenerateSecret
+test
+run
+test

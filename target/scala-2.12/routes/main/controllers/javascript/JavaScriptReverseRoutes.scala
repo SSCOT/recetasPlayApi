@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Sun Jan 14 00:58:17 CET 2018
+// @DATE:Wed Jan 17 19:24:01 CET 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -55,7 +55,7 @@ package controllers.javascript {
       "controllers.TagController.obtenerTags",
       """
         function(idReceta0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tags/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idReceta", idReceta0))})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tags/receta/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idReceta", idReceta0))})
         }
       """
     )
@@ -295,7 +295,7 @@ package controllers.javascript {
       "controllers.RecetaController.busqueda",
       """
         function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "busqueda/"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "recetas/busqueda/"})
         }
       """
     )
@@ -374,8 +374,8 @@ package controllers.javascript {
     def obtenerPasos: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PasoController.obtenerPasos",
       """
-        function(idReceta0,page1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "pasos/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idReceta", idReceta0)) + "/page/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("page", page1))})
+        function(page0,idReceta1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "pasos/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("page", page0)) + "/receta/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("idReceta", idReceta1))})
         }
       """
     )

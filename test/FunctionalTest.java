@@ -11,6 +11,8 @@ import play.test.Helpers;
 import play.test.WithApplication;
 import play.twirl.api.Content;
 
+import java.security.Key;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
@@ -62,6 +64,8 @@ public class FunctionalTest extends WithApplication {
         paso.setP_receta(receta);
         paso.save();
     }
+
+    // ----------------------------------
 
     @Test
     public void renderTemplate() {
@@ -295,6 +299,7 @@ public class FunctionalTest extends WithApplication {
     @Test
     public void testIngredienteDelete() {
         Ingrediente ingredienteBorrar = new Ingrediente();
+        ingredienteBorrar.setNombre("nomIngredienteBorrar");
         ingredienteBorrar.save();
 
         Http.RequestBuilder req = Helpers.fakeRequest()
@@ -349,7 +354,7 @@ public class FunctionalTest extends WithApplication {
     public void testTagsGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/tags/" + receta.id + "?apikey=" + cocinero.key.getKey());
+                .uri("/tags/receta/" + receta.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -427,7 +432,7 @@ public class FunctionalTest extends WithApplication {
     public void testPasosGet() {
         Http.RequestBuilder req = Helpers.fakeRequest()
                 .method("GET")
-                .uri("/pasos/" + receta.id + "/page/0" + "?apikey=" + cocinero.key.getKey());
+                .uri("/pasos/0/receta/" + receta.id + "?apikey=" + cocinero.key.getKey());
 
         Result r = Helpers.route(app, req);
         assertThat(r.status()).isEqualTo(200);
@@ -493,6 +498,59 @@ public class FunctionalTest extends WithApplication {
         assertThat(r.status()).isEqualTo(200);
     }
 
+    // ----------------------------------
+    // TEST SEGURIDAD
+    // ----------------------------------
+
+    @Test
+    public void testSeguridadEsCocineroApi() {
+        Cocinero cocineroAux = new Cocinero();
+        Apikey keyAux = new Apikey();
+        cocineroAux.setNombre("tCocineroAux");
+        cocineroAux.setTipo("estudiante");
+        keyAux.setKey("fakeApi");
+        keyAux.setCocinero(cocineroAux);
+        cocineroAux.setKey(keyAux);
+        keyAux.save();
+        cocineroAux.save();
+
+        Http.RequestBuilder req = Helpers.fakeRequest()
+                .method("DELETE")
+                .uri("/cocinero/" + cocinero.id + "?apikey=" + cocineroAux.key.getKey());
+
+        Result r1 = Helpers.route(app, req);
+        assertThat(r1.status()).isEqualTo(401);
+
+        cocineroAux.delete();
+    }
+
+    @Test
+    public void testSeguridadPermisoCocineroApi() {
+        Cocinero cocineroAux = new Cocinero();
+        cocineroAux.setNombre("cocineroBorrar");
+        cocineroAux.setTipo("cocinero");
+        cocineroAux.save();
+        Http.RequestBuilder req = Helpers.fakeRequest()
+                .method("DELETE")
+                .uri("/cocinero/" + cocineroAux.id + "?apikey=" + cocinero.key.getKey());
+
+        Result r1 = Helpers.route(app, req);
+        assertThat(r1.status()).isEqualTo(401);
+
+        cocineroAux.delete();
+    }
+
+    @Test
+    public void testSeguridadNoApiKey() {
+        Http.RequestBuilder req = Helpers.fakeRequest()
+                .method("DELETE")
+                .uri("/cocinero/" + cocinero.id);
+
+        Result r1 = Helpers.route(app, req);
+        assertThat(r1.status()).isEqualTo(401);
+    }
+
+    // ----------------------------------
 
     @After
     public void borradoDatos() {

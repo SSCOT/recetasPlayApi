@@ -60,7 +60,7 @@ public class PasoController extends Controller {
     }
 
     // El listado de pasos solo tiene sentido cuando es de una determinada receta
-    public Result obtenerPasos(Long idReceta, Integer page) {
+    public Result obtenerPasos(Integer page, Long idReceta) {
         String key = "pasos" + page + "receta" + idReceta;
         String keyResJson = "pasos" + page + "receta" + idReceta + "resJson";
 
@@ -155,7 +155,7 @@ public class PasoController extends Controller {
         pasoUpdate.setDescripcion(pasoInicial.getDescripcion());
         pasoUpdate.setTiempo(pasoInicial.getTiempo());
         pasoUpdate.update();
-        Cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+        Cachefunctions.vaciarCacheCompleta("paso" + id, "pasos", Paso.numPasos(), cache);
         Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
 
         return Results.ok();
@@ -171,11 +171,11 @@ public class PasoController extends Controller {
         if (!SeguridadFunctions.esAutorReceta(paso.p_receta.getId(), key))
             return Results.badRequest();
 
-        if (paso != null){
+        if (paso != null) {
             Ebean.beginTransaction();
-            try{
+            try {
                 paso.checkAndDelete();
-                Cachefunctions.vaciarCacheCompleta("paso"+id, "pasos", Paso.numPasos(), cache);
+                Cachefunctions.vaciarCacheCompleta("paso" + id, "pasos", Paso.numPasos(), cache);
                 Cachefunctions.vaciarCacheListas("recetas", Receta.numRecetas(), cache);
                 Ebean.commitTransaction();
             } finally {

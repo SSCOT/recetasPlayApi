@@ -16,8 +16,6 @@ public class SeguridadFunctions {
     }
 
     public static boolean tengoPermisoCocinero(Long idCocinero, String key) {
-        System.out.println("id cocinero: " + idCocinero + " key:" + key);
-
         Cocinero yo = Cocinero.findByKey(key);
 
         // Si es el mismo id es que intenta hacer acciones sobre su propio usuario

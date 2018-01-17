@@ -9,6 +9,7 @@ import play.libs.Json;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 import java.util.Iterator;
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
 public class Paso extends ModeloBase {
 
     private Long tiempo;
+    @NotNull
     private String descripcion;
     private Long indice;
 

@@ -9,12 +9,14 @@ import play.libs.Json;
 
 import javax.persistence.*;
 import javax.persistence.OrderBy;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Receta extends ModeloBase {
 
+    @NotNull
     private String titulo;
     private String tipo;
 

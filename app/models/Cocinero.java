@@ -13,6 +13,7 @@ import scala.util.parsing.json.JSONObject;
 import scala.util.parsing.json.JSONObject$;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,7 @@ public class Cocinero extends ModeloBase {
     //    VARIABLES
     //========================================
 
+    @NotNull
     private String nombre;
     private String apellido;
     private String tipo;

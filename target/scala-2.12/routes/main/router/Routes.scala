@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Sun Jan 14 00:58:17 CET 2018
+// @DATE:Wed Jan 17 19:24:01 CET 2018
 
 package router
 
@@ -85,7 +85,7 @@ class Routes(
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """id<[^/]+>""", """controllers.RecetaController.borrarReceta(id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""", """controllers.PasoController.crearPaso()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""" + "$" + """id<[^/]+>""", """controllers.PasoController.obtenerPaso(id:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """pasos/""" + "$" + """idReceta<[^/]+>/page/""" + "$" + """page<[^/]+>""", """controllers.PasoController.obtenerPasos(idReceta:Long, page:Integer)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """pasos/""" + "$" + """page<[^/]+>/receta/""" + "$" + """idReceta<[^/]+>""", """controllers.PasoController.obtenerPasos(page:Integer, idReceta:Long)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""" + "$" + """id<[^/]+>""", """controllers.PasoController.editarPaso(id:Long)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """paso/""" + "$" + """id<[^/]+>""", """controllers.PasoController.borrarPaso(id:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """ingrediente/""", """controllers.IngredienteController.crearIngrediente()"""),
@@ -96,10 +96,10 @@ class Routes(
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """receta/""" + "$" + """idR<[^/]+>/ingrediente/""" + "$" + """idI<[^/]+>""", """controllers.RecetaController.quitarIngrediente(idR:Long, idI:Long)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tag/""", """controllers.TagController.crearTag()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tag/""" + "$" + """id<[^/]+>""", """controllers.TagController.obtenerTag(id:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tags/""" + "$" + """idReceta<[^/]+>""", """controllers.TagController.obtenerTags(idReceta:Long)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tags/receta/""" + "$" + """idReceta<[^/]+>""", """controllers.TagController.obtenerTags(idReceta:Long)"""),
     ("""PUT""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tag/""" + "$" + """id<[^/]+>""", """controllers.TagController.editarTag(id:Long)"""),
     ("""DELETE""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """tag/""" + "$" + """id<[^/]+>""", """controllers.TagController.borrarTag(id:Long)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """busqueda/""", """controllers.RecetaController.busqueda()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """recetas/busqueda/""", """controllers.RecetaController.busqueda()"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -415,17 +415,17 @@ class Routes(
 
   // @LINE:35
   private[this] lazy val controllers_PasoController_obtenerPasos17_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("pasos/"), DynamicPart("idReceta", """[^/]+""",true), StaticPart("/page/"), DynamicPart("page", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("pasos/"), DynamicPart("page", """[^/]+""",true), StaticPart("/receta/"), DynamicPart("idReceta", """[^/]+""",true)))
   )
   private[this] lazy val controllers_PasoController_obtenerPasos17_invoker = createInvoker(
-    PasoController_3.obtenerPasos(fakeValue[Long], fakeValue[Integer]),
+    PasoController_3.obtenerPasos(fakeValue[Integer], fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.PasoController",
       "obtenerPasos",
-      Seq(classOf[Long], classOf[Integer]),
+      Seq(classOf[Integer], classOf[Long]),
       "GET",
-      this.prefix + """pasos/""" + "$" + """idReceta<[^/]+>/page/""" + "$" + """page<[^/]+>""",
+      this.prefix + """pasos/""" + "$" + """page<[^/]+>/receta/""" + "$" + """idReceta<[^/]+>""",
       """""",
       Seq()
     )
@@ -613,7 +613,7 @@ class Routes(
 
   // @LINE:51
   private[this] lazy val controllers_TagController_obtenerTags28_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tags/"), DynamicPart("idReceta", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("tags/receta/"), DynamicPart("idReceta", """[^/]+""",true)))
   )
   private[this] lazy val controllers_TagController_obtenerTags28_invoker = createInvoker(
     TagController_6.obtenerTags(fakeValue[Long]),
@@ -623,7 +623,7 @@ class Routes(
       "obtenerTags",
       Seq(classOf[Long]),
       "GET",
-      this.prefix + """tags/""" + "$" + """idReceta<[^/]+>""",
+      this.prefix + """tags/receta/""" + "$" + """idReceta<[^/]+>""",
       """""",
       Seq()
     )
@@ -667,7 +667,7 @@ class Routes(
 
   // @LINE:56
   private[this] lazy val controllers_RecetaController_busqueda31_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("busqueda/")))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("recetas/busqueda/")))
   )
   private[this] lazy val controllers_RecetaController_busqueda31_invoker = createInvoker(
     RecetaController_0.busqueda(),
@@ -677,7 +677,7 @@ class Routes(
       "busqueda",
       Nil,
       "GET",
-      this.prefix + """busqueda/""",
+      this.prefix + """recetas/busqueda/""",
       """ búsqueda""",
       Seq()
     )
@@ -790,8 +790,8 @@ class Routes(
   
     // @LINE:35
     case controllers_PasoController_obtenerPasos17_route(params@_) =>
-      call(params.fromPath[Long]("idReceta", None), params.fromPath[Integer]("page", None)) { (idReceta, page) =>
-        controllers_PasoController_obtenerPasos17_invoker.call(PasoController_3.obtenerPasos(idReceta, page))
+      call(params.fromPath[Integer]("page", None), params.fromPath[Long]("idReceta", None)) { (page, idReceta) =>
+        controllers_PasoController_obtenerPasos17_invoker.call(PasoController_3.obtenerPasos(page, idReceta))
       }
   
     // @LINE:36

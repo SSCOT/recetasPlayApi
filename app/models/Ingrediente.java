@@ -11,11 +11,13 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
 public class Ingrediente extends ModeloBase {
 
+    @NotNull
     private String nombre;
 
     @ManyToMany(cascade = CascadeType.ALL)

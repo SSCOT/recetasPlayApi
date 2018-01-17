@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Sun Jan 14 00:58:17 CET 2018
+// @DATE:Wed Jan 17 19:24:01 CET 2018
 
 import play.api.mvc.Call
 
@@ -43,7 +43,7 @@ package controllers {
     // @LINE:51
     def obtenerTags(idReceta:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "tags/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
+      Call("GET", _prefix + { _defaultPrefix } + "tags/receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
     }
   
     // @LINE:49
@@ -205,7 +205,7 @@ package controllers {
     // @LINE:56
     def busqueda(): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "busqueda/")
+      Call("GET", _prefix + { _defaultPrefix } + "recetas/busqueda/")
     }
   
     // @LINE:29
@@ -254,9 +254,9 @@ package controllers {
 
   
     // @LINE:35
-    def obtenerPasos(idReceta:Long, page:Integer): Call = {
+    def obtenerPasos(page:Integer, idReceta:Long): Call = {
       
-      Call("GET", _prefix + { _defaultPrefix } + "pasos/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)) + "/page/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)))
+      Call("GET", _prefix + { _defaultPrefix } + "pasos/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("page", page)) + "/receta/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Long]].unbind("idReceta", idReceta)))
     }
   
     // @LINE:34
