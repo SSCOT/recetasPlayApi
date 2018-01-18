@@ -6,48 +6,363 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec9897ba-90c9-4d94-802d-27b111ca6b8d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$41bee5e5f5cb6bd25271$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$41bee5e5f5cb6bd25271.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$41bee5e5f5cb6bd25271.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$9f99dcd8510b4330cfc9$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$9f99dcd8510b4330cfc9.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$9f99dcd8510b4330cfc9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c520c458780048114236$.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c520c458780048114236.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/project/target/config-classes/$c520c458780048114236.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_cache_2_12_2_6_7_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__com_typesafe_play_play_ehcache_2_12_2_6_7_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__javax_cache_cache_api_1_0_0_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__mysql_mysql_connector_java_5_1_18_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__net_sf_ehcache_ehcache_2_10_4_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_ehcache_jcache_1_0_1_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0eca6db105fb758e6ded$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0eca6db105fb758e6ded.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$0eca6db105fb758e6ded.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$16886d975a094f6637f9$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$16886d975a094f6637f9.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$16886d975a094f6637f9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$171dd57d1036460e0e30$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$171dd57d1036460e0e30.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$171dd57d1036460e0e30.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1f1ccf808cc22497fc4e$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1f1ccf808cc22497fc4e.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$1f1ccf808cc22497fc4e.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$3fa29cd485624bdc1235$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$3fa29cd485624bdc1235.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$3fa29cd485624bdc1235.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$593cf52d576cc2e40716$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$593cf52d576cc2e40716.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$593cf52d576cc2e40716.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$98177edc0ad2ab95a2d8$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$98177edc0ad2ab95a2d8.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$98177edc0ad2ab95a2d8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$99fdb60fe53e4ae3975e$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$99fdb60fe53e4ae3975e.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$99fdb60fe53e4ae3975e.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a5643633bc9ceb99ab62$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a5643633bc9ceb99ab62.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$a5643633bc9ceb99ab62.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ba1c4c12fe95036fe9ce$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ba1c4c12fe95036fe9ce.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$ba1c4c12fe95036fe9ce.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bb12253857e38fc1621f$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bb12253857e38fc1621f.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$bb12253857e38fc1621f.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d25ff08ef67ebc4a217b$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d25ff08ef67ebc4a217b.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$d25ff08ef67ebc4a217b.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$e6849ace939b4070eda0$.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$e6849ace939b4070eda0.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$e6849ace939b4070eda0.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/Module.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/AsyncController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/CocineroController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/CountController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/HomeController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/IngredienteController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/PasoController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/RecetaController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseAssets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseAsyncController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseCocineroController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseCountController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseHomeController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseIngredienteController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReversePasoController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseRecetaController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/ReverseTagController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/TagController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseAssets.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseAsyncController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseCocineroController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseCountController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseHomeController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseIngredienteController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReversePasoController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseRecetaController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/ReverseTagController.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/javascript/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/controllers/routes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/filters/ExampleFilter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/filters/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/MaterialIcons-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/MaterialIcons-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/MaterialIcons-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/abstract_type.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/class.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/class_comp.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/class_diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/diagrams.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/diagrams.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/jquery.mousewheel.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/jquery.panzoom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/lato-v11-latin-100.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/lato-v11-latin-100.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/lato-v11-latin-100.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/lato-v11-latin-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/lato-v11-latin-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/lato-v11-latin-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/modernizr.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/object.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/object_comp.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/object_comp_trait.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/object_diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/open-sans-v13-latin-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/open-sans-v13-latin-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/open-sans-v13-latin-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/ownderbg2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/ownerbg.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/ownerbg2.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/package.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/ref-index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/scheduler.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/source-code-pro-v6-latin-700.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/source-code-pro-v6-latin-700.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/source-code-pro-v6-latin-700.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/source-code-pro-v6-latin-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/source-code-pro-v6-latin-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/source-code-pro-v6-latin-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/template.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/template.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/tools.tooltip.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/trait.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/trait_comp.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/trait_diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/lib/type_diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/Cocinero.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/Ingrediente.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/ModeloBase.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/Paso.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/Receta.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/Tag.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/models/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/router/Routes.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/router/RoutesPrefix$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/router/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/services/ApplicationTimer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/services/AtomicCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/services/Counter.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/services/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/utils/Cachefunctions.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/utils/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/html/index$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/html/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/html/main$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/html/welcome$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/cocinero$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/ingrediente$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/listacocineros$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/listaingredientes$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/listapasos$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/listarecetas$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/listatags$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/paso$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/receta$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/api/views/xml/tag$.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT-javadoc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT-sans-externalized.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT-sources.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT-web-assets.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/play-java-starter-example_2.12-1.0-SNAPSHOT.pom" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/recetasplayapi_2.12/0.1-SNAPSHOT/resolved.xml.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/recetasplayapi_2.12/0.1-SNAPSHOT/resolved.xml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/play-java-starter-example/play-java-starter-example$sources/1.0-SNAPSHOT/resolved.xml.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/play-java-starter-example/play-java-starter-example$sources/1.0-SNAPSHOT/resolved.xml.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-compile-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-compile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-optional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-provided.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-runtime-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-runtime.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-scala-tool.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-test-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-recetasplayapi_2.12-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-compile-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-compile.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-debian.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-docker.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-docs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-linux.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-optional.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-plugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-pom.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-provided.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-rpm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-runtime-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-runtime.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-scala-tool.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-test-internal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-test.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-universal-docs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-universal-src.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-universal.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example$sources-windows.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/makeBashScripts/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/makeBatScripts/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/makePom/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/mappings/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/playCompileEverything/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/$global/playGenerateSecret/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/doc/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/doc/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/doc/$global/streams/scala/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/doc/$global/streams/scala/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/managedSources/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/manipulateBytecode/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageDoc/$global/streams/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageDoc/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageDoc/$global/streams/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageSrc/$global/streams/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageSrc/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/packageSrc/$global/streams/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/playEnhancerRewriteAccessors/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/playJarSansExternalized/$global/streams/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/playJarSansExternalized/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/playJarSansExternalized/$global/streams/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/compile/sources/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/test/testOnly/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/universal/dist/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/web-assets/packageBin/$global/streams/inputs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/web-assets/packageBin/$global/streams/out" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/streams/web-assets/packageBin/$global/streams/output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-reports/BrowserTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/universal/play-java-starter-example-1.0-SNAPSHOT.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/universal/scripts/scripts/play-java-starter-example" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/universal/scripts/scripts/play-java-starter-example.bat" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/twirlCompileTemplates/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/twirlCompileTemplates/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compile/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/compile/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterPath="$PROJECT_DIR$/target/streams/test/compileIncSetup/$global/streams/inc_compile_2.12.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/project/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/root-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/root-build.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/root.iml" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/play2_project_settings.xml" afterPath="$PROJECT_DIR$/.idea/play2_project_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/play2_settings.xml" afterPath="$PROJECT_DIR$/.idea/play2_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/application.log" afterPath="$PROJECT_DIR$/logs/application.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/compile/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/exportedProducts/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/fullClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/project/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas$sources/1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas$sources/1.0-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas$sources/1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas$sources/1.0-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas_2.12/1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas_2.12/1.0-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas_2.12/1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/apirecetas/apirecetas_2.12/1.0-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/play-java-starter-example/play-java-starter-example_2.12/1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/play-java-starter-example/play-java-starter-example_2.12/1.0-SNAPSHOT/resolved.xml.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/play-java-starter-example/play-java-starter-example_2.12/1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/play-java-starter-example/play-java-starter-example_2.12/1.0-SNAPSHOT/resolved.xml.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-debian.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-debian.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docker.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docs.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-linux.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-linux.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-rpm.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-rpm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-docs.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-src.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-src.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-windows.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-windows.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-debian.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-debian.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-docker.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-docker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-docs.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-linux.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-linux.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-rpm.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-rpm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-universal-docs.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-universal-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-universal-src.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-universal-src.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-universal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-universal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-windows.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas_2.12-windows.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-compile-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-compile.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-debian.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-debian.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-docker.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-docker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-docs.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-linux.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-linux.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-optional.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-provided.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-rpm.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-rpm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-runtime-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-runtime.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-scala-tool.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-test-internal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-test.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-universal-docs.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-universal-docs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-universal-src.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-universal-src.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-universal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-universal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-windows.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/play-java-starter-example-play-java-starter-example_2.12-windows.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/ReverseRoutes.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/ReverseRoutes.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/javascript/JavaScriptReverseRoutes.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/routes.java" afterPath="$PROJECT_DIR$/target/scala-2.12/routes/main/controllers/routes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/router/Routes.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/routes/main/router/Routes.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/routes/main/router/RoutesPrefix.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/routes/main/router/RoutesPrefix.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/index.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/index.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/main.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/main.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/welcome.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/html/welcome.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/cocinero.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/cocinero.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/ingrediente.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/ingrediente.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listacocineros.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listacocineros.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listaingredientes.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listaingredientes.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listapasos.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listapasos.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listarecetas.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listarecetas.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listatags.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/listatags.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/paso.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/paso.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/receta.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/receta.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/tag.template.scala" afterPath="$PROJECT_DIR$/target/scala-2.12/twirl/main/views/xml/tag.template.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/sync-exported-assets-web-assets" afterPath="$PROJECT_DIR$/target/streams/$global/$global/$global/streams/sync-exported-assets-web-assets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/copy-resources" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/compile/copyResources/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/exportedProducts/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/compile/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/compile/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/exportedProducts/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" afterPath="$PROJECT_DIR$/target/streams/compile/playRoutes/$global/streams/op-cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/internalDependencyClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/$global/$global/definedTestNames/data" afterPath="$PROJECT_DIR$/target/streams/test/$global/$global/definedTestNames/data" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/dependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/exportedProducts/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/exportedProducts/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/fullClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/fullClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/internalDependencyClasspath/$global/streams/export" />
@@ -55,6 +370,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/test/playEnhancerGenerateAccessors/$global/streams/play_instrumentation_2.12" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" afterPath="$PROJECT_DIR$/target/streams/test/playEnhancerRewriteAccessors/$global/streams/play_instrumentation_2.12" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/web-assets-test/assets/$global/streams/sync-assets-web-assets-test" afterPath="$PROJECT_DIR$/target/streams/web-assets-test/assets/$global/streams/sync-assets-web-assets-test" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/web-assets/assets/$global/streams/sync-assets-web-assets" afterPath="$PROJECT_DIR$/target/streams/web-assets/assets/$global/streams/sync-assets-web-assets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/FunctionalTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/FunctionalTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-reports/UnitTest.xml" afterPath="$PROJECT_DIR$/target/test-reports/UnitTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/web/web-modules/webjars-test.cache" afterPath="$PROJECT_DIR$/target/web/web-modules/webjars-test.cache" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -73,84 +395,101 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Ingrediente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Ingrediente.java">
+      <file leaf-file-name="FunctionalTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/FunctionalTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#findByNombre#0;class#Ingrediente#0" expanded="false" />
-                <element signature="method#findAll#0;class#Ingrediente#0" expanded="false" />
-                <element signature="method#checkAndCreate#0;class#Ingrediente#0" expanded="false" />
-                <element signature="method#checkAndUpdate#0;class#Ingrediente#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Paso.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Paso.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="0">
+              <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Receta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Receta.java">
+      <file leaf-file-name="UnitTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/UnitTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugins.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tag.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Tag.java">
+      <file leaf-file-name="build.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/build.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-              <folding>
-                <element signature="e#424#434#0" expanded="false" />
-                <element signature="e#809#810#0" expanded="true" />
-                <element signature="e#849#850#0" expanded="true" />
-                <element signature="e#857#899#0" expanded="false" />
-                <element signature="method#findByReceta#0;class#Tag#0" expanded="false" />
-                <element signature="method#findByTexto#0;class#Tag#0" expanded="false" />
-                <element signature="method#checkAndCreate#0;class#Tag#0" expanded="false" />
-                <element signature="e#2272#2314#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cocinero.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/Cocinero.java">
+      <file leaf-file-name="sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="28" column="26" lean-forward="false" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-              <folding>
-                <element signature="e#620#662#0" expanded="false" />
-                <element signature="method#Cocinero#1;class#Cocinero#0" expanded="false" />
-                <element signature="method#findByNombre#0;class#Cocinero#0" expanded="false" />
-                <element signature="method#findAll#0;class#Cocinero#0" expanded="false" />
-                <element signature="method#findByKey#0;class#Cocinero#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FunctionalTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/FunctionalTest.java">
+      <file leaf-file-name="sbt.bat" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sbt.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="882">
-              <caret line="301" column="25" lean-forward="false" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowserTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/BrowserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="27" column="7" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.conf" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/application.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4811">
+              <caret line="283" column="4" lean-forward="false" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -242,7 +581,6 @@
         <option value="$PROJECT_DIR$/app/controllers/PasoController.java" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/conf/routes" />
-        <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/app/controllers/_esKeyValidaAction.java" />
         <option value="$PROJECT_DIR$/app/models/Ingrediente.java" />
         <option value="$PROJECT_DIR$/app/models/Tag.java" />
@@ -250,6 +588,7 @@
         <option value="$PROJECT_DIR$/app/models/Paso.java" />
         <option value="$PROJECT_DIR$/app/models/Cocinero.java" />
         <option value="$PROJECT_DIR$/test/FunctionalTest.java" />
+        <option value="$PROJECT_DIR$/build.sbt" />
       </list>
     </option>
   </component>
@@ -267,8 +606,8 @@
         <option value="java.lang._" />
         <option value="play.mvc._" />
         <option value="_root_.play.twirl.api.Txt" />
-        <option value="play.api.data.Field" />
         <option value="play.data._" />
+        <option value="play.api.data.Field" />
         <option value="play.api.templates.PlayMagic._" />
         <option value="_root_.play.twirl.api.JavaScript" />
         <option value="play.core.j.PlayMagicForJava._" />
@@ -305,21 +644,32 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="recetasPlayApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apiRecetas" type="b2602c69:ProjectViewProjectNode" />
               <item name="recetasPlayApi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiRecetas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="recetasPlayApi" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apiRecetas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="recetasPlayApi" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +785,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1516213931980" />
+    <option name="lastUpdateTimestamp" value="1516303467444" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -526,15 +876,17 @@
       <workItem from="1516124431175" duration="8494000" />
       <workItem from="1516204896905" duration="9872000" />
       <workItem from="1516220627795" duration="631000" />
-      <workItem from="1516300361657" duration="40000" />
+      <workItem from="1516300361657" duration="1411000" />
+      <workItem from="1516301810264" duration="1554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261004000" />
+    <option name="totallyTimeSpent" value="263929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="22" width="1880" height="1058" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -557,7 +909,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23612623" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23612623" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -584,34 +936,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/Paso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/RecetaController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/PasoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6035">
-          <caret line="355" column="29" lean-forward="false" selection-start-line="355" selection-start-column="29" selection-end-line="355" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Receta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
@@ -630,13 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -726,21 +1043,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/utils/Constantes.java" />
-    <entry file="file://$PROJECT_DIR$/test/UnitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="789">
-          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/utils/Utilidades.java" />
-    <entry file="file://$PROJECT_DIR$/test/BrowserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="27" column="7" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/esAutor.java" />
     <entry file="file://$PROJECT_DIR$/app/controllers/esAutorAction.java" />
     <entry file="file://$PROJECT_DIR$/app/controllers/_esCocinero.java">
@@ -771,24 +1074,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/project/build.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-614">
-          <caret line="283" column="4" lean-forward="false" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="761">
           <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -803,6 +1093,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,6 +1101,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="140" column="17" lean-forward="false" selection-start-line="140" selection-start-column="17" selection-end-line="140" selection-end-column="17" />
+          <folding>
+            <element signature="method#obtenerTags#0;class#TagController#0" expanded="false" />
+            <element signature="method#obtenerTag#0;class#TagController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -817,6 +1112,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding>
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#758#759#0" expanded="false" />
+            <element signature="method#obtenerReceta#0;class#RecetaController#0" expanded="false" />
+            <element signature="method#obtenerRecetas#0;class#RecetaController#0" expanded="false" />
+            <element signature="method#obtenerRecetasCocinero#0;class#RecetaController#0" expanded="false" />
+            <element signature="method#editarReceta#0;class#RecetaController#0" expanded="false" />
+            <element signature="method#borrarReceta#0;class#RecetaController#0" expanded="false" />
+            <element signature="method#anadirIngrediente#0;class#RecetaController#0" expanded="false" />
+            <element signature="method#quitarIngrediente#0;class#RecetaController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -824,6 +1130,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
           <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+          <folding>
+            <element signature="method#crearPaso#0;class#PasoController#0" expanded="false" />
+            <element signature="method#obtenerPaso#0;class#PasoController#0" expanded="false" />
+            <element signature="method#editarPaso#0;class#PasoController#0" expanded="false" />
+            <element signature="method#borrarPaso#0;class#PasoController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -845,6 +1157,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
           <caret line="170" column="12" lean-forward="false" selection-start-line="170" selection-start-column="12" selection-end-line="170" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,6 +1180,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="35" column="17" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+          <folding>
+            <element signature="method#obtenerIngredientes#0;class#IngredienteController#0" expanded="false" />
+            <element signature="method#editarIngrediente#0;class#IngredienteController#0" expanded="false" />
+            <element signature="method#borrarIngrediente#0;class#IngredienteController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -933,10 +1251,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="61" lean-forward="false" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4811">
+          <caret line="283" column="4" lean-forward="false" selection-start-line="283" selection-start-column="4" selection-end-line="283" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sbt.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/BrowserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="7" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/FunctionalTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="301" column="25" lean-forward="false" selection-start-line="301" selection-start-column="25" selection-end-line="301" selection-end-column="25" />
+        <state relative-caret-position="0">
+          <caret line="64" column="20" lean-forward="false" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/UnitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.sbt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>

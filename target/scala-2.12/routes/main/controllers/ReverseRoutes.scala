@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/conf/routes
-// @DATE:Wed Jan 17 19:24:01 CET 2018
+// @SOURCE:/Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/conf/routes
+// @DATE:Thu Jan 18 20:03:34 CET 2018
 
 import play.api.mvc.Call
 

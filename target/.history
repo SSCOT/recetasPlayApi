@@ -281,3 +281,16 @@ test
 run
 test
 cd ..
+test
+compile
+test
+clean
+build
+compile
+test
+run
+h2-browser
+test
+run
+h2-browser
+run

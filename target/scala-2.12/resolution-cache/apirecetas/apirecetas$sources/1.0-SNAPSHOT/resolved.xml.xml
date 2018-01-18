@@ -4,7 +4,7 @@
 		module="apirecetas$sources"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20180117193205"
+		publication="20180118202417"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

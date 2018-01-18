@@ -13758,185 +13758,233 @@
 [debug] circular dependency found: org.seleniumhq.selenium#htmlunit-driver;2.27->net.sourceforge.htmlunit#htmlunit;2.27->...
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] commons-io#commons-io;2.5!commons-io.jar(src)
+[debug] 	[NOT REQUIRED] org.avaje#avaje-classpath-scanner;2.2.2!avaje-classpath-scanner.jar(src)
 [debug] 	[NOT REQUIRED] com.google.guava#guava;22.0!guava.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#build-link;2.6.7!build-link.jar(src)
-[debug] 	[NOT REQUIRED] org.avaje#avaje-classpath-scanner;2.2.2!avaje-classpath-scanner.jar(src)
-[debug] 	[NOT REQUIRED] org.avaje#avaje-datasource-api;1.1!avaje-datasource-api.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.9.0!jackson-core.jar(src)
-[debug] 	[NOT REQUIRED] com.zaxxer#HikariCP;2.7.1!HikariCP.jar(src)
+[debug] 	[NOT REQUIRED] commons-io#commons-io;2.5!commons-io.jar(src)
 [debug] no default ivy user dir defined: set to /Users/mimo/.ivy2
-[debug] 	[NOT REQUIRED] org.avaje#avaje-datasource;2.1.1!avaje-datasource.jar(src)
-[debug] 	[NOT REQUIRED] org.avaje#avaje-classpath-scanner-api;2.2!avaje-classpath-scanner-api.jar(src)
-[debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.11!reflections.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.6!akka-actor_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.8.10!jackson-datatype-jsr310.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-ehcache_2.12;2.6.7!play-ehcache_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.1!reactive-streams.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-server_2.12;2.6.7!play-server_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#twirl-api_2.12;1.3.12!twirl-api_2.12.jar(src)
+[debug] no default ivy user dir defined: set to /Users/mimo/.ivy2
+[debug] no default ivy user dir defined: set to /Users/mimo/.ivy2
+[debug] no default ivy user dir defined: set to /Users/mimo/.ivy2
 [debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-parsing_2.12;10.0.10!akka-parsing_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-ebean_2.12;4.0.6!play-ebean_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.google.j2objc#j2objc-annotations;1.1!j2objc-annotations.jar(src)
-[debug] 	[NOT REQUIRED] org.springframework#spring-beans;4.3.11.RELEASE!spring-beans.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.6.7!play-exceptions.jar(src)
-[debug] 	[NOT REQUIRED] io.jsonwebtoken#jjwt;0.7.0!jjwt.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml#classmate;1.3.1!classmate.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-jdbc-api_2.12;2.6.7!play-jdbc-api_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#filters-helpers_2.12;2.6.7!filters-helpers_2.12.jar(src)
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /Users/mimo/.ivy2/cache
-[debug] 	[NOT REQUIRED] net.sf.ehcache#ehcache;2.10.4!ehcache.jar(src)
+[debug] no default cache defined: set to /Users/mimo/.ivy2/cache
+[debug] no default cache defined: set to /Users/mimo/.ivy2/cache
+[debug] no default cache defined: set to /Users/mimo/.ivy2/cache
 [debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.8.10!jackson-annotations.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.2!scala-reflect.jar(src)
-[debug] 	[NOT REQUIRED] org.hibernate#hibernate-validator;5.4.1.Final!hibernate-validator.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.8.10!jackson-datatype-jdk8.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#jul-to-slf4j;1.7.25!jul-to-slf4j.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play_2.12;2.6.7!play_2.12.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.2.3!logback-core.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-streams_2.12;2.6.7!play-streams_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.google.inject#guice;4.1.0!guice.jar(src)
-[debug] 	[NOT REQUIRED] io.ebean#ebean;10.4.4!ebean.jar(src)
-[debug] 	[NOT REQUIRED] org.antlr#antlr4-runtime;4.6!antlr4-runtime.jar(src)
-[debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar(src)
-[debug] 	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.6!commons-lang3.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.0.6!scala-parser-combinators_2.12.jar(src)
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.1!config.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.12;2.6.7!play-jdbc-evolutions_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.12;2.6.7!play-json_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.jboss.logging#jboss-logging;3.3.0.Final!jboss-logging.jar(src)
-[debug] 	[NOT REQUIRED] com.googlecode.usc#jdbcdslog;1.0.6.2!jdbcdslog.jar(src)
-[debug] 	[NOT REQUIRED] commons-codec#commons-codec;1.10!commons-codec.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http-core_2.12;10.0.10!akka-http-core_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-support;3.5.3!selenium-support.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-netty-utils;2.6.7!play-netty-utils.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-api;9.4.5.v20170502!websocket-api.jar(src)
-[debug] 	[NOT REQUIRED] org.fluentlenium#fluentlenium-core;3.3.0!fluentlenium-core.jar(src)
-[debug] 	[NOT REQUIRED] javax.cache#cache-api;1.0.0!cache-api.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-stream_2.12;2.5.6!akka-stream_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.commons#commons-exec;1.3!commons-exec.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-logback_2.12;2.6.7!play-logback_2.12.jar(src)
-[debug] 	[NOT REQUIRED] xerces#xercesImpl;2.11.0!xercesImpl.jar(src)
-[debug] 	[NOT REQUIRED] org.ehcache#jcache;1.0.1!jcache.jar(src)
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] 	[NOT REQUIRED] net.sourceforge.htmlunit#htmlunit;2.27!htmlunit.jar(src)
-[debug] 	[NOT REQUIRED] org.springframework#spring-core;4.3.11.RELEASE!spring-core.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-test_2.12;2.6.7!play-test_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.12;2.6.6!play-java-jdbc_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-client;9.4.5.v20170502!websocket-client.jar(src)
-[debug] 	[NOT REQUIRED] com.google.code.findbugs#jsr305;3.0.2!jsr305.jar(src)
-[debug] 	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
-[debug] 	[NOT REQUIRED] net.sourceforge.cssparser#cssparser;0.9.23!cssparser.jar(src)
-[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#htmlunit-driver;2.27!htmlunit-driver.jar(src)
-[debug] 	[NOT REQUIRED] org.codehaus.mojo#animal-sniffer-annotations;1.14!animal-sniffer-annotations.jar(src)
-[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-firefox-driver;3.5.3!selenium-firefox-driver.jar(src)
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.awaitility#awaitility;2.0.0!awaitility.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.12;2.6.6!play-jdbc_2.12.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-util;9.4.5.v20170502!jetty-util.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.5.3!httpclient.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-io;9.4.5.v20170502!jetty-io.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.8.10!jackson-databind.jar(src)
-[debug] 	[NOT REQUIRED] org.assertj#assertj-core;3.6.2!assertj-core.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-client;9.4.5.v20170502!jetty-client.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-common;9.4.5.v20170502!websocket-common.jar(src)
-[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-http;9.4.5.v20170502!jetty-http.jar(src)
-[debug] 	[NOT REQUIRED] com.novocode#junit-interface;0.11!junit-interface.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.4.6!httpcore.jar(src)
-[debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpmime;4.5.3!httpmime.jar(src)
-[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-remote-driver;3.5.3!selenium-remote-driver.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.2!scala-compiler.jar(src)
-[debug] 	[NOT REQUIRED] jline#jline;2.14.3!jline.jar(src)
-[debug] 	[NOT REQUIRED] net.jodah#typetools;0.5.0!typetools.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.2!scala-library.jar(src)
-[debug] 	[NOT REQUIRED] io.ebean#ebean-agent;10.4.1!ebean-agent.jar(src)
-[debug] 	[NOT REQUIRED] io.ebean#persistence-api;2.2.1!persistence-api.jar(src)
-[debug] settings loaded (27ms)
-[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.2.2!ssl-config-core_2.12.jar(src)
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] settings loaded (35ms)
 [debug] 	default cache: /Users/mimo/.ivy2/cache
 [debug] 	default resolver: default
+[debug] settings loaded (35ms)
+[debug] including url: jar:file:/Users/mimo/.sbt/boot/scala-2.12.3/org.scala-sbt/sbt/1.0.2/ivy-2.3.0-sbt-a3314352b638afbf0dca19f127e8263ed6f898bd.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	-- 5 resolvers:
-[debug] 	[NOT REQUIRED] com.jolbox#bonecp;0.8.0.RELEASE!bonecp.jar(src)
 [debug] 	shared [file]
 [debug] 	default [chain] [local, main]
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-forms_2.12;2.6.7!play-java-forms_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-enhancer;1.2.2!play-enhancer.jar(src)
+[debug] 	default cache: /Users/mimo/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] settings loaded (38ms)
+[debug] 	shared [file]
+[debug] 	default cache: /Users/mimo/.ivy2/cache
+[debug] 	default [chain] [local, main]
+[debug] 	default resolver: default
+[debug] 	public [ibiblio]
+[debug] 	-- 5 resolvers:
+[debug] 	main [chain] [shared, public]
+[debug] 	shared [file]
+[debug] 	local [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] settings loaded (39ms)
+[debug] 	main [chain] [shared, public]
+[debug] 	default cache: /Users/mimo/.ivy2/cache
+[debug] 	local [file]
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	[NOT REQUIRED] org.avaje#avaje-datasource-api;1.1!avaje-datasource-api.jar(src)
+[debug] 	[NOT REQUIRED] com.zaxxer#HikariCP;2.7.1!HikariCP.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.9.0!jackson-core.jar(src)
+[debug] 	[NOT REQUIRED] org.avaje#avaje-classpath-scanner-api;2.2!avaje-classpath-scanner-api.jar(src)
+[debug] 	[NOT REQUIRED] org.avaje#avaje-datasource;2.1.1!avaje-datasource.jar(src)
+[debug] 	[NOT REQUIRED] org.reflections#reflections;0.9.11!reflections.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.8.10!jackson-datatype-jsr310.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.12;2.5.6!akka-actor_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-ehcache_2.12;2.6.7!play-ehcache_2.12.jar(src)
 [debug] 	[NOT REQUIRED] net.java.dev.jna#jna;4.1.0!jna.jar(src)
-[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.2.3!logback-classic.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-server_2.12;2.6.7!play-server_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.reactivestreams#reactive-streams;1.0.1!reactive-streams.jar(src)
 [debug] 	[NOT REQUIRED] cglib#cglib-nodep;3.2.4!cglib-nodep.jar(src)
-[debug] 	[NOT REQUIRED] javax.transaction#jta;1.1!jta.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#twirl-api_2.12;1.3.12!twirl-api_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-ebean_2.12;4.0.6!play-ebean_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.hamcrest#hamcrest-library;1.3!hamcrest-library.jar(src)
-[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.9!joda-time.jar(src)
-[debug] 	[NOT REQUIRED] javax.validation#validation-api;1.1.0.Final!validation-api.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-parsing_2.12;10.0.10!akka-parsing_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.google.j2objc#j2objc-annotations;1.1!j2objc-annotations.jar(src)
 [debug] 	[NOT REQUIRED] org.atteo.classindex#classindex;3.4!classindex.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-java_2.12;2.6.7!play-java_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-akka-http-server_2.12;2.6.7!play-akka-http-server_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.6.7!play-exceptions.jar(src)
+[debug] 	[NOT REQUIRED] org.springframework#spring-beans;4.3.11.RELEASE!spring-beans.jar(src)
 [debug] 	[NOT REQUIRED] org.w3c.css#sac;1.3!sac.jar(src)
-[debug] 	[NOT REQUIRED] org.jetbrains#annotations;13.0!annotations.jar(src)
-[debug] 	[NOT REQUIRED] com.google.errorprone#error_prone_annotations;2.0.18!error_prone_annotations.jar(src)
+[debug] 	[NOT REQUIRED] io.jsonwebtoken#jjwt;0.7.0!jjwt.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-jdbc-api_2.12;2.6.7!play-jdbc-api_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml#classmate;1.3.1!classmate.jar(src)
 [debug] 	[NOT REQUIRED] net.sourceforge.htmlunit#neko-htmlunit;2.27!neko-htmlunit.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#filters-helpers_2.12;2.6.7!filters-helpers_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.8.10!jackson-annotations.jar(src)
 [debug] 	[NOT REQUIRED] net.sourceforge.htmlunit#htmlunit-core-js;2.27!htmlunit-core-js.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.12;2.6.7!play-functional_2.12.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-guice_2.12;2.6.7!play-guice_2.12.jar(src)
+[debug] 	[NOT REQUIRED] net.sf.ehcache#ehcache;2.10.4!ehcache.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.2!scala-reflect.jar(src)
 [debug] 	[NOT REQUIRED] junit#junit;4.12!junit.jar(src)
-[debug] 	[NOT REQUIRED] org.springframework#spring-context;4.3.11.RELEASE!spring-context.jar(src)
-[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.8.10!jackson-datatype-jdk8.jar(src)
+[debug] 	[NOT REQUIRED] org.hibernate#hibernate-validator;5.4.1.Final!hibernate-validator.jar(src)
 [debug] 	[NOT REQUIRED] xalan#serializer;2.7.2!serializer.jar(src)
-[debug] 	[NOT REQUIRED] aopalliance#aopalliance;1.0!aopalliance.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#jul-to-slf4j;1.7.25!jul-to-slf4j.jar(src)
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-core;1.2.3!logback-core.jar(src)
 [debug] 	[NOT REQUIRED] org.hamcrest#hamcrest-core;1.3!hamcrest-core.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-slf4j_2.12;2.5.6!akka-slf4j_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play_2.12;2.6.7!play_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-streams_2.12;2.6.7!play-streams_2.12.jar(src)
+[debug] 	[NOT REQUIRED] io.ebean#ebean;10.4.4!ebean.jar(src)
 [debug] 	[NOT REQUIRED] xml-apis#xml-apis;1.4.01!xml-apis.jar(src)
-[debug] 	[NOT REQUIRED] com.google.inject.extensions#guice-assistedinject;4.1.0!guice-assistedinject.jar(src)
-[debug] 	[NOT REQUIRED] org.javassist#javassist;3.21.0-GA!javassist.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-cache_2.12;2.6.7!play-cache_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.google.inject#guice;4.1.0!guice.jar(src)
+[debug] 	[NOT REQUIRED] org.antlr#antlr4-runtime;4.6!antlr4-runtime.jar(src)
 [debug] 	[NOT REQUIRED] xalan#xalan;2.7.2!xalan.jar(src)
+[debug] 	[NOT REQUIRED] javax.inject#javax.inject;1!javax.inject.jar(src)
 [debug] 	[NOT REQUIRED] org.objenesis#objenesis;2.1!objenesis.jar(src)
-[debug] 	[NOT REQUIRED] org.parboiled#parboiled-core;1.1.7!parboiled-core.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe#config;1.3.1!config.jar(src)
 [debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-api;3.5.3!selenium-api.jar(src)
-[debug] 	[NOT REQUIRED] org.ow2.asm#asm-analysis;5.0.3!asm-analysis.jar(src)
+[debug] 	[NOT REQUIRED] org.typelevel#macro-compat_2.12;1.1.1!macro-compat_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.6!commons-lang3.jar(src)
+[debug] 	[NOT REQUIRED] org.jboss.logging#jboss-logging;3.3.0.Final!jboss-logging.jar(src)
 [debug] 	[NOT REQUIRED] com.google.code.gson#gson;2.8.0!gson.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar(src)
-[debug] 	[NOT REQUIRED] org.ow2.asm#asm;5.0.3!asm.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-jdbc-evolutions_2.12;2.6.7!play-jdbc-evolutions_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.12;0.8.0!scala-java8-compat_2.12.jar(src)
 [debug] 	[NOT REQUIRED] net.java.dev.jna#jna-platform;4.1.0!jna-platform.jar(src)
+[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-support;3.5.3!selenium-support.jar(src)
+[debug] 	[NOT REQUIRED] com.googlecode.usc#jdbcdslog;1.0.6.2!jdbcdslog.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.12;1.0.6!scala-parser-combinators_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-http;9.4.5.v20170502!jetty-http.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-api;9.4.5.v20170502!websocket-api.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-http-core_2.12;10.0.10!akka-http-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.12;2.6.7!play-json_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.novocode#junit-interface;0.11!junit-interface.jar(src)
+[debug] 	[NOT REQUIRED] org.fluentlenium#fluentlenium-core;3.3.0!fluentlenium-core.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-netty-utils;2.6.7!play-netty-utils.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpcore;4.4.6!httpcore.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.commons#commons-exec;1.3!commons-exec.jar(src)
+[debug] 	[NOT REQUIRED] commons-codec#commons-codec;1.10!commons-codec.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-stream_2.12;2.5.6!akka-stream_2.12.jar(src)
+[debug] 	[NOT REQUIRED] xerces#xercesImpl;2.11.0!xercesImpl.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpmime;4.5.3!httpmime.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#jcl-over-slf4j;1.7.25!jcl-over-slf4j.jar(src)
+[debug] 	[NOT REQUIRED] net.sourceforge.htmlunit#htmlunit;2.27!htmlunit.jar(src)
+[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-remote-driver;3.5.3!selenium-remote-driver.jar(src)
+[debug] 	[NOT REQUIRED] javax.cache#cache-api;1.0.0!cache-api.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-test_2.12;2.6.7!play-test_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.2!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] jline#jline;2.14.3!jline.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-client;9.4.5.v20170502!websocket-client.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-logback_2.12;2.6.7!play-logback_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.ehcache#jcache;1.0.1!jcache.jar(src)
+[debug] 	[NOT REQUIRED] org.codehaus.mojo#animal-sniffer-annotations;1.14!animal-sniffer-annotations.jar(src)
+[debug] 	[NOT REQUIRED] com.google.code.findbugs#jsr305;3.0.2!jsr305.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-jdbc_2.12;2.6.6!play-jdbc_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.springframework#spring-core;4.3.11.RELEASE!spring-core.jar(src)
+[debug] 	[NOT REQUIRED] commons-logging#commons-logging;1.2!commons-logging.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.8.10!jackson-databind.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-jdbc_2.12;2.6.6!play-java-jdbc_2.12.jar(src)
+[debug] 	[NOT REQUIRED] net.sourceforge.cssparser#cssparser;0.9.23!cssparser.jar(src)
+[debug] 	[NOT REQUIRED] org.parboiled#parboiled-core;1.1.7!parboiled-core.jar(src)
+[debug] 	[NOT REQUIRED] com.jolbox#bonecp;0.8.0.RELEASE!bonecp.jar(src)
+[debug] 	[NOT REQUIRED] net.jodah#typetools;0.5.0!typetools.jar(src)
+[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#htmlunit-driver;2.27!htmlunit-driver.jar(src)
+[debug] 	[NOT REQUIRED] org.ow2.asm#asm-analysis;5.0.3!asm-analysis.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-enhancer;1.2.2!play-enhancer.jar(src)
+[debug] 	[NOT REQUIRED] org.ow2.asm#asm;5.0.3!asm.jar(src)
+[debug] 	[NOT REQUIRED] org.seleniumhq.selenium#selenium-firefox-driver;3.5.3!selenium-firefox-driver.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.2!scala-library.jar(src)
 [debug] 	[NOT REQUIRED] org.pegdown#pegdown;1.6.0!pegdown.jar(src)
+[debug] 	[NOT REQUIRED] org.awaitility#awaitility;2.0.0!awaitility.jar(src)
+[debug] 	[NOT REQUIRED] javax.transaction#jta;1.1!jta.jar(src)
+[debug] 	[NOT REQUIRED] io.ebean#ebean-agent;10.4.1!ebean-agent.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-omnidoc_2.12;2.6.7!play-omnidoc_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-util;9.4.5.v20170502!jetty-util.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-doc_2.12;1.8.1!play-doc_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.apache.httpcomponents#httpclient;4.5.3!httpclient.jar(src)
+[debug] 	[NOT REQUIRED] io.ebean#persistence-api;2.2.1!persistence-api.jar(src)
+[debug] 	[NOT REQUIRED] javax.validation#validation-api;1.1.0.Final!validation-api.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm-tree;5.0.3!asm-tree.jar(src)
-[debug] 	[NOT REQUIRED] io.ebean#ebean-annotation;2.3!ebean-annotation.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-io;9.4.5.v20170502!jetty-io.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe#ssl-config-core_2.12;0.2.2!ssl-config-core_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-akka-http-server_2.12;2.6.7!play-akka-http-server_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-docs_2.12;2.6.7!play-docs_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.assertj#assertj-core;3.6.2!assertj-core.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-java-forms_2.12;2.6.7!play-java-forms_2.12.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.8.10!jackson-core.jar(src)
-[debug] 	[NOT REQUIRED] com.h2database#h2;1.4.194!h2.jar(src)
+[debug] 	[NOT REQUIRED] com.google.errorprone#error_prone_annotations;2.0.18!error_prone_annotations.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-client;9.4.5.v20170502!jetty-client.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm-util;5.0.3!asm-util.jar(src)
-[debug] 	[NOT REQUIRED] io.ebean#ebean-dbmigration;10.1.10!ebean-dbmigration.jar(src)
+[debug] 	[NOT REQUIRED] ch.qos.logback#logback-classic;1.2.3!logback-classic.jar(src)
+[debug] 	[NOT REQUIRED] org.eclipse.jetty.websocket#websocket-common;9.4.5.v20170502!websocket-common.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.12;2.6.7!play-functional_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.parboiled#parboiled-java;1.1.7!parboiled-java.jar(src)
-[debug] :: resolution report :: resolve 4757ms :: artifacts dl 77ms
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT compile produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT runtime produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT test produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT provided produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-provided.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT optional produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-optional.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT universal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT universal-docs produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-docs.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT universal-src produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-src.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT windows produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-windows.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT docker produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docker.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT linux produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-linux.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT rpm produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-rpm.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT debian produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-debian.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT compile-internal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile-internal.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT runtime-internal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime-internal.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT test-internal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test-internal.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT plugin produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-plugin.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT pom produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-pom.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT scala-tool produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-scala-tool.xml
-[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT docs produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/apiRecetas/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docs.xml
-[debug] 	resolve done (4757ms resolve - 77ms download)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.9!joda-time.jar(src)
+[debug] 	[NOT REQUIRED] org.springframework#spring-context;4.3.11.RELEASE!spring-context.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-java_2.12;2.6.7!play-java_2.12.jar(src)
+[debug] 	[NOT REQUIRED] aopalliance#aopalliance;1.0!aopalliance.jar(src)
+[debug] 	[NOT REQUIRED] org.jetbrains#annotations;13.0!annotations.jar(src)
+[debug] 	[NOT REQUIRED] com.google.inject.extensions#guice-assistedinject;4.1.0!guice-assistedinject.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-guice_2.12;2.6.7!play-guice_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-cache_2.12;2.6.7!play-cache_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.25!slf4j-api.jar(src)
+[debug] 	[NOT REQUIRED] io.ebean#ebean-annotation;2.3!ebean-annotation.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.akka#akka-slf4j_2.12;2.5.6!akka-slf4j_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.h2database#h2;1.4.194!h2.jar(src)
+[debug] 	[NOT REQUIRED] io.ebean#ebean-dbmigration;10.1.10!ebean-dbmigration.jar(src)
+[debug] 	[NOT REQUIRED] org.javassist#javassist;3.21.0-GA!javassist.jar(src)
+[debug] :: resolution report :: resolve 8532ms :: artifacts dl 230ms
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT compile produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT runtime produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT test produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT provided produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-provided.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT optional produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-optional.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT universal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT universal-docs produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-docs.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT universal-src produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-universal-src.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT windows produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-windows.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT docker produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docker.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT linux produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-linux.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT rpm produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-rpm.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT debian produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-debian.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT compile-internal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-compile-internal.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT runtime-internal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-runtime-internal.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT test-internal produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-test-internal.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT plugin produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-plugin.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT pom produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-pom.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT scala-tool produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-scala-tool.xml
+[debug] 	report for apirecetas#apirecetas$sources;1.0-SNAPSHOT docs produced in /Users/mimo/_MASTER MIMO/_proyectos/2 CLOUD/play/_err/recetasPlayApi/target/scala-2.12/resolution-cache/reports/apirecetas-apirecetas$sources-docs.xml
+[debug] 	resolve done (8532ms resolve - 230ms download)
